@@ -1,0 +1,2930 @@
+[
+  {
+    "code_naf": "01.11Z",
+    "libelle": "Culture de c\u00e9r\u00e9ales (\u00e0 l'exception du riz), de l\u00e9gumineuses et de graines ol\u00e9agineuses"
+  },
+  {
+    "code_naf": "01.12Z",
+    "libelle": "Culture du riz"
+  },
+  {
+    "code_naf": "01.13Z",
+    "libelle": "Culture de l\u00e9gumes, de melons, de racines et de tubercules"
+  },
+  {
+    "code_naf": "01.14Z",
+    "libelle": "Culture de la canne \u00e0 sucre"
+  },
+  {
+    "code_naf": "01.15Z",
+    "libelle": "Culture du tabac"
+  },
+  {
+    "code_naf": "01.16Z",
+    "libelle": "Culture de plantes \u00e0 fibres"
+  },
+  {
+    "code_naf": "01.19Z",
+    "libelle": "Autres cultures non permanentes"
+  },
+  {
+    "code_naf": "01.21Z",
+    "libelle": "Culture de la vigne"
+  },
+  {
+    "code_naf": "01.22Z",
+    "libelle": "Culture de fruits tropicaux et subtropicaux"
+  },
+  {
+    "code_naf": "01.23Z",
+    "libelle": "Culture d'agrumes"
+  },
+  {
+    "code_naf": "01.24Z",
+    "libelle": "Culture de fruits \u00e0 p\u00e9pins et \u00e0 noyau"
+  },
+  {
+    "code_naf": "01.25Z",
+    "libelle": "Culture d'autres fruits d'arbres ou d'arbustes et de fruits \u00e0 coque"
+  },
+  {
+    "code_naf": "01.26Z",
+    "libelle": "Culture de fruits ol\u00e9agineux"
+  },
+  {
+    "code_naf": "01.27Z",
+    "libelle": "Culture de plantes \u00e0 boissons"
+  },
+  {
+    "code_naf": "01.28Z",
+    "libelle": "Culture de plantes \u00e0 \u00e9pices, aromatiques, m\u00e9dicinales et pharmaceutiques"
+  },
+  {
+    "code_naf": "01.29Z",
+    "libelle": "Autres cultures permanentes"
+  },
+  {
+    "code_naf": "01.30Z",
+    "libelle": "Reproduction de plantes"
+  },
+  {
+    "code_naf": "01.41Z",
+    "libelle": "\u00c9levage de vaches laiti\u00e8res"
+  },
+  {
+    "code_naf": "01.42Z",
+    "libelle": "\u00c9levage d'autres bovins et de buffles"
+  },
+  {
+    "code_naf": "01.43Z",
+    "libelle": "\u00c9levage de chevaux et d'autres \u00e9quid\u00e9s"
+  },
+  {
+    "code_naf": "01.44Z",
+    "libelle": "\u00c9levage de chameaux et d'autres cam\u00e9lid\u00e9s"
+  },
+  {
+    "code_naf": "01.45Z",
+    "libelle": "\u00c9levage d'ovins et de caprins"
+  },
+  {
+    "code_naf": "01.46Z",
+    "libelle": "\u00c9levage de porcins"
+  },
+  {
+    "code_naf": "01.47Z",
+    "libelle": "\u00c9levage de volailles"
+  },
+  {
+    "code_naf": "01.49Z",
+    "libelle": "\u00c9levage d'autres animaux"
+  },
+  {
+    "code_naf": "01.50Z",
+    "libelle": "Culture et \u00e9levage associ\u00e9s"
+  },
+  {
+    "code_naf": "01.61Z",
+    "libelle": "Activit\u00e9s de soutien aux cultures"
+  },
+  {
+    "code_naf": "01.62Z",
+    "libelle": "Activit\u00e9s de soutien \u00e0 la production animale"
+  },
+  {
+    "code_naf": "01.63Z",
+    "libelle": "Traitement primaire des r\u00e9coltes"
+  },
+  {
+    "code_naf": "01.64Z",
+    "libelle": "Traitement des semences"
+  },
+  {
+    "code_naf": "01.70Z",
+    "libelle": "Chasse, pi\u00e9geage et services annexes"
+  },
+  {
+    "code_naf": "02.10Z",
+    "libelle": "Sylviculture et autres activit\u00e9s foresti\u00e8res"
+  },
+  {
+    "code_naf": "02.20Z",
+    "libelle": "Exploitation foresti\u00e8re"
+  },
+  {
+    "code_naf": "02.30Z",
+    "libelle": "R\u00e9colte de produits forestiers non ligneux poussant \u00e0 l'\u00e9tat sauvage"
+  },
+  {
+    "code_naf": "02.40Z",
+    "libelle": "Services de soutien \u00e0 l'exploitation foresti\u00e8re"
+  },
+  {
+    "code_naf": "03.11Z",
+    "libelle": "P\u00eache en mer"
+  },
+  {
+    "code_naf": "03.12Z",
+    "libelle": "P\u00eache en eau douce"
+  },
+  {
+    "code_naf": "03.21Z",
+    "libelle": "Aquaculture en mer"
+  },
+  {
+    "code_naf": "03.22Z",
+    "libelle": "Aquaculture en eau douce"
+  },
+  {
+    "code_naf": "05.10Z",
+    "libelle": "Extraction de houille"
+  },
+  {
+    "code_naf": "05.20Z",
+    "libelle": "Extraction de lignite"
+  },
+  {
+    "code_naf": "06.10Z",
+    "libelle": "Extraction de p\u00e9trole brut"
+  },
+  {
+    "code_naf": "06.20Z",
+    "libelle": "Extraction de gaz naturel"
+  },
+  {
+    "code_naf": "07.10Z",
+    "libelle": "Extraction de minerais de fer"
+  },
+  {
+    "code_naf": "07.21Z",
+    "libelle": "Extraction de minerais d'uranium et de thorium"
+  },
+  {
+    "code_naf": "07.29Z",
+    "libelle": "Extraction d'autres minerais de m\u00e9taux non ferreux"
+  },
+  {
+    "code_naf": "08.11Z",
+    "libelle": "Extraction de pierres ornementales et de construction, de calcaire industriel, de gypse, de craie et d'ardoise"
+  },
+  {
+    "code_naf": "08.12Z",
+    "libelle": "Exploitation de gravi\u00e8res et sabli\u00e8res, extraction d'argiles et de kaolin"
+  },
+  {
+    "code_naf": "08.91Z",
+    "libelle": "Extraction des min\u00e9raux chimiques et d'engrais min\u00e9raux"
+  },
+  {
+    "code_naf": "08.92Z",
+    "libelle": "Extraction de tourbe"
+  },
+  {
+    "code_naf": "08.93Z",
+    "libelle": "Production de sel"
+  },
+  {
+    "code_naf": "08.99Z",
+    "libelle": "Autres activit\u00e9s extractives n.c.a."
+  },
+  {
+    "code_naf": "09.10Z",
+    "libelle": "Activit\u00e9s de soutien \u00e0 l'extraction d'hydrocarbures"
+  },
+  {
+    "code_naf": "09.90Z",
+    "libelle": "Activit\u00e9s de soutien aux autres industries extractives"
+  },
+  {
+    "code_naf": "10.11Z",
+    "libelle": "Transformation et conservation de la viande de boucherie"
+  },
+  {
+    "code_naf": "10.12Z",
+    "libelle": "Transformation et conservation de la viande de volaille"
+  },
+  {
+    "code_naf": "10.13A",
+    "libelle": "Pr\u00e9paration industrielle de produits \u00e0 base de viande"
+  },
+  {
+    "code_naf": "10.13B",
+    "libelle": "Charcuterie"
+  },
+  {
+    "code_naf": "10.20Z",
+    "libelle": "Transformation et conservation de poisson, de crustac\u00e9s et de mollusques"
+  },
+  {
+    "code_naf": "10.31Z",
+    "libelle": "Transformation et conservation de pommes de terre"
+  },
+  {
+    "code_naf": "10.32Z",
+    "libelle": "Pr\u00e9paration de jus de fruits et l\u00e9gumes"
+  },
+  {
+    "code_naf": "10.39A",
+    "libelle": "Autre transformation et conservation de l\u00e9gumes"
+  },
+  {
+    "code_naf": "10.39B",
+    "libelle": "Transformation et conservation de fruits"
+  },
+  {
+    "code_naf": "10.41A",
+    "libelle": "Fabrication d'huiles et graisses brutes"
+  },
+  {
+    "code_naf": "10.41B",
+    "libelle": "Fabrication d'huiles et graisses raffin\u00e9es"
+  },
+  {
+    "code_naf": "10.42Z",
+    "libelle": "Fabrication de margarine et graisses comestibles similaires"
+  },
+  {
+    "code_naf": "10.51A",
+    "libelle": "Fabrication de lait liquide et de produits frais"
+  },
+  {
+    "code_naf": "10.51B",
+    "libelle": "Fabrication de beurre"
+  },
+  {
+    "code_naf": "10.51C",
+    "libelle": "Fabrication de fromage"
+  },
+  {
+    "code_naf": "10.51D",
+    "libelle": "Fabrication d'autres produits laitiers"
+  },
+  {
+    "code_naf": "10.52Z",
+    "libelle": "Fabrication de glaces et sorbets"
+  },
+  {
+    "code_naf": "10.61A",
+    "libelle": "Meunerie"
+  },
+  {
+    "code_naf": "10.61B",
+    "libelle": "Autres activit\u00e9s du travail des grains"
+  },
+  {
+    "code_naf": "10.62Z",
+    "libelle": "Fabrication de produits amylac\u00e9s"
+  },
+  {
+    "code_naf": "10.71A",
+    "libelle": "Fabrication industrielle de pain et de p\u00e2tisserie fra\u00eeche"
+  },
+  {
+    "code_naf": "10.71B",
+    "libelle": "Cuisson de produits de boulangerie"
+  },
+  {
+    "code_naf": "10.71C",
+    "libelle": "Boulangerie et boulangerie-p\u00e2tisserie"
+  },
+  {
+    "code_naf": "10.71D",
+    "libelle": "P\u00e2tisserie"
+  },
+  {
+    "code_naf": "10.72Z",
+    "libelle": "Fabrication de biscuits, biscottes et p\u00e2tisseries de conservation"
+  },
+  {
+    "code_naf": "10.73Z",
+    "libelle": "Fabrication de p\u00e2tes alimentaires"
+  },
+  {
+    "code_naf": "10.81Z",
+    "libelle": "Fabrication de sucre"
+  },
+  {
+    "code_naf": "10.82Z",
+    "libelle": "Fabrication de cacao, chocolat et de produits de confiserie"
+  },
+  {
+    "code_naf": "10.83Z",
+    "libelle": "Transformation du th\u00e9 et du caf\u00e9"
+  },
+  {
+    "code_naf": "10.84Z",
+    "libelle": "Fabrication de condiments et assaisonnements"
+  },
+  {
+    "code_naf": "10.85Z",
+    "libelle": "Fabrication de plats pr\u00e9par\u00e9s"
+  },
+  {
+    "code_naf": "10.86Z",
+    "libelle": "Fabrication d'aliments homog\u00e9n\u00e9is\u00e9s et di\u00e9t\u00e9tiques"
+  },
+  {
+    "code_naf": "10.89Z",
+    "libelle": "Fabrication d'autres produits alimentaires n.c.a."
+  },
+  {
+    "code_naf": "10.91Z",
+    "libelle": "Fabrication d'aliments pour animaux de ferme"
+  },
+  {
+    "code_naf": "10.92Z",
+    "libelle": "Fabrication d'aliments pour animaux de compagnie"
+  },
+  {
+    "code_naf": "11.01Z",
+    "libelle": "Production de boissons alcooliques distill\u00e9es"
+  },
+  {
+    "code_naf": "11.02A",
+    "libelle": "Fabrication de vins effervescents"
+  },
+  {
+    "code_naf": "11.02B",
+    "libelle": "Vinification"
+  },
+  {
+    "code_naf": "11.03Z",
+    "libelle": "Fabrication de cidre et de vins de fruits"
+  },
+  {
+    "code_naf": "11.04Z",
+    "libelle": "Production d'autres boissons ferment\u00e9es non distill\u00e9es"
+  },
+  {
+    "code_naf": "11.05Z",
+    "libelle": "Fabrication de bi\u00e8re"
+  },
+  {
+    "code_naf": "11.06Z",
+    "libelle": "Fabrication de malt"
+  },
+  {
+    "code_naf": "11.07A",
+    "libelle": "Industrie des eaux de table"
+  },
+  {
+    "code_naf": "11.07B",
+    "libelle": "Production de boissons rafra\u00eechissantes"
+  },
+  {
+    "code_naf": "12.00Z",
+    "libelle": "Fabrication de produits \u00e0 base de tabac"
+  },
+  {
+    "code_naf": "13.10Z",
+    "libelle": "Pr\u00e9paration de fibres textiles et filature"
+  },
+  {
+    "code_naf": "13.20Z",
+    "libelle": "Tissage"
+  },
+  {
+    "code_naf": "13.30Z",
+    "libelle": "Ennoblissement textile"
+  },
+  {
+    "code_naf": "13.91Z",
+    "libelle": "Fabrication d'\u00e9toffes \u00e0 mailles"
+  },
+  {
+    "code_naf": "13.92Z",
+    "libelle": "Fabrication d'articles textiles, sauf habillement"
+  },
+  {
+    "code_naf": "13.93Z",
+    "libelle": "Fabrication de tapis et moquettes"
+  },
+  {
+    "code_naf": "13.94Z",
+    "libelle": "Fabrication de ficelles, cordes et filets"
+  },
+  {
+    "code_naf": "13.95Z",
+    "libelle": "Fabrication de non-tiss\u00e9s, sauf habillement"
+  },
+  {
+    "code_naf": "13.96Z",
+    "libelle": "Fabrication d'autres textiles techniques et industriels"
+  },
+  {
+    "code_naf": "13.99Z",
+    "libelle": "Fabrication d'autres textiles n.c.a."
+  },
+  {
+    "code_naf": "14.11Z",
+    "libelle": "Fabrication de v\u00eatements en cuir"
+  },
+  {
+    "code_naf": "14.12Z",
+    "libelle": "Fabrication de v\u00eatements de travail"
+  },
+  {
+    "code_naf": "14.13Z",
+    "libelle": "Fabrication de v\u00eatements de dessus"
+  },
+  {
+    "code_naf": "14.14Z",
+    "libelle": "Fabrication de v\u00eatements de dessous"
+  },
+  {
+    "code_naf": "14.19Z",
+    "libelle": "Fabrication d'autres v\u00eatements et accessoires"
+  },
+  {
+    "code_naf": "14.20Z",
+    "libelle": "Fabrication d'articles en fourrure"
+  },
+  {
+    "code_naf": "14.31Z",
+    "libelle": "Fabrication d'articles chaussants \u00e0 mailles"
+  },
+  {
+    "code_naf": "14.39Z",
+    "libelle": "Fabrication d'autres articles \u00e0 mailles"
+  },
+  {
+    "code_naf": "15.11Z",
+    "libelle": "Appr\u00eat et tannage des cuirs ; pr\u00e9paration et teinture des fourrures"
+  },
+  {
+    "code_naf": "15.12Z",
+    "libelle": "Fabrication d'articles de voyage, de maroquinerie et de sellerie"
+  },
+  {
+    "code_naf": "15.20Z",
+    "libelle": "Fabrication de chaussures"
+  },
+  {
+    "code_naf": "16.10A",
+    "libelle": "Sciage et rabotage du bois, hors impr\u00e9gnation"
+  },
+  {
+    "code_naf": "16.10B",
+    "libelle": "Impr\u00e9gnation du bois"
+  },
+  {
+    "code_naf": "16.21Z",
+    "libelle": "Fabrication de placage et de panneaux de bois"
+  },
+  {
+    "code_naf": "16.22Z",
+    "libelle": "Fabrication de parquets assembl\u00e9s"
+  },
+  {
+    "code_naf": "16.23Z",
+    "libelle": "Fabrication de charpentes et d'autres menuiseries"
+  },
+  {
+    "code_naf": "16.24Z",
+    "libelle": "Fabrication d'emballages en bois"
+  },
+  {
+    "code_naf": "16.29Z",
+    "libelle": "Fabrication d'objets divers en bois ; fabrication d'objets en li\u00e8ge, vannerie et sparterie"
+  },
+  {
+    "code_naf": "17.11Z",
+    "libelle": "Fabrication de p\u00e2te \u00e0 papier"
+  },
+  {
+    "code_naf": "17.12Z",
+    "libelle": "Fabrication de papier et de carton"
+  },
+  {
+    "code_naf": "17.21A",
+    "libelle": "Fabrication de carton ondul\u00e9"
+  },
+  {
+    "code_naf": "17.21B",
+    "libelle": "Fabrication de cartonnages"
+  },
+  {
+    "code_naf": "17.21C",
+    "libelle": "Fabrication d'emballages en papier"
+  },
+  {
+    "code_naf": "17.22Z",
+    "libelle": "Fabrication d'articles en papier \u00e0 usage sanitaire ou domestique"
+  },
+  {
+    "code_naf": "17.23Z",
+    "libelle": "Fabrication d'articles de papeterie"
+  },
+  {
+    "code_naf": "17.24Z",
+    "libelle": "Fabrication de papiers peints"
+  },
+  {
+    "code_naf": "17.29Z",
+    "libelle": "Fabrication d'autres articles en papier ou en carton"
+  },
+  {
+    "code_naf": "18.11Z",
+    "libelle": "Imprimerie de journaux"
+  },
+  {
+    "code_naf": "18.12Z",
+    "libelle": "Autre imprimerie (labeur)"
+  },
+  {
+    "code_naf": "18.13Z",
+    "libelle": "Activit\u00e9s de pr\u00e9-presse"
+  },
+  {
+    "code_naf": "18.14Z",
+    "libelle": "Reliure et activit\u00e9s connexes"
+  },
+  {
+    "code_naf": "18.20Z",
+    "libelle": "Reproduction d'enregistrements"
+  },
+  {
+    "code_naf": "19.10Z",
+    "libelle": "Cok\u00e9faction"
+  },
+  {
+    "code_naf": "19.20Z",
+    "libelle": "Raffinage du p\u00e9trole"
+  },
+  {
+    "code_naf": "20.11Z",
+    "libelle": "Fabrication de gaz industriels"
+  },
+  {
+    "code_naf": "20.12Z",
+    "libelle": "Fabrication de colorants et de pigments"
+  },
+  {
+    "code_naf": "20.13A",
+    "libelle": "Enrichissement et retraitement de mati\u00e8res nucl\u00e9aires"
+  },
+  {
+    "code_naf": "20.13B",
+    "libelle": "Fabrication d'autres produits chimiques inorganiques de base n.c.a."
+  },
+  {
+    "code_naf": "20.14Z",
+    "libelle": "Fabrication d'autres produits chimiques organiques de base"
+  },
+  {
+    "code_naf": "20.15Z",
+    "libelle": "Fabrication de produits azot\u00e9s et d'engrais"
+  },
+  {
+    "code_naf": "20.16Z",
+    "libelle": "Fabrication de mati\u00e8res plastiques de base"
+  },
+  {
+    "code_naf": "20.17Z",
+    "libelle": "Fabrication de caoutchouc synth\u00e9tique"
+  },
+  {
+    "code_naf": "20.20Z",
+    "libelle": "Fabrication de pesticides et d'autres produits agrochimiques"
+  },
+  {
+    "code_naf": "20.30Z",
+    "libelle": "Fabrication de peintures, vernis, encres et mastics"
+  },
+  {
+    "code_naf": "20.41Z",
+    "libelle": "Fabrication de savons, d\u00e9tergents et produits d'entretien"
+  },
+  {
+    "code_naf": "20.42Z",
+    "libelle": "Fabrication de parfums et de produits pour la toilette"
+  },
+  {
+    "code_naf": "20.51Z",
+    "libelle": "Fabrication de produits explosifs"
+  },
+  {
+    "code_naf": "20.52Z",
+    "libelle": "Fabrication de colles"
+  },
+  {
+    "code_naf": "20.53Z",
+    "libelle": "Fabrication d'huiles essentielles"
+  },
+  {
+    "code_naf": "20.59Z",
+    "libelle": "Fabrication d'autres produits chimiques n.c.a."
+  },
+  {
+    "code_naf": "20.60Z",
+    "libelle": "Fabrication de fibres artificielles ou synth\u00e9tiques"
+  },
+  {
+    "code_naf": "21.10Z",
+    "libelle": "Fabrication de produits pharmaceutiques de base"
+  },
+  {
+    "code_naf": "21.20Z",
+    "libelle": "Fabrication de pr\u00e9parations pharmaceutiques"
+  },
+  {
+    "code_naf": "22.11Z",
+    "libelle": "Fabrication et rechapage de pneumatiques"
+  },
+  {
+    "code_naf": "22.19Z",
+    "libelle": "Fabrication d'autres articles en caoutchouc"
+  },
+  {
+    "code_naf": "22.21Z",
+    "libelle": "Fabrication de plaques, feuilles, tubes et profil\u00e9s en mati\u00e8res plastiques"
+  },
+  {
+    "code_naf": "22.22Z",
+    "libelle": "Fabrication d'emballages en mati\u00e8res plastiques"
+  },
+  {
+    "code_naf": "22.23Z",
+    "libelle": "Fabrication d'\u00e9l\u00e9ments en mati\u00e8res plastiques pour la construction"
+  },
+  {
+    "code_naf": "22.29A",
+    "libelle": "Fabrication de pi\u00e8ces techniques \u00e0 base de mati\u00e8res plastiques"
+  },
+  {
+    "code_naf": "22.29B",
+    "libelle": "Fabrication de produits de consommation courante en mati\u00e8res plastiques"
+  },
+  {
+    "code_naf": "23.11Z",
+    "libelle": "Fabrication de verre plat"
+  },
+  {
+    "code_naf": "23.12Z",
+    "libelle": "Fa\u00e7onnage et transformation du verre plat"
+  },
+  {
+    "code_naf": "23.13Z",
+    "libelle": "Fabrication de verre creux"
+  },
+  {
+    "code_naf": "23.14Z",
+    "libelle": "Fabrication de fibres de verre"
+  },
+  {
+    "code_naf": "23.19Z",
+    "libelle": "Fabrication et fa\u00e7onnage d'autres articles en verre, y compris verre technique"
+  },
+  {
+    "code_naf": "23.20Z",
+    "libelle": "Fabrication de produits r\u00e9fractaires"
+  },
+  {
+    "code_naf": "23.31Z",
+    "libelle": "Fabrication de carreaux en c\u00e9ramique"
+  },
+  {
+    "code_naf": "23.32Z",
+    "libelle": "Fabrication de briques, tuiles et produits de construction, en terre cuite"
+  },
+  {
+    "code_naf": "23.41Z",
+    "libelle": "Fabrication d'articles c\u00e9ramiques \u00e0 usage domestique ou ornemental"
+  },
+  {
+    "code_naf": "23.42Z",
+    "libelle": "Fabrication d'appareils sanitaires en c\u00e9ramique"
+  },
+  {
+    "code_naf": "23.43Z",
+    "libelle": "Fabrication d'isolateurs et pi\u00e8ces isolantes en c\u00e9ramique"
+  },
+  {
+    "code_naf": "23.44Z",
+    "libelle": "Fabrication d'autres produits c\u00e9ramiques \u00e0 usage technique"
+  },
+  {
+    "code_naf": "23.49Z",
+    "libelle": "Fabrication d'autres produits c\u00e9ramiques"
+  },
+  {
+    "code_naf": "23.51Z",
+    "libelle": "Fabrication de ciment"
+  },
+  {
+    "code_naf": "23.52Z",
+    "libelle": "Fabrication de chaux et pl\u00e2tre"
+  },
+  {
+    "code_naf": "23.61Z",
+    "libelle": "Fabrication d'\u00e9l\u00e9ments en b\u00e9ton pour la construction"
+  },
+  {
+    "code_naf": "23.62Z",
+    "libelle": "Fabrication d'\u00e9l\u00e9ments en pl\u00e2tre pour la construction"
+  },
+  {
+    "code_naf": "23.63Z",
+    "libelle": "Fabrication de b\u00e9ton pr\u00eat \u00e0 l'emploi"
+  },
+  {
+    "code_naf": "23.64Z",
+    "libelle": "Fabrication de mortiers et b\u00e9tons secs"
+  },
+  {
+    "code_naf": "23.65Z",
+    "libelle": "Fabrication d'ouvrages en fibre-ciment"
+  },
+  {
+    "code_naf": "23.69Z",
+    "libelle": "Fabrication d'autres ouvrages en b\u00e9ton, en ciment ou en pl\u00e2tre"
+  },
+  {
+    "code_naf": "23.70Z",
+    "libelle": "Taille, fa\u00e7onnage et finissage de pierres"
+  },
+  {
+    "code_naf": "23.91Z",
+    "libelle": "Fabrication de produits abrasifs"
+  },
+  {
+    "code_naf": "23.99Z",
+    "libelle": "Fabrication d'autres produits min\u00e9raux non m\u00e9talliques n.c.a."
+  },
+  {
+    "code_naf": "24.10Z",
+    "libelle": "Sid\u00e9rurgie"
+  },
+  {
+    "code_naf": "24.20Z",
+    "libelle": "Fabrication de tubes, tuyaux, profil\u00e9s creux et accessoires correspondants en acier"
+  },
+  {
+    "code_naf": "24.31Z",
+    "libelle": "\u00c9tirage \u00e0 froid de barres"
+  },
+  {
+    "code_naf": "24.32Z",
+    "libelle": "Laminage \u00e0 froid de feuillards"
+  },
+  {
+    "code_naf": "24.33Z",
+    "libelle": "Profilage \u00e0 froid par formage ou pliage"
+  },
+  {
+    "code_naf": "24.34Z",
+    "libelle": "Tr\u00e9filage \u00e0 froid"
+  },
+  {
+    "code_naf": "24.41Z",
+    "libelle": "Production de m\u00e9taux pr\u00e9cieux"
+  },
+  {
+    "code_naf": "24.42Z",
+    "libelle": "M\u00e9tallurgie de l'aluminium"
+  },
+  {
+    "code_naf": "24.43Z",
+    "libelle": "M\u00e9tallurgie du plomb, du zinc ou de l'\u00e9tain"
+  },
+  {
+    "code_naf": "24.44Z",
+    "libelle": "M\u00e9tallurgie du cuivre"
+  },
+  {
+    "code_naf": "24.45Z",
+    "libelle": "M\u00e9tallurgie des autres m\u00e9taux non ferreux"
+  },
+  {
+    "code_naf": "24.46Z",
+    "libelle": "\u00c9laboration et transformation de mati\u00e8res nucl\u00e9aires"
+  },
+  {
+    "code_naf": "24.51Z",
+    "libelle": "Fonderie de fonte"
+  },
+  {
+    "code_naf": "24.52Z",
+    "libelle": "Fonderie d'acier"
+  },
+  {
+    "code_naf": "24.53Z",
+    "libelle": "Fonderie de m\u00e9taux l\u00e9gers"
+  },
+  {
+    "code_naf": "24.54Z",
+    "libelle": "Fonderie d'autres m\u00e9taux non ferreux"
+  },
+  {
+    "code_naf": "25.11Z",
+    "libelle": "Fabrication de structures m\u00e9talliques et de parties de structures"
+  },
+  {
+    "code_naf": "25.12Z",
+    "libelle": "Fabrication de portes et fen\u00eatres en m\u00e9tal"
+  },
+  {
+    "code_naf": "25.21Z",
+    "libelle": "Fabrication de radiateurs et de chaudi\u00e8res pour le chauffage central"
+  },
+  {
+    "code_naf": "25.29Z",
+    "libelle": "Fabrication d'autres r\u00e9servoirs, citernes et conteneurs m\u00e9talliques"
+  },
+  {
+    "code_naf": "25.30Z",
+    "libelle": "Fabrication de g\u00e9n\u00e9rateurs de vapeur, \u00e0 l'exception des chaudi\u00e8res pour le chauffage central"
+  },
+  {
+    "code_naf": "25.40Z",
+    "libelle": "Fabrication d'armes et de munitions"
+  },
+  {
+    "code_naf": "25.50A",
+    "libelle": "Forge, estampage, matri\u00e7age ; m\u00e9tallurgie des poudres"
+  },
+  {
+    "code_naf": "25.50B",
+    "libelle": "D\u00e9coupage, emboutissage"
+  },
+  {
+    "code_naf": "25.61Z",
+    "libelle": "Traitement et rev\u00eatement des m\u00e9taux"
+  },
+  {
+    "code_naf": "25.62A",
+    "libelle": "D\u00e9colletage"
+  },
+  {
+    "code_naf": "25.62B",
+    "libelle": "M\u00e9canique industrielle"
+  },
+  {
+    "code_naf": "25.71Z",
+    "libelle": "Fabrication de coutellerie"
+  },
+  {
+    "code_naf": "25.72Z",
+    "libelle": "Fabrication de serrures et de ferrures"
+  },
+  {
+    "code_naf": "25.73A",
+    "libelle": "Fabrication de moules et mod\u00e8les"
+  },
+  {
+    "code_naf": "25.73B",
+    "libelle": "Fabrication d'autres outillages"
+  },
+  {
+    "code_naf": "25.91Z",
+    "libelle": "Fabrication de f\u00fbts et emballages m\u00e9talliques similaires"
+  },
+  {
+    "code_naf": "25.92Z",
+    "libelle": "Fabrication d'emballages m\u00e9talliques l\u00e9gers"
+  },
+  {
+    "code_naf": "25.93Z",
+    "libelle": "Fabrication d'articles en fils m\u00e9talliques, de cha\u00eenes et de ressorts"
+  },
+  {
+    "code_naf": "25.94Z",
+    "libelle": "Fabrication de vis et de boulons"
+  },
+  {
+    "code_naf": "25.99A",
+    "libelle": "Fabrication d'articles m\u00e9talliques m\u00e9nagers"
+  },
+  {
+    "code_naf": "25.99B",
+    "libelle": "Fabrication d'autres articles m\u00e9talliques"
+  },
+  {
+    "code_naf": "26.11Z",
+    "libelle": "Fabrication de composants \u00e9lectroniques"
+  },
+  {
+    "code_naf": "26.12Z",
+    "libelle": "Fabrication de cartes \u00e9lectroniques assembl\u00e9es"
+  },
+  {
+    "code_naf": "26.20Z",
+    "libelle": "Fabrication d'ordinateurs et d'\u00e9quipements p\u00e9riph\u00e9riques"
+  },
+  {
+    "code_naf": "26.30Z",
+    "libelle": "Fabrication d'\u00e9quipements de communication"
+  },
+  {
+    "code_naf": "26.40Z",
+    "libelle": "Fabrication de produits \u00e9lectroniques grand public"
+  },
+  {
+    "code_naf": "26.51A",
+    "libelle": "Fabrication d'\u00e9quipements d'aide \u00e0 la navigation"
+  },
+  {
+    "code_naf": "26.51B",
+    "libelle": "Fabrication d'instrumentation scientifique et technique"
+  },
+  {
+    "code_naf": "26.52Z",
+    "libelle": "Horlogerie"
+  },
+  {
+    "code_naf": "26.60Z",
+    "libelle": "Fabrication d'\u00e9quipements d'irradiation m\u00e9dicale, d'\u00e9quipements \u00e9lectrom\u00e9dicaux et \u00e9lectroth\u00e9rapeutiques"
+  },
+  {
+    "code_naf": "26.70Z",
+    "libelle": "Fabrication de mat\u00e9riels optique et photographique"
+  },
+  {
+    "code_naf": "26.80Z",
+    "libelle": "Fabrication de supports magn\u00e9tiques et optiques"
+  },
+  {
+    "code_naf": "27.11Z",
+    "libelle": "Fabrication de moteurs, g\u00e9n\u00e9ratrices et transformateurs \u00e9lectriques"
+  },
+  {
+    "code_naf": "27.12Z",
+    "libelle": "Fabrication de mat\u00e9riel de distribution et de commande \u00e9lectrique"
+  },
+  {
+    "code_naf": "27.20Z",
+    "libelle": "Fabrication de piles et d'accumulateurs \u00e9lectriques"
+  },
+  {
+    "code_naf": "27.31Z",
+    "libelle": "Fabrication de c\u00e2bles de fibres optiques"
+  },
+  {
+    "code_naf": "27.32Z",
+    "libelle": "Fabrication d'autres fils et c\u00e2bles \u00e9lectroniques ou \u00e9lectriques"
+  },
+  {
+    "code_naf": "27.33Z",
+    "libelle": "Fabrication de mat\u00e9riel d'installation \u00e9lectrique"
+  },
+  {
+    "code_naf": "27.40Z",
+    "libelle": "Fabrication d'appareils d'\u00e9clairage \u00e9lectrique"
+  },
+  {
+    "code_naf": "27.51Z",
+    "libelle": "Fabrication d'appareils \u00e9lectrom\u00e9nagers"
+  },
+  {
+    "code_naf": "27.52Z",
+    "libelle": "Fabrication d'appareils m\u00e9nagers non \u00e9lectriques"
+  },
+  {
+    "code_naf": "27.90Z",
+    "libelle": "Fabrication d'autres mat\u00e9riels \u00e9lectriques"
+  },
+  {
+    "code_naf": "28.11Z",
+    "libelle": "Fabrication de moteurs et turbines, \u00e0 l'exception des moteurs d'avions et de v\u00e9hicules"
+  },
+  {
+    "code_naf": "28.12Z",
+    "libelle": "Fabrication d'\u00e9quipements hydrauliques et pneumatiques"
+  },
+  {
+    "code_naf": "28.13Z",
+    "libelle": "Fabrication d'autres pompes et compresseurs"
+  },
+  {
+    "code_naf": "28.14Z",
+    "libelle": "Fabrication d'autres articles de robinetterie"
+  },
+  {
+    "code_naf": "28.15Z",
+    "libelle": "Fabrication d'engrenages et d'organes m\u00e9caniques de transmission"
+  },
+  {
+    "code_naf": "28.21Z",
+    "libelle": "Fabrication de fours et br\u00fbleurs"
+  },
+  {
+    "code_naf": "28.22Z",
+    "libelle": "Fabrication de mat\u00e9riel de levage et de manutention"
+  },
+  {
+    "code_naf": "28.23Z",
+    "libelle": "Fabrication de machines et d'\u00e9quipements de bureau (\u00e0 l'exception des ordinateurs et \u00e9quipements p\u00e9riph\u00e9riques)"
+  },
+  {
+    "code_naf": "28.24Z",
+    "libelle": "Fabrication d'outillage portatif \u00e0 moteur incorpor\u00e9"
+  },
+  {
+    "code_naf": "28.25Z",
+    "libelle": "Fabrication d'\u00e9quipements a\u00e9rauliques et frigorifiques industriels"
+  },
+  {
+    "code_naf": "28.29A",
+    "libelle": "Fabrication d'\u00e9quipements d'emballage, de conditionnement et de pesage"
+  },
+  {
+    "code_naf": "28.29B",
+    "libelle": "Fabrication d'autres machines d'usage g\u00e9n\u00e9ral"
+  },
+  {
+    "code_naf": "28.30Z",
+    "libelle": "Fabrication de machines agricoles et foresti\u00e8res"
+  },
+  {
+    "code_naf": "28.41Z",
+    "libelle": "Fabrication de machines-outils pour le travail des m\u00e9taux"
+  },
+  {
+    "code_naf": "28.49Z",
+    "libelle": "Fabrication d'autres machines-outils"
+  },
+  {
+    "code_naf": "28.91Z",
+    "libelle": "Fabrication de machines pour la m\u00e9tallurgie"
+  },
+  {
+    "code_naf": "28.92Z",
+    "libelle": "Fabrication de machines pour l'extraction ou la construction"
+  },
+  {
+    "code_naf": "28.93Z",
+    "libelle": "Fabrication de machines pour l'industrie agro-alimentaire"
+  },
+  {
+    "code_naf": "28.94Z",
+    "libelle": "Fabrication de machines pour les industries textiles"
+  },
+  {
+    "code_naf": "28.95Z",
+    "libelle": "Fabrication de machines pour les industries du papier et du carton"
+  },
+  {
+    "code_naf": "28.96Z",
+    "libelle": "Fabrication de machines pour le travail du caoutchouc ou des plastiques"
+  },
+  {
+    "code_naf": "28.99A",
+    "libelle": "Fabrication de machines d'imprimerie"
+  },
+  {
+    "code_naf": "28.99B",
+    "libelle": "Fabrication d'autres machines sp\u00e9cialis\u00e9es"
+  },
+  {
+    "code_naf": "29.10Z",
+    "libelle": "Construction de v\u00e9hicules automobiles"
+  },
+  {
+    "code_naf": "29.20Z",
+    "libelle": "Fabrication de carrosseries et remorques"
+  },
+  {
+    "code_naf": "29.31Z",
+    "libelle": "Fabrication d'\u00e9quipements \u00e9lectriques et \u00e9lectroniques automobiles"
+  },
+  {
+    "code_naf": "29.32Z",
+    "libelle": "Fabrication d'autres \u00e9quipements automobiles"
+  },
+  {
+    "code_naf": "30.11Z",
+    "libelle": "Construction de navires et de structures flottantes"
+  },
+  {
+    "code_naf": "30.12Z",
+    "libelle": "Construction de bateaux de plaisance"
+  },
+  {
+    "code_naf": "30.20Z",
+    "libelle": "Construction de locomotives et d'autre mat\u00e9riel ferroviaire roulant"
+  },
+  {
+    "code_naf": "30.30Z",
+    "libelle": "Construction a\u00e9ronautique et spatiale"
+  },
+  {
+    "code_naf": "30.40Z",
+    "libelle": "Construction de v\u00e9hicules militaires de combat"
+  },
+  {
+    "code_naf": "30.91Z",
+    "libelle": "Fabrication de motocycles"
+  },
+  {
+    "code_naf": "30.92Z",
+    "libelle": "Fabrication de bicyclettes et de v\u00e9hicules pour invalides"
+  },
+  {
+    "code_naf": "30.99Z",
+    "libelle": "Fabrication d'autres \u00e9quipements de transport n.c.a."
+  },
+  {
+    "code_naf": "31.01Z",
+    "libelle": "Fabrication de meubles de bureau et de magasin"
+  },
+  {
+    "code_naf": "31.02Z",
+    "libelle": "Fabrication de meubles de cuisine"
+  },
+  {
+    "code_naf": "31.03Z",
+    "libelle": "Fabrication de matelas"
+  },
+  {
+    "code_naf": "31.09A",
+    "libelle": "Fabrication de si\u00e8ges d'ameublement d'int\u00e9rieur"
+  },
+  {
+    "code_naf": "31.09B",
+    "libelle": "Fabrication d'autres meubles et industries connexes de l'ameublement"
+  },
+  {
+    "code_naf": "32.11Z",
+    "libelle": "Frappe de monnaie"
+  },
+  {
+    "code_naf": "32.12Z",
+    "libelle": "Fabrication d'articles de joaillerie et bijouterie"
+  },
+  {
+    "code_naf": "32.13Z",
+    "libelle": "Fabrication d'articles de bijouterie fantaisie et articles similaires"
+  },
+  {
+    "code_naf": "32.20Z",
+    "libelle": "Fabrication d'instruments de musique"
+  },
+  {
+    "code_naf": "32.30Z",
+    "libelle": "Fabrication d'articles de sport"
+  },
+  {
+    "code_naf": "32.40Z",
+    "libelle": "Fabrication de jeux et jouets"
+  },
+  {
+    "code_naf": "32.50A",
+    "libelle": "Fabrication de mat\u00e9riel m\u00e9dico-chirurgical et dentaire"
+  },
+  {
+    "code_naf": "32.50B",
+    "libelle": "Fabrication de lunettes"
+  },
+  {
+    "code_naf": "32.91Z",
+    "libelle": "Fabrication d'articles de brosserie"
+  },
+  {
+    "code_naf": "32.99Z",
+    "libelle": "Autres activit\u00e9s manufacturi\u00e8res n.c.a."
+  },
+  {
+    "code_naf": "33.11Z",
+    "libelle": "R\u00e9paration d'ouvrages en m\u00e9taux"
+  },
+  {
+    "code_naf": "33.12Z",
+    "libelle": "R\u00e9paration de machines et \u00e9quipements m\u00e9caniques"
+  },
+  {
+    "code_naf": "33.13Z",
+    "libelle": "R\u00e9paration de mat\u00e9riels \u00e9lectroniques et optiques"
+  },
+  {
+    "code_naf": "33.14Z",
+    "libelle": "R\u00e9paration d'\u00e9quipements \u00e9lectriques"
+  },
+  {
+    "code_naf": "33.15Z",
+    "libelle": "R\u00e9paration et maintenance navale"
+  },
+  {
+    "code_naf": "33.16Z",
+    "libelle": "R\u00e9paration et maintenance d'a\u00e9ronefs et d'engins spatiaux"
+  },
+  {
+    "code_naf": "33.17Z",
+    "libelle": "R\u00e9paration et maintenance d'autres \u00e9quipements de transport"
+  },
+  {
+    "code_naf": "33.19Z",
+    "libelle": "R\u00e9paration d'autres \u00e9quipements"
+  },
+  {
+    "code_naf": "33.20A",
+    "libelle": "Installation de structures m\u00e9talliques, chaudronn\u00e9es et de tuyauterie"
+  },
+  {
+    "code_naf": "33.20B",
+    "libelle": "Installation de machines et \u00e9quipements m\u00e9caniques"
+  },
+  {
+    "code_naf": "33.20C",
+    "libelle": "Conception d'ensemble et assemblage sur site industriel d'\u00e9quipements de contr\u00f4le des processus industriels"
+  },
+  {
+    "code_naf": "33.20D",
+    "libelle": "Installation d'\u00e9quipements \u00e9lectriques, de mat\u00e9riels \u00e9lectroniques et optiques ou d'autres mat\u00e9riels"
+  },
+  {
+    "code_naf": "35.11Z",
+    "libelle": "Production d'\u00e9lectricit\u00e9"
+  },
+  {
+    "code_naf": "35.12Z",
+    "libelle": "Transport d'\u00e9lectricit\u00e9"
+  },
+  {
+    "code_naf": "35.13Z",
+    "libelle": "Distribution d'\u00e9lectricit\u00e9"
+  },
+  {
+    "code_naf": "35.14Z",
+    "libelle": "Commerce d'\u00e9lectricit\u00e9"
+  },
+  {
+    "code_naf": "35.21Z",
+    "libelle": "Production de combustibles gazeux"
+  },
+  {
+    "code_naf": "35.22Z",
+    "libelle": "Distribution de combustibles gazeux par conduites"
+  },
+  {
+    "code_naf": "35.23Z",
+    "libelle": "Commerce de combustibles gazeux par conduites"
+  },
+  {
+    "code_naf": "35.30Z",
+    "libelle": "Production et distribution de vapeur et d'air conditionn\u00e9"
+  },
+  {
+    "code_naf": "36.00Z",
+    "libelle": "Captage, traitement et distribution d'eau"
+  },
+  {
+    "code_naf": "37.00Z",
+    "libelle": "Collecte et traitement des eaux us\u00e9es"
+  },
+  {
+    "code_naf": "38.11Z",
+    "libelle": "Collecte des d\u00e9chets non dangereux"
+  },
+  {
+    "code_naf": "38.12Z",
+    "libelle": "Collecte des d\u00e9chets dangereux"
+  },
+  {
+    "code_naf": "38.21Z",
+    "libelle": "Traitement et \u00e9limination des d\u00e9chets non dangereux"
+  },
+  {
+    "code_naf": "38.22Z",
+    "libelle": "Traitement et \u00e9limination des d\u00e9chets dangereux"
+  },
+  {
+    "code_naf": "38.31Z",
+    "libelle": "D\u00e9mant\u00e8lement d'\u00e9paves"
+  },
+  {
+    "code_naf": "38.32Z",
+    "libelle": "R\u00e9cup\u00e9ration de d\u00e9chets tri\u00e9s"
+  },
+  {
+    "code_naf": "39.00Z",
+    "libelle": "D\u00e9pollution et autres services de gestion des d\u00e9chets"
+  },
+  {
+    "code_naf": "41.10A",
+    "libelle": "Promotion immobili\u00e8re de logements"
+  },
+  {
+    "code_naf": "41.10B",
+    "libelle": "Promotion immobili\u00e8re de bureaux"
+  },
+  {
+    "code_naf": "41.10C",
+    "libelle": "Promotion immobili\u00e8re d'autres b\u00e2timents"
+  },
+  {
+    "code_naf": "41.10D",
+    "libelle": "Supports juridiques de programmes"
+  },
+  {
+    "code_naf": "41.20A",
+    "libelle": "Construction de maisons individuelles"
+  },
+  {
+    "code_naf": "41.20B",
+    "libelle": "Construction d'autres b\u00e2timents"
+  },
+  {
+    "code_naf": "42.11Z",
+    "libelle": "Construction de routes et autoroutes"
+  },
+  {
+    "code_naf": "42.12Z",
+    "libelle": "Construction de voies ferr\u00e9es de surface et souterraines"
+  },
+  {
+    "code_naf": "42.13A",
+    "libelle": "Construction d'ouvrages d'art"
+  },
+  {
+    "code_naf": "42.13B",
+    "libelle": "Construction et entretien de tunnels"
+  },
+  {
+    "code_naf": "42.21Z",
+    "libelle": "Construction de r\u00e9seaux pour fluides"
+  },
+  {
+    "code_naf": "42.22Z",
+    "libelle": "Construction de r\u00e9seaux \u00e9lectriques et de t\u00e9l\u00e9communications"
+  },
+  {
+    "code_naf": "42.91Z",
+    "libelle": "Construction d'ouvrages maritimes et fluviaux"
+  },
+  {
+    "code_naf": "42.99Z",
+    "libelle": "Construction d'autres ouvrages de g\u00e9nie civil n.c.a."
+  },
+  {
+    "code_naf": "43.11Z",
+    "libelle": "Travaux de d\u00e9molition"
+  },
+  {
+    "code_naf": "43.12A",
+    "libelle": "Travaux de terrassement courants et travaux pr\u00e9paratoires"
+  },
+  {
+    "code_naf": "43.12B",
+    "libelle": "Travaux de terrassement sp\u00e9cialis\u00e9s ou de grande masse"
+  },
+  {
+    "code_naf": "43.13Z",
+    "libelle": "Forages et sondages"
+  },
+  {
+    "code_naf": "43.21A",
+    "libelle": "Travaux d'installation \u00e9lectrique dans tous locaux"
+  },
+  {
+    "code_naf": "43.21B",
+    "libelle": "Travaux d'installation \u00e9lectrique sur la voie publique"
+  },
+  {
+    "code_naf": "43.22A",
+    "libelle": "Travaux d'installation d'eau et de gaz en tous locaux"
+  },
+  {
+    "code_naf": "43.22B",
+    "libelle": "Travaux d'installation d'\u00e9quipements thermiques et de climatisation"
+  },
+  {
+    "code_naf": "43.29A",
+    "libelle": "Travaux d'isolation"
+  },
+  {
+    "code_naf": "43.29B",
+    "libelle": "Autres travaux d'installation n.c.a."
+  },
+  {
+    "code_naf": "43.31Z",
+    "libelle": "Travaux de pl\u00e2trerie"
+  },
+  {
+    "code_naf": "43.32A",
+    "libelle": "Travaux de menuiserie bois et PVC"
+  },
+  {
+    "code_naf": "43.32B",
+    "libelle": "Travaux de menuiserie m\u00e9tallique et serrurerie"
+  },
+  {
+    "code_naf": "43.32C",
+    "libelle": "Agencement de lieux de vente"
+  },
+  {
+    "code_naf": "43.33Z",
+    "libelle": "Travaux de rev\u00eatement des sols et des murs"
+  },
+  {
+    "code_naf": "43.34Z",
+    "libelle": "Travaux de peinture et vitrerie"
+  },
+  {
+    "code_naf": "43.39Z",
+    "libelle": "Autres travaux de finition"
+  },
+  {
+    "code_naf": "43.91A",
+    "libelle": "Travaux de charpente"
+  },
+  {
+    "code_naf": "43.91B",
+    "libelle": "Travaux de couverture par \u00e9l\u00e9ments"
+  },
+  {
+    "code_naf": "43.99A",
+    "libelle": "Travaux d'\u00e9tanch\u00e9ification"
+  },
+  {
+    "code_naf": "43.99B",
+    "libelle": "Travaux de montage de structures m\u00e9talliques"
+  },
+  {
+    "code_naf": "43.99C",
+    "libelle": "Travaux de ma\u00e7onnerie g\u00e9n\u00e9rale et gros \u0153uvre de b\u00e2timent"
+  },
+  {
+    "code_naf": "43.99D",
+    "libelle": "Autres travaux sp\u00e9cialis\u00e9s de construction"
+  },
+  {
+    "code_naf": "43.99E",
+    "libelle": "Location avec op\u00e9rateur de mat\u00e9riel de construction"
+  },
+  {
+    "code_naf": "45.11Z",
+    "libelle": "Commerce de voitures et de v\u00e9hicules automobiles l\u00e9gers"
+  },
+  {
+    "code_naf": "45.19Z",
+    "libelle": "Commerce d'autres v\u00e9hicules automobiles"
+  },
+  {
+    "code_naf": "45.20A",
+    "libelle": "Entretien et r\u00e9paration de v\u00e9hicules automobiles l\u00e9gers"
+  },
+  {
+    "code_naf": "45.20B",
+    "libelle": "Entretien et r\u00e9paration d'autres v\u00e9hicules automobiles"
+  },
+  {
+    "code_naf": "45.31Z",
+    "libelle": "Commerce de gros d'\u00e9quipements automobiles"
+  },
+  {
+    "code_naf": "45.32Z",
+    "libelle": "Commerce de d\u00e9tail d'\u00e9quipements automobiles"
+  },
+  {
+    "code_naf": "45.40Z",
+    "libelle": "Commerce et r\u00e9paration de motocycles"
+  },
+  {
+    "code_naf": "46.11Z",
+    "libelle": "Interm\u00e9diaires du commerce en mati\u00e8res premi\u00e8res agricoles, animaux vivants, mati\u00e8res premi\u00e8res textiles et produits semi-finis"
+  },
+  {
+    "code_naf": "46.12A",
+    "libelle": "Centrales d'achat de carburant"
+  },
+  {
+    "code_naf": "46.12B",
+    "libelle": "Autres interm\u00e9diaires du commerce en combustibles, m\u00e9taux, min\u00e9raux et produits chimiques"
+  },
+  {
+    "code_naf": "46.13Z",
+    "libelle": "Interm\u00e9diaires du commerce en bois et mat\u00e9riaux de construction"
+  },
+  {
+    "code_naf": "46.14Z",
+    "libelle": "Interm\u00e9diaires du commerce en machines, \u00e9quipements industriels, navires et avions"
+  },
+  {
+    "code_naf": "46.15Z",
+    "libelle": "Interm\u00e9diaires du commerce en meubles, articles de m\u00e9nage et quincaillerie"
+  },
+  {
+    "code_naf": "46.16Z",
+    "libelle": "Interm\u00e9diaires du commerce en textiles, habillement, fourrures, chaussures et articles en cuir"
+  },
+  {
+    "code_naf": "46.17A",
+    "libelle": "Centrales d'achat alimentaires"
+  },
+  {
+    "code_naf": "46.17B",
+    "libelle": "Autres interm\u00e9diaires du commerce en denr\u00e9es, boissons et tabac"
+  },
+  {
+    "code_naf": "46.18Z",
+    "libelle": "Interm\u00e9diaires sp\u00e9cialis\u00e9s dans le commerce d'autres produits sp\u00e9cifiques"
+  },
+  {
+    "code_naf": "46.19A",
+    "libelle": "Centrales d'achat non alimentaires"
+  },
+  {
+    "code_naf": "46.19B",
+    "libelle": "Autres interm\u00e9diaires du commerce en produits divers"
+  },
+  {
+    "code_naf": "46.21Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de c\u00e9r\u00e9ales, de tabac non manufactur\u00e9, de semences et d'aliments pour le b\u00e9tail"
+  },
+  {
+    "code_naf": "46.22Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de fleurs et plantes"
+  },
+  {
+    "code_naf": "46.23Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'animaux vivants"
+  },
+  {
+    "code_naf": "46.24Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de cuirs et peaux"
+  },
+  {
+    "code_naf": "46.31Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de fruits et l\u00e9gumes"
+  },
+  {
+    "code_naf": "46.32A",
+    "libelle": "Commerce de gros (commerce interentreprises) de viandes de boucherie"
+  },
+  {
+    "code_naf": "46.32B",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits \u00e0 base de viande"
+  },
+  {
+    "code_naf": "46.32C",
+    "libelle": "Commerce de gros (commerce interentreprises) de volailles et gibier"
+  },
+  {
+    "code_naf": "46.33Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits laitiers, \u0153ufs, huiles et mati\u00e8res grasses comestibles"
+  },
+  {
+    "code_naf": "46.34Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de boissons"
+  },
+  {
+    "code_naf": "46.35Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits \u00e0 base de tabac"
+  },
+  {
+    "code_naf": "46.36Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de sucre, chocolat et confiserie"
+  },
+  {
+    "code_naf": "46.37Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de caf\u00e9, th\u00e9, cacao et \u00e9pices"
+  },
+  {
+    "code_naf": "46.38A",
+    "libelle": "Commerce de gros (commerce interentreprises) de poissons, crustac\u00e9s et mollusques"
+  },
+  {
+    "code_naf": "46.38B",
+    "libelle": "Commerce de gros (commerce interentreprises) alimentaire sp\u00e9cialis\u00e9 divers"
+  },
+  {
+    "code_naf": "46.39A",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits surgel\u00e9s"
+  },
+  {
+    "code_naf": "46.39B",
+    "libelle": "Commerce de gros (commerce interentreprises) alimentaire non sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "46.41Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de textiles"
+  },
+  {
+    "code_naf": "46.42Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'habillement et de chaussures"
+  },
+  {
+    "code_naf": "46.43Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'appareils \u00e9lectrom\u00e9nagers"
+  },
+  {
+    "code_naf": "46.44Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de vaisselle, verrerie et produits d'entretien"
+  },
+  {
+    "code_naf": "46.45Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de parfumerie et de produits de beaut\u00e9"
+  },
+  {
+    "code_naf": "46.46Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits pharmaceutiques"
+  },
+  {
+    "code_naf": "46.47Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de meubles, de tapis et d'appareils d'\u00e9clairage"
+  },
+  {
+    "code_naf": "46.48Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'articles d'horlogerie et de bijouterie"
+  },
+  {
+    "code_naf": "46.49Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'autres biens domestiques"
+  },
+  {
+    "code_naf": "46.51Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'ordinateurs, d'\u00e9quipements informatiques p\u00e9riph\u00e9riques et de logiciels"
+  },
+  {
+    "code_naf": "46.52Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de composants et d'\u00e9quipements \u00e9lectroniques et de t\u00e9l\u00e9communication"
+  },
+  {
+    "code_naf": "46.61Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de mat\u00e9riel agricole"
+  },
+  {
+    "code_naf": "46.62Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de machines-outils"
+  },
+  {
+    "code_naf": "46.63Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de machines pour l'extraction, la construction et le g\u00e9nie civil"
+  },
+  {
+    "code_naf": "46.64Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de machines pour l'industrie textile et l'habillement"
+  },
+  {
+    "code_naf": "46.65Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de mobilier de bureau"
+  },
+  {
+    "code_naf": "46.66Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'autres machines et \u00e9quipements de bureau"
+  },
+  {
+    "code_naf": "46.69A",
+    "libelle": "Commerce de gros (commerce interentreprises) de mat\u00e9riel \u00e9lectrique"
+  },
+  {
+    "code_naf": "46.69B",
+    "libelle": "Commerce de gros (commerce interentreprises) de fournitures et \u00e9quipements industriels divers"
+  },
+  {
+    "code_naf": "46.69C",
+    "libelle": "Commerce de gros (commerce interentreprises) de fournitures et \u00e9quipements divers pour le commerce et les services"
+  },
+  {
+    "code_naf": "46.71Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de combustibles et de produits annexes"
+  },
+  {
+    "code_naf": "46.72Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de minerais et m\u00e9taux"
+  },
+  {
+    "code_naf": "46.73A",
+    "libelle": "Commerce de gros (commerce interentreprises) de bois et de mat\u00e9riaux de construction"
+  },
+  {
+    "code_naf": "46.73B",
+    "libelle": "Commerce de gros (commerce interentreprises) d'appareils sanitaires et de produits de d\u00e9coration"
+  },
+  {
+    "code_naf": "46.74A",
+    "libelle": "Commerce de gros (commerce interentreprises) de quincaillerie"
+  },
+  {
+    "code_naf": "46.74B",
+    "libelle": "Commerce de gros (commerce interentreprises) de fournitures pour la plomberie et le chauffage"
+  },
+  {
+    "code_naf": "46.75Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de produits chimiques"
+  },
+  {
+    "code_naf": "46.76Z",
+    "libelle": "Commerce de gros (commerce interentreprises) d'autres produits interm\u00e9diaires"
+  },
+  {
+    "code_naf": "46.77Z",
+    "libelle": "Commerce de gros (commerce interentreprises) de d\u00e9chets et d\u00e9bris"
+  },
+  {
+    "code_naf": "46.90Z",
+    "libelle": "Commerce de gros (commerce interentreprises) non sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.11A",
+    "libelle": "Commerce de d\u00e9tail de produits surgel\u00e9s"
+  },
+  {
+    "code_naf": "47.11B",
+    "libelle": "Commerce d'alimentation g\u00e9n\u00e9rale"
+  },
+  {
+    "code_naf": "47.11C",
+    "libelle": "Sup\u00e9rettes"
+  },
+  {
+    "code_naf": "47.11D",
+    "libelle": "Supermarch\u00e9s"
+  },
+  {
+    "code_naf": "47.11E",
+    "libelle": "Magasins multi-commerces"
+  },
+  {
+    "code_naf": "47.11F",
+    "libelle": "Hypermarch\u00e9s"
+  },
+  {
+    "code_naf": "47.19A",
+    "libelle": "Grands magasins"
+  },
+  {
+    "code_naf": "47.19B",
+    "libelle": "Autres commerces de d\u00e9tail en magasin non sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.21Z",
+    "libelle": "Commerce de d\u00e9tail de fruits et l\u00e9gumes en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.22Z",
+    "libelle": "Commerce de d\u00e9tail de viandes et de produits \u00e0 base de viande en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.23Z",
+    "libelle": "Commerce de d\u00e9tail de poissons, crustac\u00e9s et mollusques en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.24Z",
+    "libelle": "Commerce de d\u00e9tail de pain, p\u00e2tisserie et confiserie en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.25Z",
+    "libelle": "Commerce de d\u00e9tail de boissons en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.26Z",
+    "libelle": "Commerce de d\u00e9tail de produits \u00e0 base de tabac en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.29Z",
+    "libelle": "Autres commerces de d\u00e9tail alimentaires en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.30Z",
+    "libelle": "Commerce de d\u00e9tail de carburants en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.41Z",
+    "libelle": "Commerce de d\u00e9tail d'ordinateurs, d'unit\u00e9s p\u00e9riph\u00e9riques et de logiciels en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.42Z",
+    "libelle": "Commerce de d\u00e9tail de mat\u00e9riels de t\u00e9l\u00e9communication en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.43Z",
+    "libelle": "Commerce de d\u00e9tail de mat\u00e9riels audio et vid\u00e9o en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.51Z",
+    "libelle": "Commerce de d\u00e9tail de textiles en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.52A",
+    "libelle": "Commerce de d\u00e9tail de quincaillerie, peintures et verres en petites surfaces (moins de 400 m\u00b2)"
+  },
+  {
+    "code_naf": "47.52B",
+    "libelle": "Commerce de d\u00e9tail de quincaillerie, peintures et verres en grandes surfaces (400 m\u00b2 et plus)"
+  },
+  {
+    "code_naf": "47.53Z",
+    "libelle": "Commerce de d\u00e9tail de tapis, moquettes et rev\u00eatements de murs et de sols en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.54Z",
+    "libelle": "Commerce de d\u00e9tail d'appareils \u00e9lectrom\u00e9nagers en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.59A",
+    "libelle": "Commerce de d\u00e9tail de meubles"
+  },
+  {
+    "code_naf": "47.59B",
+    "libelle": "Commerce de d\u00e9tail d'autres \u00e9quipements du foyer"
+  },
+  {
+    "code_naf": "47.61Z",
+    "libelle": "Commerce de d\u00e9tail de livres en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.62Z",
+    "libelle": "Commerce de d\u00e9tail de journaux et papeterie en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.63Z",
+    "libelle": "Commerce de d\u00e9tail d'enregistrements musicaux et vid\u00e9o en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.64Z",
+    "libelle": "Commerce de d\u00e9tail d'articles de sport en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.65Z",
+    "libelle": "Commerce de d\u00e9tail de jeux et jouets en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.71Z",
+    "libelle": "Commerce de d\u00e9tail d'habillement en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.72A",
+    "libelle": "Commerce de d\u00e9tail de la chaussure"
+  },
+  {
+    "code_naf": "47.72B",
+    "libelle": "Commerce de d\u00e9tail de maroquinerie et d'articles de voyage"
+  },
+  {
+    "code_naf": "47.73Z",
+    "libelle": "Commerce de d\u00e9tail de produits pharmaceutiques en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.74Z",
+    "libelle": "Commerce de d\u00e9tail d'articles m\u00e9dicaux et orthop\u00e9diques en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.75Z",
+    "libelle": "Commerce de d\u00e9tail de parfumerie et de produits de beaut\u00e9 en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.76Z",
+    "libelle": "Commerce de d\u00e9tail de fleurs, plantes, graines, engrais, animaux de compagnie et aliments pour ces animaux en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.77Z",
+    "libelle": "Commerce de d\u00e9tail d'articles d'horlogerie et de bijouterie en magasin sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.78A",
+    "libelle": "Commerces de d\u00e9tail d'optique"
+  },
+  {
+    "code_naf": "47.78B",
+    "libelle": "Commerces de d\u00e9tail de charbons et combustibles"
+  },
+  {
+    "code_naf": "47.78C",
+    "libelle": "Autres commerces de d\u00e9tail sp\u00e9cialis\u00e9s divers"
+  },
+  {
+    "code_naf": "47.79Z",
+    "libelle": "Commerce de d\u00e9tail de biens d'occasion en magasin"
+  },
+  {
+    "code_naf": "47.81Z",
+    "libelle": "Commerce de d\u00e9tail alimentaire sur \u00e9ventaires et march\u00e9s"
+  },
+  {
+    "code_naf": "47.82Z",
+    "libelle": "Commerce de d\u00e9tail de textiles, d'habillement et de chaussures sur \u00e9ventaires et march\u00e9s"
+  },
+  {
+    "code_naf": "47.89Z",
+    "libelle": "Autres commerces de d\u00e9tail sur \u00e9ventaires et march\u00e9s"
+  },
+  {
+    "code_naf": "47.91A",
+    "libelle": "Vente \u00e0 distance sur catalogue g\u00e9n\u00e9ral"
+  },
+  {
+    "code_naf": "47.91B",
+    "libelle": "Vente \u00e0 distance sur catalogue sp\u00e9cialis\u00e9"
+  },
+  {
+    "code_naf": "47.99A",
+    "libelle": "Vente \u00e0 domicile"
+  },
+  {
+    "code_naf": "47.99B",
+    "libelle": "Vente par automates et autres commerces de d\u00e9tail hors magasin, \u00e9ventaires ou march\u00e9s n.c.a."
+  },
+  {
+    "code_naf": "49.10Z",
+    "libelle": "Transport ferroviaire interurbain de voyageurs"
+  },
+  {
+    "code_naf": "49.20Z",
+    "libelle": "Transports ferroviaires de fret"
+  },
+  {
+    "code_naf": "49.31Z",
+    "libelle": "Transports urbains et suburbains de voyageurs"
+  },
+  {
+    "code_naf": "49.32Z",
+    "libelle": "Transports de voyageurs par taxis"
+  },
+  {
+    "code_naf": "49.39A",
+    "libelle": "Transports routiers r\u00e9guliers de voyageurs"
+  },
+  {
+    "code_naf": "49.39B",
+    "libelle": "Autres transports routiers de voyageurs"
+  },
+  {
+    "code_naf": "49.39C",
+    "libelle": "T\u00e9l\u00e9ph\u00e9riques et remont\u00e9es m\u00e9caniques"
+  },
+  {
+    "code_naf": "49.41A",
+    "libelle": "Transports routiers de fret interurbains"
+  },
+  {
+    "code_naf": "49.41B",
+    "libelle": "Transports routiers de fret de proximit\u00e9"
+  },
+  {
+    "code_naf": "49.41C",
+    "libelle": "Location de camions avec chauffeur"
+  },
+  {
+    "code_naf": "49.42Z",
+    "libelle": "Services de d\u00e9m\u00e9nagement"
+  },
+  {
+    "code_naf": "49.50Z",
+    "libelle": "Transports par conduites"
+  },
+  {
+    "code_naf": "50.10Z",
+    "libelle": "Transports maritimes et c\u00f4tiers de passagers"
+  },
+  {
+    "code_naf": "50.20Z",
+    "libelle": "Transports maritimes et c\u00f4tiers de fret"
+  },
+  {
+    "code_naf": "50.30Z",
+    "libelle": "Transports fluviaux de passagers"
+  },
+  {
+    "code_naf": "50.40Z",
+    "libelle": "Transports fluviaux de fret"
+  },
+  {
+    "code_naf": "51.10Z",
+    "libelle": "Transports a\u00e9riens de passagers"
+  },
+  {
+    "code_naf": "51.21Z",
+    "libelle": "Transports a\u00e9riens de fret"
+  },
+  {
+    "code_naf": "51.22Z",
+    "libelle": "Transports spatiaux"
+  },
+  {
+    "code_naf": "52.10A",
+    "libelle": "Entreposage et stockage frigorifique"
+  },
+  {
+    "code_naf": "52.10B",
+    "libelle": "Entreposage et stockage non frigorifique"
+  },
+  {
+    "code_naf": "52.21Z",
+    "libelle": "Services auxiliaires des transports terrestres"
+  },
+  {
+    "code_naf": "52.22Z",
+    "libelle": "Services auxiliaires des transports par eau"
+  },
+  {
+    "code_naf": "52.23Z",
+    "libelle": "Services auxiliaires des transports a\u00e9riens"
+  },
+  {
+    "code_naf": "52.24A",
+    "libelle": "Manutention portuaire"
+  },
+  {
+    "code_naf": "52.24B",
+    "libelle": "Manutention non portuaire"
+  },
+  {
+    "code_naf": "52.29A",
+    "libelle": "Messagerie, fret express"
+  },
+  {
+    "code_naf": "52.29B",
+    "libelle": "Affr\u00e8tement et organisation des transports"
+  },
+  {
+    "code_naf": "53.10Z",
+    "libelle": "Activit\u00e9s de poste dans le cadre d'une obligation de service universel"
+  },
+  {
+    "code_naf": "53.20Z",
+    "libelle": "Autres activit\u00e9s de poste et de courrier"
+  },
+  {
+    "code_naf": "55.10Z",
+    "libelle": "H\u00f4tels et h\u00e9bergement similaire"
+  },
+  {
+    "code_naf": "55.20Z",
+    "libelle": "H\u00e9bergement touristique et autre h\u00e9bergement de courte dur\u00e9e"
+  },
+  {
+    "code_naf": "55.30Z",
+    "libelle": "Terrains de camping et parcs pour caravanes ou v\u00e9hicules de loisirs"
+  },
+  {
+    "code_naf": "55.90Z",
+    "libelle": "Autres h\u00e9bergements"
+  },
+  {
+    "code_naf": "56.10A",
+    "libelle": "Restauration traditionnelle"
+  },
+  {
+    "code_naf": "56.10B",
+    "libelle": "Caf\u00e9t\u00e9rias et autres libres-services"
+  },
+  {
+    "code_naf": "56.10C",
+    "libelle": "Restauration de type rapide"
+  },
+  {
+    "code_naf": "56.21Z",
+    "libelle": "Services des traiteurs"
+  },
+  {
+    "code_naf": "56.29A",
+    "libelle": "Restauration collective sous contrat"
+  },
+  {
+    "code_naf": "56.29B",
+    "libelle": "Autres services de restauration n.c.a."
+  },
+  {
+    "code_naf": "56.30Z",
+    "libelle": "D\u00e9bits de boissons"
+  },
+  {
+    "code_naf": "58.11Z",
+    "libelle": "\u00c9dition de livres"
+  },
+  {
+    "code_naf": "58.12Z",
+    "libelle": "\u00c9dition de r\u00e9pertoires et de fichiers d'adresses"
+  },
+  {
+    "code_naf": "58.13Z",
+    "libelle": "\u00c9dition de journaux"
+  },
+  {
+    "code_naf": "58.14Z",
+    "libelle": "\u00c9dition de revues et p\u00e9riodiques"
+  },
+  {
+    "code_naf": "58.19Z",
+    "libelle": "Autres activit\u00e9s d'\u00e9dition"
+  },
+  {
+    "code_naf": "58.21Z",
+    "libelle": "\u00c9dition de jeux \u00e9lectroniques"
+  },
+  {
+    "code_naf": "58.29A",
+    "libelle": "\u00c9dition de logiciels syst\u00e8me et de r\u00e9seau"
+  },
+  {
+    "code_naf": "58.29B",
+    "libelle": "\u00c9dition de logiciels outils de d\u00e9veloppement et de langages"
+  },
+  {
+    "code_naf": "58.29C",
+    "libelle": "\u00c9dition de logiciels applicatifs"
+  },
+  {
+    "code_naf": "59.11A",
+    "libelle": "Production de films et de programmes pour la t\u00e9l\u00e9vision"
+  },
+  {
+    "code_naf": "59.11B",
+    "libelle": "Production de films institutionnels et publicitaires"
+  },
+  {
+    "code_naf": "59.11C",
+    "libelle": "Production de films pour le cin\u00e9ma"
+  },
+  {
+    "code_naf": "59.12Z",
+    "libelle": "Post-production de films cin\u00e9matographiques, de vid\u00e9o et de programmes de t\u00e9l\u00e9vision"
+  },
+  {
+    "code_naf": "59.13A",
+    "libelle": "Distribution de films cin\u00e9matographiques"
+  },
+  {
+    "code_naf": "59.13B",
+    "libelle": "\u00c9dition et distribution vid\u00e9o"
+  },
+  {
+    "code_naf": "59.14Z",
+    "libelle": "Projection de films cin\u00e9matographiques"
+  },
+  {
+    "code_naf": "59.20Z",
+    "libelle": "Enregistrement sonore et \u00e9dition musicale"
+  },
+  {
+    "code_naf": "60.10Z",
+    "libelle": "\u00c9dition et diffusion de programmes radio"
+  },
+  {
+    "code_naf": "60.20A",
+    "libelle": "\u00c9dition de cha\u00eenes g\u00e9n\u00e9ralistes"
+  },
+  {
+    "code_naf": "60.20B",
+    "libelle": "\u00c9dition de cha\u00eenes th\u00e9matiques"
+  },
+  {
+    "code_naf": "61.10Z",
+    "libelle": "T\u00e9l\u00e9communications filaires"
+  },
+  {
+    "code_naf": "61.20Z",
+    "libelle": "T\u00e9l\u00e9communications sans fil"
+  },
+  {
+    "code_naf": "61.30Z",
+    "libelle": "T\u00e9l\u00e9communications par satellite"
+  },
+  {
+    "code_naf": "61.90Z",
+    "libelle": "Autres activit\u00e9s de t\u00e9l\u00e9communication"
+  },
+  {
+    "code_naf": "62.01Z",
+    "libelle": "Programmation informatique"
+  },
+  {
+    "code_naf": "62.02A",
+    "libelle": "Conseil en syst\u00e8mes et logiciels informatiques"
+  },
+  {
+    "code_naf": "62.02B",
+    "libelle": "Tierce maintenance de syst\u00e8mes et d'applications informatiques"
+  },
+  {
+    "code_naf": "62.03Z",
+    "libelle": "Gestion d'installations informatiques"
+  },
+  {
+    "code_naf": "62.09Z",
+    "libelle": "Autres activit\u00e9s informatiques"
+  },
+  {
+    "code_naf": "63.11Z",
+    "libelle": "Traitement de donn\u00e9es, h\u00e9bergement et activit\u00e9s connexes"
+  },
+  {
+    "code_naf": "63.12Z",
+    "libelle": "Portails Internet"
+  },
+  {
+    "code_naf": "63.91Z",
+    "libelle": "Activit\u00e9s des agences de presse"
+  },
+  {
+    "code_naf": "63.99Z",
+    "libelle": "Autres services d'information n.c.a."
+  },
+  {
+    "code_naf": "64.11Z",
+    "libelle": "Activit\u00e9s de banque centrale"
+  },
+  {
+    "code_naf": "64.19Z",
+    "libelle": "Autres interm\u00e9diations mon\u00e9taires"
+  },
+  {
+    "code_naf": "64.20Z",
+    "libelle": "Activit\u00e9s des soci\u00e9t\u00e9s holding"
+  },
+  {
+    "code_naf": "64.30Z",
+    "libelle": "Fonds de placement et entit\u00e9s financi\u00e8res similaires"
+  },
+  {
+    "code_naf": "64.91Z",
+    "libelle": "Cr\u00e9dit-bail"
+  },
+  {
+    "code_naf": "64.92Z",
+    "libelle": "Autre distribution de cr\u00e9dit"
+  },
+  {
+    "code_naf": "64.99Z",
+    "libelle": "Autres activit\u00e9s des services financiers, hors assurance et caisses de retraite, n.c.a."
+  },
+  {
+    "code_naf": "65.11Z",
+    "libelle": "Assurance vie"
+  },
+  {
+    "code_naf": "65.12Z",
+    "libelle": "Autres assurances"
+  },
+  {
+    "code_naf": "65.20Z",
+    "libelle": "R\u00e9assurance"
+  },
+  {
+    "code_naf": "65.30Z",
+    "libelle": "Caisses de retraite"
+  },
+  {
+    "code_naf": "66.11Z",
+    "libelle": "Administration de march\u00e9s financiers"
+  },
+  {
+    "code_naf": "66.12Z",
+    "libelle": "Courtage de valeurs mobili\u00e8res et de marchandises"
+  },
+  {
+    "code_naf": "66.19A",
+    "libelle": "Supports juridiques de gestion de patrimoine mobilier"
+  },
+  {
+    "code_naf": "66.19B",
+    "libelle": "Autres activit\u00e9s auxiliaires de services financiers, hors assurance et caisses de retraite, n.c.a."
+  },
+  {
+    "code_naf": "66.21Z",
+    "libelle": "\u00c9valuation des risques et dommages"
+  },
+  {
+    "code_naf": "66.22Z",
+    "libelle": "Activit\u00e9s des agents et courtiers d'assurances"
+  },
+  {
+    "code_naf": "66.29Z",
+    "libelle": "Autres activit\u00e9s auxiliaires d'assurance et de caisses de retraite"
+  },
+  {
+    "code_naf": "66.30Z",
+    "libelle": "Gestion de fonds"
+  },
+  {
+    "code_naf": "68.10Z",
+    "libelle": "Activit\u00e9s des marchands de biens immobiliers"
+  },
+  {
+    "code_naf": "68.20A",
+    "libelle": "Location de logements"
+  },
+  {
+    "code_naf": "68.20B",
+    "libelle": "Location de terrains et d'autres biens immobiliers"
+  },
+  {
+    "code_naf": "68.31Z",
+    "libelle": "Agences immobili\u00e8res"
+  },
+  {
+    "code_naf": "68.32A",
+    "libelle": "Administration d'immeubles et autres biens immobiliers"
+  },
+  {
+    "code_naf": "68.32B",
+    "libelle": "Supports juridiques de gestion de patrimoine immobilier"
+  },
+  {
+    "code_naf": "69.10Z",
+    "libelle": "Activit\u00e9s juridiques"
+  },
+  {
+    "code_naf": "69.20Z",
+    "libelle": "Activit\u00e9s comptables"
+  },
+  {
+    "code_naf": "70.10Z",
+    "libelle": "Activit\u00e9s des si\u00e8ges sociaux"
+  },
+  {
+    "code_naf": "70.21Z",
+    "libelle": "Conseil en relations publiques et communication"
+  },
+  {
+    "code_naf": "70.22Z",
+    "libelle": "Conseil pour les affaires et autres conseils de gestion"
+  },
+  {
+    "code_naf": "71.11Z",
+    "libelle": "Activit\u00e9s d'architecture"
+  },
+  {
+    "code_naf": "71.12A",
+    "libelle": "Activit\u00e9 des g\u00e9om\u00e8tres"
+  },
+  {
+    "code_naf": "71.12B",
+    "libelle": "Ing\u00e9nierie, \u00e9tudes techniques"
+  },
+  {
+    "code_naf": "71.20A",
+    "libelle": "Contr\u00f4le technique automobile"
+  },
+  {
+    "code_naf": "71.20B",
+    "libelle": "Analyses, essais et inspections techniques"
+  },
+  {
+    "code_naf": "72.11Z",
+    "libelle": "Recherche-d\u00e9veloppement en biotechnologie"
+  },
+  {
+    "code_naf": "72.19Z",
+    "libelle": "Recherche-d\u00e9veloppement en autres sciences physiques et naturelles"
+  },
+  {
+    "code_naf": "72.20Z",
+    "libelle": "Recherche-d\u00e9veloppement en sciences humaines et sociales"
+  },
+  {
+    "code_naf": "73.11Z",
+    "libelle": "Activit\u00e9s des agences de publicit\u00e9"
+  },
+  {
+    "code_naf": "73.12Z",
+    "libelle": "R\u00e9gie publicitaire de m\u00e9dias"
+  },
+  {
+    "code_naf": "73.20Z",
+    "libelle": "\u00c9tudes de march\u00e9 et sondages"
+  },
+  {
+    "code_naf": "74.10Z",
+    "libelle": "Activit\u00e9s sp\u00e9cialis\u00e9es de design"
+  },
+  {
+    "code_naf": "74.20Z",
+    "libelle": "Activit\u00e9s photographiques"
+  },
+  {
+    "code_naf": "74.30Z",
+    "libelle": "Traduction et interpr\u00e9tation"
+  },
+  {
+    "code_naf": "74.90A",
+    "libelle": "Activit\u00e9 des \u00e9conomistes de la construction"
+  },
+  {
+    "code_naf": "74.90B",
+    "libelle": "Activit\u00e9s sp\u00e9cialis\u00e9es, scientifiques et techniques diverses"
+  },
+  {
+    "code_naf": "75.00Z",
+    "libelle": "Activit\u00e9s v\u00e9t\u00e9rinaires"
+  },
+  {
+    "code_naf": "77.11A",
+    "libelle": "Location de courte dur\u00e9e de voitures et de v\u00e9hicules automobiles l\u00e9gers"
+  },
+  {
+    "code_naf": "77.11B",
+    "libelle": "Location de longue dur\u00e9e de voitures et de v\u00e9hicules automobiles l\u00e9gers"
+  },
+  {
+    "code_naf": "77.12Z",
+    "libelle": "Location et location-bail de camions"
+  },
+  {
+    "code_naf": "77.21Z",
+    "libelle": "Location et location-bail d'articles de loisirs et de sport"
+  },
+  {
+    "code_naf": "77.22Z",
+    "libelle": "Location de vid\u00e9ocassettes et disques vid\u00e9o"
+  },
+  {
+    "code_naf": "77.29Z",
+    "libelle": "Location et location-bail d'autres biens personnels et domestiques"
+  },
+  {
+    "code_naf": "77.31Z",
+    "libelle": "Location et location-bail de machines et \u00e9quipements agricoles"
+  },
+  {
+    "code_naf": "77.32Z",
+    "libelle": "Location et location-bail de machines et \u00e9quipements pour la construction"
+  },
+  {
+    "code_naf": "77.33Z",
+    "libelle": "Location et location-bail de machines de bureau et de mat\u00e9riel informatique"
+  },
+  {
+    "code_naf": "77.34Z",
+    "libelle": "Location et location-bail de mat\u00e9riels de transport par eau"
+  },
+  {
+    "code_naf": "77.35Z",
+    "libelle": "Location et location-bail de mat\u00e9riels de transport a\u00e9rien"
+  },
+  {
+    "code_naf": "77.39Z",
+    "libelle": "Location et location-bail d'autres machines, \u00e9quipements et biens mat\u00e9riels n.c.a."
+  },
+  {
+    "code_naf": "77.40Z",
+    "libelle": "Location-bail de propri\u00e9t\u00e9 intellectuelle et de produits similaires, \u00e0 l'exception des \u0153uvres soumises \u00e0 copyright"
+  },
+  {
+    "code_naf": "78.10Z",
+    "libelle": "Activit\u00e9s des agences de placement de main-d'\u0153uvre"
+  },
+  {
+    "code_naf": "78.20Z",
+    "libelle": "Activit\u00e9s des agences de travail temporaire"
+  },
+  {
+    "code_naf": "78.30Z",
+    "libelle": "Autre mise \u00e0 disposition de ressources humaines"
+  },
+  {
+    "code_naf": "79.11Z",
+    "libelle": "Activit\u00e9s des agences de voyage"
+  },
+  {
+    "code_naf": "79.12Z",
+    "libelle": "Activit\u00e9s des voyagistes"
+  },
+  {
+    "code_naf": "79.90Z",
+    "libelle": "Autres services de r\u00e9servation et activit\u00e9s connexes"
+  },
+  {
+    "code_naf": "80.10Z",
+    "libelle": "Activit\u00e9s de s\u00e9curit\u00e9 priv\u00e9e"
+  },
+  {
+    "code_naf": "80.20Z",
+    "libelle": "Activit\u00e9s li\u00e9es aux syst\u00e8mes de s\u00e9curit\u00e9"
+  },
+  {
+    "code_naf": "80.30Z",
+    "libelle": "Activit\u00e9s d'enqu\u00eate"
+  },
+  {
+    "code_naf": "81.10Z",
+    "libelle": "Activit\u00e9s combin\u00e9es de soutien li\u00e9 aux b\u00e2timents"
+  },
+  {
+    "code_naf": "81.21Z",
+    "libelle": "Nettoyage courant des b\u00e2timents"
+  },
+  {
+    "code_naf": "81.22Z",
+    "libelle": "Autres activit\u00e9s de nettoyage des b\u00e2timents et nettoyage industriel"
+  },
+  {
+    "code_naf": "81.29A",
+    "libelle": "D\u00e9sinfection, d\u00e9sinsectisation, d\u00e9ratisation"
+  },
+  {
+    "code_naf": "81.29B",
+    "libelle": "Autres activit\u00e9s de nettoyage n.c.a."
+  },
+  {
+    "code_naf": "81.30Z",
+    "libelle": "Services d'am\u00e9nagement paysager"
+  },
+  {
+    "code_naf": "82.11Z",
+    "libelle": "Services administratifs combin\u00e9s de bureau"
+  },
+  {
+    "code_naf": "82.19Z",
+    "libelle": "Photocopie, pr\u00e9paration de documents et autres activit\u00e9s sp\u00e9cialis\u00e9es de soutien de bureau"
+  },
+  {
+    "code_naf": "82.20Z",
+    "libelle": "Activit\u00e9s de centres d'appels"
+  },
+  {
+    "code_naf": "82.30Z",
+    "libelle": "Organisation de foires, salons professionnels et congr\u00e8s"
+  },
+  {
+    "code_naf": "82.91Z",
+    "libelle": "Activit\u00e9s des agences de recouvrement de factures et des soci\u00e9t\u00e9s d'information financi\u00e8re sur la client\u00e8le"
+  },
+  {
+    "code_naf": "82.92Z",
+    "libelle": "Activit\u00e9s de conditionnement"
+  },
+  {
+    "code_naf": "82.99Z",
+    "libelle": "Autres activit\u00e9s de soutien aux entreprises n.c.a."
+  },
+  {
+    "code_naf": "84.11Z",
+    "libelle": "Administration publique g\u00e9n\u00e9rale"
+  },
+  {
+    "code_naf": "84.12Z",
+    "libelle": "Administration publique (tutelle) de la sant\u00e9, de la formation, de la culture et des services sociaux, autre que s\u00e9curit\u00e9 sociale"
+  },
+  {
+    "code_naf": "84.13Z",
+    "libelle": "Administration publique (tutelle) des activit\u00e9s \u00e9conomiques"
+  },
+  {
+    "code_naf": "84.21Z",
+    "libelle": "Affaires \u00e9trang\u00e8res"
+  },
+  {
+    "code_naf": "84.22Z",
+    "libelle": "D\u00e9fense"
+  },
+  {
+    "code_naf": "84.23Z",
+    "libelle": "Justice"
+  },
+  {
+    "code_naf": "84.24Z",
+    "libelle": "Activit\u00e9s d'ordre public et de s\u00e9curit\u00e9"
+  },
+  {
+    "code_naf": "84.25Z",
+    "libelle": "Services du feu et de secours"
+  },
+  {
+    "code_naf": "84.30A",
+    "libelle": "Activit\u00e9s g\u00e9n\u00e9rales de s\u00e9curit\u00e9 sociale"
+  },
+  {
+    "code_naf": "84.30B",
+    "libelle": "Gestion des retraites compl\u00e9mentaires"
+  },
+  {
+    "code_naf": "84.30C",
+    "libelle": "Distribution sociale de revenus"
+  },
+  {
+    "code_naf": "85.10Z",
+    "libelle": "Enseignement pr\u00e9-primaire"
+  },
+  {
+    "code_naf": "85.20Z",
+    "libelle": "Enseignement primaire"
+  },
+  {
+    "code_naf": "85.31Z",
+    "libelle": "Enseignement secondaire g\u00e9n\u00e9ral"
+  },
+  {
+    "code_naf": "85.32Z",
+    "libelle": "Enseignement secondaire technique ou professionnel"
+  },
+  {
+    "code_naf": "85.41Z",
+    "libelle": "Enseignement post-secondaire non sup\u00e9rieur"
+  },
+  {
+    "code_naf": "85.42Z",
+    "libelle": "Enseignement sup\u00e9rieur"
+  },
+  {
+    "code_naf": "85.51Z",
+    "libelle": "Enseignement de disciplines sportives et d'activit\u00e9s de loisirs"
+  },
+  {
+    "code_naf": "85.52Z",
+    "libelle": "Enseignement culturel"
+  },
+  {
+    "code_naf": "85.53Z",
+    "libelle": "Enseignement de la conduite"
+  },
+  {
+    "code_naf": "85.59A",
+    "libelle": "Formation continue d'adultes"
+  },
+  {
+    "code_naf": "85.59B",
+    "libelle": "Autres enseignements"
+  },
+  {
+    "code_naf": "85.60Z",
+    "libelle": "Activit\u00e9s de soutien \u00e0 l'enseignement"
+  },
+  {
+    "code_naf": "86.10Z",
+    "libelle": "Activit\u00e9s hospitali\u00e8res"
+  },
+  {
+    "code_naf": "86.21Z",
+    "libelle": "Activit\u00e9 des m\u00e9decins g\u00e9n\u00e9ralistes"
+  },
+  {
+    "code_naf": "86.22A",
+    "libelle": "Activit\u00e9s de radiodiagnostic et de radioth\u00e9rapie"
+  },
+  {
+    "code_naf": "86.22B",
+    "libelle": "Activit\u00e9s chirurgicales"
+  },
+  {
+    "code_naf": "86.22C",
+    "libelle": "Autres activit\u00e9s des m\u00e9decins sp\u00e9cialistes"
+  },
+  {
+    "code_naf": "86.23Z",
+    "libelle": "Pratique dentaire"
+  },
+  {
+    "code_naf": "86.90A",
+    "libelle": "Ambulances"
+  },
+  {
+    "code_naf": "86.90B",
+    "libelle": "Laboratoires d'analyses m\u00e9dicales"
+  },
+  {
+    "code_naf": "86.90C",
+    "libelle": "Centres de collecte et banques d'organes"
+  },
+  {
+    "code_naf": "86.90D",
+    "libelle": "Activit\u00e9s des infirmiers et des sages-femmes"
+  },
+  {
+    "code_naf": "86.90E",
+    "libelle": "Activit\u00e9s des professionnels de la r\u00e9\u00e9ducation, de l'appareillage et des p\u00e9dicures-podologues"
+  },
+  {
+    "code_naf": "86.90F",
+    "libelle": "Activit\u00e9s de sant\u00e9 humaine non class\u00e9es ailleurs"
+  },
+  {
+    "code_naf": "87.10A",
+    "libelle": "H\u00e9bergement m\u00e9dicalis\u00e9 pour personnes \u00e2g\u00e9es"
+  },
+  {
+    "code_naf": "87.10B",
+    "libelle": "H\u00e9bergement m\u00e9dicalis\u00e9 pour enfants handicap\u00e9s"
+  },
+  {
+    "code_naf": "87.10C",
+    "libelle": "H\u00e9bergement m\u00e9dicalis\u00e9 pour adultes handicap\u00e9s et autre h\u00e9bergement m\u00e9dicalis\u00e9"
+  },
+  {
+    "code_naf": "87.20A",
+    "libelle": "H\u00e9bergement social pour handicap\u00e9s mentaux et malades mentaux"
+  },
+  {
+    "code_naf": "87.20B",
+    "libelle": "H\u00e9bergement social pour toxicomanes"
+  },
+  {
+    "code_naf": "87.30A",
+    "libelle": "H\u00e9bergement social pour personnes \u00e2g\u00e9es"
+  },
+  {
+    "code_naf": "87.30B",
+    "libelle": "H\u00e9bergement social pour handicap\u00e9s physiques"
+  },
+  {
+    "code_naf": "87.90A",
+    "libelle": "H\u00e9bergement social pour enfants en difficult\u00e9s"
+  },
+  {
+    "code_naf": "87.90B",
+    "libelle": "H\u00e9bergement social pour adultes et familles en difficult\u00e9s et autre h\u00e9bergement social"
+  },
+  {
+    "code_naf": "88.10A",
+    "libelle": "Aide \u00e0 domicile"
+  },
+  {
+    "code_naf": "88.10B",
+    "libelle": "Accueil ou accompagnement sans h\u00e9bergement d'adultes handicap\u00e9s ou de personnes \u00e2g\u00e9es"
+  },
+  {
+    "code_naf": "88.10C",
+    "libelle": "Aide par le travail"
+  },
+  {
+    "code_naf": "88.91A",
+    "libelle": "Accueil de jeunes enfants"
+  },
+  {
+    "code_naf": "88.91B",
+    "libelle": "Accueil ou accompagnement sans h\u00e9bergement d'enfants handicap\u00e9s"
+  },
+  {
+    "code_naf": "88.99A",
+    "libelle": "Autre accueil ou accompagnement sans h\u00e9bergement d'enfants et d'adolescents"
+  },
+  {
+    "code_naf": "88.99B",
+    "libelle": "Action sociale sans h\u00e9bergement n.c.a."
+  },
+  {
+    "code_naf": "90.01Z",
+    "libelle": "Arts du spectacle vivant"
+  },
+  {
+    "code_naf": "90.02Z",
+    "libelle": "Activit\u00e9s de soutien au spectacle vivant"
+  },
+  {
+    "code_naf": "90.03A",
+    "libelle": "Cr\u00e9ation artistique relevant des arts plastiques"
+  },
+  {
+    "code_naf": "90.03B",
+    "libelle": "Autre cr\u00e9ation artistique"
+  },
+  {
+    "code_naf": "90.04Z",
+    "libelle": "Gestion de salles de spectacles"
+  },
+  {
+    "code_naf": "91.01Z",
+    "libelle": "Gestion des biblioth\u00e8ques et des archives"
+  },
+  {
+    "code_naf": "91.02Z",
+    "libelle": "Gestion des mus\u00e9es"
+  },
+  {
+    "code_naf": "91.03Z",
+    "libelle": "Gestion des sites et monuments historiques et des attractions touristiques similaires"
+  },
+  {
+    "code_naf": "91.04Z",
+    "libelle": "Gestion des jardins botaniques et zoologiques et des r\u00e9serves naturelles"
+  },
+  {
+    "code_naf": "92.00Z",
+    "libelle": "Organisation de jeux de hasard et d'argent"
+  },
+  {
+    "code_naf": "93.11Z",
+    "libelle": "Gestion d'installations sportives"
+  },
+  {
+    "code_naf": "93.12Z",
+    "libelle": "Activit\u00e9s de clubs de sports"
+  },
+  {
+    "code_naf": "93.13Z",
+    "libelle": "Activit\u00e9s des centres de culture physique"
+  },
+  {
+    "code_naf": "93.19Z",
+    "libelle": "Autres activit\u00e9s li\u00e9es au sport"
+  },
+  {
+    "code_naf": "93.21Z",
+    "libelle": "Activit\u00e9s des parcs d'attractions et parcs \u00e0 th\u00e8mes"
+  },
+  {
+    "code_naf": "93.29Z",
+    "libelle": "Autres activit\u00e9s r\u00e9cr\u00e9atives et de loisirs"
+  },
+  {
+    "code_naf": "94.11Z",
+    "libelle": "Activit\u00e9s des organisations patronales et consulaires"
+  },
+  {
+    "code_naf": "94.12Z",
+    "libelle": "Activit\u00e9s des organisations professionnelles"
+  },
+  {
+    "code_naf": "94.20Z",
+    "libelle": "Activit\u00e9s des syndicats de salari\u00e9s"
+  },
+  {
+    "code_naf": "94.91Z",
+    "libelle": "Activit\u00e9s des organisations religieuses"
+  },
+  {
+    "code_naf": "94.92Z",
+    "libelle": "Activit\u00e9s des organisations politiques"
+  },
+  {
+    "code_naf": "94.99Z",
+    "libelle": "Autres organisations fonctionnant par adh\u00e9sion volontaire"
+  },
+  {
+    "code_naf": "95.11Z",
+    "libelle": "R\u00e9paration d'ordinateurs et d'\u00e9quipements p\u00e9riph\u00e9riques"
+  },
+  {
+    "code_naf": "95.12Z",
+    "libelle": "R\u00e9paration d'\u00e9quipements de communication"
+  },
+  {
+    "code_naf": "95.21Z",
+    "libelle": "R\u00e9paration de produits \u00e9lectroniques grand public"
+  },
+  {
+    "code_naf": "95.22Z",
+    "libelle": "R\u00e9paration d'appareils \u00e9lectrom\u00e9nagers et d'\u00e9quipements pour la maison et le jardin"
+  },
+  {
+    "code_naf": "95.23Z",
+    "libelle": "R\u00e9paration de chaussures et d'articles en cuir"
+  },
+  {
+    "code_naf": "95.24Z",
+    "libelle": "R\u00e9paration de meubles et d'\u00e9quipements du foyer"
+  },
+  {
+    "code_naf": "95.25Z",
+    "libelle": "R\u00e9paration d'articles d'horlogerie et de bijouterie"
+  },
+  {
+    "code_naf": "95.29Z",
+    "libelle": "R\u00e9paration d'autres biens personnels et domestiques"
+  },
+  {
+    "code_naf": "96.01A",
+    "libelle": "Blanchisserie-teinturerie de gros"
+  },
+  {
+    "code_naf": "96.01B",
+    "libelle": "Blanchisserie-teinturerie de d\u00e9tail"
+  },
+  {
+    "code_naf": "96.02A",
+    "libelle": "Coiffure"
+  },
+  {
+    "code_naf": "96.02B",
+    "libelle": "Soins de beaut\u00e9"
+  },
+  {
+    "code_naf": "96.03Z",
+    "libelle": "Services fun\u00e9raires"
+  },
+  {
+    "code_naf": "96.04Z",
+    "libelle": "Entretien corporel"
+  },
+  {
+    "code_naf": "96.09Z",
+    "libelle": "Autres services personnels n.c.a."
+  },
+  {
+    "code_naf": "97.00Z",
+    "libelle": "Activit\u00e9s des m\u00e9nages en tant qu'employeurs de personnel domestique"
+  },
+  {
+    "code_naf": "98.10Z",
+    "libelle": "Activit\u00e9s indiff\u00e9renci\u00e9es des m\u00e9nages en tant que producteurs de biens pour usage propre"
+  },
+  {
+    "code_naf": "98.20Z",
+    "libelle": "Activit\u00e9s indiff\u00e9renci\u00e9es des m\u00e9nages en tant que producteurs de services pour usage propre"
+  },
+  {
+    "code_naf": "99.00Z",
+    "libelle": "Activit\u00e9s des organisations et organismes extraterritoriaux"
+  }
+]

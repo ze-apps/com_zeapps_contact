@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "label": "Petit compte",
+    "sort": "1"
+  },
+  {
+    "id": "2",
+    "label": "Moyenne compte",
+    "sort": "2"
+  },
+  {
+    "id": "3",
+    "label": "Grand compte",
+    "sort": "3"
+  }
+]

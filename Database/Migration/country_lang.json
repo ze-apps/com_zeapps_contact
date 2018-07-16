@@ -1,0 +1,1222 @@
+[
+  {
+    "id_country": "1",
+    "id_lang": "1",
+    "name": "Allemagne"
+  },
+  {
+    "id_country": "2",
+    "id_lang": "1",
+    "name": "Autriche"
+  },
+  {
+    "id_country": "3",
+    "id_lang": "1",
+    "name": "Belgique"
+  },
+  {
+    "id_country": "4",
+    "id_lang": "1",
+    "name": "Canada"
+  },
+  {
+    "id_country": "5",
+    "id_lang": "1",
+    "name": "Chine"
+  },
+  {
+    "id_country": "6",
+    "id_lang": "1",
+    "name": "Espagne"
+  },
+  {
+    "id_country": "7",
+    "id_lang": "1",
+    "name": "Finlande"
+  },
+  {
+    "id_country": "8",
+    "id_lang": "1",
+    "name": "France"
+  },
+  {
+    "id_country": "9",
+    "id_lang": "1",
+    "name": "Gr\u00e8ce"
+  },
+  {
+    "id_country": "10",
+    "id_lang": "1",
+    "name": "Italie"
+  },
+  {
+    "id_country": "11",
+    "id_lang": "1",
+    "name": "Japon"
+  },
+  {
+    "id_country": "12",
+    "id_lang": "1",
+    "name": "Luxembourg"
+  },
+  {
+    "id_country": "13",
+    "id_lang": "1",
+    "name": "Pays-bas"
+  },
+  {
+    "id_country": "14",
+    "id_lang": "1",
+    "name": "Pologne"
+  },
+  {
+    "id_country": "15",
+    "id_lang": "1",
+    "name": "Portugal"
+  },
+  {
+    "id_country": "16",
+    "id_lang": "1",
+    "name": "R\u00e9publique Tch\u00e8que"
+  },
+  {
+    "id_country": "17",
+    "id_lang": "1",
+    "name": "Royaume-Uni"
+  },
+  {
+    "id_country": "18",
+    "id_lang": "1",
+    "name": "Su\u00e8de"
+  },
+  {
+    "id_country": "19",
+    "id_lang": "1",
+    "name": "Suisse"
+  },
+  {
+    "id_country": "20",
+    "id_lang": "1",
+    "name": "Danemark"
+  },
+  {
+    "id_country": "21",
+    "id_lang": "1",
+    "name": "\u00c9tats-Unis"
+  },
+  {
+    "id_country": "22",
+    "id_lang": "1",
+    "name": "Hong-Kong"
+  },
+  {
+    "id_country": "23",
+    "id_lang": "1",
+    "name": "Norv\u00e8ge"
+  },
+  {
+    "id_country": "24",
+    "id_lang": "1",
+    "name": "Australie"
+  },
+  {
+    "id_country": "25",
+    "id_lang": "1",
+    "name": "Singapour"
+  },
+  {
+    "id_country": "26",
+    "id_lang": "1",
+    "name": "Irlande"
+  },
+  {
+    "id_country": "27",
+    "id_lang": "1",
+    "name": "Nouvelle-Z\u00e9lande"
+  },
+  {
+    "id_country": "28",
+    "id_lang": "1",
+    "name": "Cor\u00e9e du Sud"
+  },
+  {
+    "id_country": "29",
+    "id_lang": "1",
+    "name": "Isra\u00ebl"
+  },
+  {
+    "id_country": "30",
+    "id_lang": "1",
+    "name": "Afrique du Sud"
+  },
+  {
+    "id_country": "31",
+    "id_lang": "1",
+    "name": "Nigeria"
+  },
+  {
+    "id_country": "32",
+    "id_lang": "1",
+    "name": "C\u00f4te d'Ivoire"
+  },
+  {
+    "id_country": "33",
+    "id_lang": "1",
+    "name": "Togo"
+  },
+  {
+    "id_country": "34",
+    "id_lang": "1",
+    "name": "Bolivie"
+  },
+  {
+    "id_country": "35",
+    "id_lang": "1",
+    "name": "Ile Maurice"
+  },
+  {
+    "id_country": "36",
+    "id_lang": "1",
+    "name": "Roumanie"
+  },
+  {
+    "id_country": "37",
+    "id_lang": "1",
+    "name": "Slovaquie"
+  },
+  {
+    "id_country": "38",
+    "id_lang": "1",
+    "name": "Alg\u00e9rie"
+  },
+  {
+    "id_country": "39",
+    "id_lang": "1",
+    "name": "Samoa Am\u00e9ricaines"
+  },
+  {
+    "id_country": "40",
+    "id_lang": "1",
+    "name": "Andorre"
+  },
+  {
+    "id_country": "41",
+    "id_lang": "1",
+    "name": "Angola"
+  },
+  {
+    "id_country": "42",
+    "id_lang": "1",
+    "name": "Anguilla"
+  },
+  {
+    "id_country": "43",
+    "id_lang": "1",
+    "name": "Antigua et Barbuda"
+  },
+  {
+    "id_country": "44",
+    "id_lang": "1",
+    "name": "Argentine"
+  },
+  {
+    "id_country": "45",
+    "id_lang": "1",
+    "name": "Arm\u00e9nie"
+  },
+  {
+    "id_country": "46",
+    "id_lang": "1",
+    "name": "Aruba"
+  },
+  {
+    "id_country": "47",
+    "id_lang": "1",
+    "name": "Azerba\u00efdjan"
+  },
+  {
+    "id_country": "48",
+    "id_lang": "1",
+    "name": "Bahamas"
+  },
+  {
+    "id_country": "49",
+    "id_lang": "1",
+    "name": "Bahre\u00efn"
+  },
+  {
+    "id_country": "50",
+    "id_lang": "1",
+    "name": "Bangladesh"
+  },
+  {
+    "id_country": "51",
+    "id_lang": "1",
+    "name": "Barbade"
+  },
+  {
+    "id_country": "52",
+    "id_lang": "1",
+    "name": "B\u00e9larus"
+  },
+  {
+    "id_country": "53",
+    "id_lang": "1",
+    "name": "Belize"
+  },
+  {
+    "id_country": "54",
+    "id_lang": "1",
+    "name": "B\u00e9nin"
+  },
+  {
+    "id_country": "55",
+    "id_lang": "1",
+    "name": "Bermudes"
+  },
+  {
+    "id_country": "56",
+    "id_lang": "1",
+    "name": "Bhoutan"
+  },
+  {
+    "id_country": "57",
+    "id_lang": "1",
+    "name": "Botswana"
+  },
+  {
+    "id_country": "58",
+    "id_lang": "1",
+    "name": "Br\u00e9sil"
+  },
+  {
+    "id_country": "59",
+    "id_lang": "1",
+    "name": "Brun\u00e9i Darussalam"
+  },
+  {
+    "id_country": "60",
+    "id_lang": "1",
+    "name": "Burkina Faso"
+  },
+  {
+    "id_country": "61",
+    "id_lang": "1",
+    "name": "Burma (Myanmar)"
+  },
+  {
+    "id_country": "62",
+    "id_lang": "1",
+    "name": "Burundi"
+  },
+  {
+    "id_country": "63",
+    "id_lang": "1",
+    "name": "Cambodge"
+  },
+  {
+    "id_country": "64",
+    "id_lang": "1",
+    "name": "Cameroun"
+  },
+  {
+    "id_country": "65",
+    "id_lang": "1",
+    "name": "Cap-Vert"
+  },
+  {
+    "id_country": "66",
+    "id_lang": "1",
+    "name": "Centrafricaine, R\u00e9publique"
+  },
+  {
+    "id_country": "67",
+    "id_lang": "1",
+    "name": "Tchad"
+  },
+  {
+    "id_country": "68",
+    "id_lang": "1",
+    "name": "Chili"
+  },
+  {
+    "id_country": "69",
+    "id_lang": "1",
+    "name": "Colombie"
+  },
+  {
+    "id_country": "70",
+    "id_lang": "1",
+    "name": "Comores"
+  },
+  {
+    "id_country": "71",
+    "id_lang": "1",
+    "name": "Congo, R\u00e9p. D\u00e9m."
+  },
+  {
+    "id_country": "72",
+    "id_lang": "1",
+    "name": "Congo, R\u00e9p."
+  },
+  {
+    "id_country": "73",
+    "id_lang": "1",
+    "name": "Costa Rica"
+  },
+  {
+    "id_country": "74",
+    "id_lang": "1",
+    "name": "Croatie"
+  },
+  {
+    "id_country": "75",
+    "id_lang": "1",
+    "name": "Cuba"
+  },
+  {
+    "id_country": "76",
+    "id_lang": "1",
+    "name": "Chypre"
+  },
+  {
+    "id_country": "77",
+    "id_lang": "1",
+    "name": "Djibouti"
+  },
+  {
+    "id_country": "78",
+    "id_lang": "1",
+    "name": "Dominica"
+  },
+  {
+    "id_country": "79",
+    "id_lang": "1",
+    "name": "R\u00e9publique Dominicaine"
+  },
+  {
+    "id_country": "80",
+    "id_lang": "1",
+    "name": "Timor oriental"
+  },
+  {
+    "id_country": "81",
+    "id_lang": "1",
+    "name": "\u00c9quateur"
+  },
+  {
+    "id_country": "82",
+    "id_lang": "1",
+    "name": "\u00c9gypte"
+  },
+  {
+    "id_country": "83",
+    "id_lang": "1",
+    "name": "El Salvador"
+  },
+  {
+    "id_country": "84",
+    "id_lang": "1",
+    "name": "Guin\u00e9e \u00c9quatoriale"
+  },
+  {
+    "id_country": "85",
+    "id_lang": "1",
+    "name": "\u00c9rythr\u00e9e"
+  },
+  {
+    "id_country": "86",
+    "id_lang": "1",
+    "name": "Estonie"
+  },
+  {
+    "id_country": "87",
+    "id_lang": "1",
+    "name": "\u00c9thiopie"
+  },
+  {
+    "id_country": "88",
+    "id_lang": "1",
+    "name": "Falkland, \u00celes"
+  },
+  {
+    "id_country": "89",
+    "id_lang": "1",
+    "name": "F\u00e9ro\u00e9, \u00celes"
+  },
+  {
+    "id_country": "90",
+    "id_lang": "1",
+    "name": "Fidji"
+  },
+  {
+    "id_country": "91",
+    "id_lang": "1",
+    "name": "Gabon"
+  },
+  {
+    "id_country": "92",
+    "id_lang": "1",
+    "name": "Gambie"
+  },
+  {
+    "id_country": "93",
+    "id_lang": "1",
+    "name": "G\u00e9orgie"
+  },
+  {
+    "id_country": "94",
+    "id_lang": "1",
+    "name": "Ghana"
+  },
+  {
+    "id_country": "95",
+    "id_lang": "1",
+    "name": "Grenade"
+  },
+  {
+    "id_country": "96",
+    "id_lang": "1",
+    "name": "Groenland"
+  },
+  {
+    "id_country": "97",
+    "id_lang": "1",
+    "name": "Gibraltar"
+  },
+  {
+    "id_country": "98",
+    "id_lang": "1",
+    "name": "Guadeloupe"
+  },
+  {
+    "id_country": "99",
+    "id_lang": "1",
+    "name": "Guam"
+  },
+  {
+    "id_country": "100",
+    "id_lang": "1",
+    "name": "Guatemala"
+  },
+  {
+    "id_country": "101",
+    "id_lang": "1",
+    "name": "Guernesey"
+  },
+  {
+    "id_country": "102",
+    "id_lang": "1",
+    "name": "Guin\u00e9e"
+  },
+  {
+    "id_country": "103",
+    "id_lang": "1",
+    "name": "Guin\u00e9e-Bissau"
+  },
+  {
+    "id_country": "104",
+    "id_lang": "1",
+    "name": "Guyana"
+  },
+  {
+    "id_country": "105",
+    "id_lang": "1",
+    "name": "Ha\u00eeti"
+  },
+  {
+    "id_country": "106",
+    "id_lang": "1",
+    "name": "Heard, \u00cele et Mcdonald, \u00celes"
+  },
+  {
+    "id_country": "107",
+    "id_lang": "1",
+    "name": "Saint-Siege (\u00c9tat de la Cit\u00e9 du Vatican)"
+  },
+  {
+    "id_country": "108",
+    "id_lang": "1",
+    "name": "Honduras"
+  },
+  {
+    "id_country": "109",
+    "id_lang": "1",
+    "name": "Islande"
+  },
+  {
+    "id_country": "110",
+    "id_lang": "1",
+    "name": "Inde"
+  },
+  {
+    "id_country": "111",
+    "id_lang": "1",
+    "name": "Indon\u00e9sie"
+  },
+  {
+    "id_country": "112",
+    "id_lang": "1",
+    "name": "Iran"
+  },
+  {
+    "id_country": "113",
+    "id_lang": "1",
+    "name": "Iraq"
+  },
+  {
+    "id_country": "114",
+    "id_lang": "1",
+    "name": "Man, \u00cele de"
+  },
+  {
+    "id_country": "115",
+    "id_lang": "1",
+    "name": "Jamaique"
+  },
+  {
+    "id_country": "116",
+    "id_lang": "1",
+    "name": "Jersey"
+  },
+  {
+    "id_country": "117",
+    "id_lang": "1",
+    "name": "Jordanie"
+  },
+  {
+    "id_country": "118",
+    "id_lang": "1",
+    "name": "Kazakhstan"
+  },
+  {
+    "id_country": "119",
+    "id_lang": "1",
+    "name": "Kenya"
+  },
+  {
+    "id_country": "120",
+    "id_lang": "1",
+    "name": "Kiribati"
+  },
+  {
+    "id_country": "121",
+    "id_lang": "1",
+    "name": "Cor\u00e9e, R\u00e9p. Populaire D\u00e9m. de"
+  },
+  {
+    "id_country": "122",
+    "id_lang": "1",
+    "name": "Kowe\u00eft"
+  },
+  {
+    "id_country": "123",
+    "id_lang": "1",
+    "name": "Kirghizistan"
+  },
+  {
+    "id_country": "124",
+    "id_lang": "1",
+    "name": "Laos"
+  },
+  {
+    "id_country": "125",
+    "id_lang": "1",
+    "name": "Lettonie"
+  },
+  {
+    "id_country": "126",
+    "id_lang": "1",
+    "name": "Liban"
+  },
+  {
+    "id_country": "127",
+    "id_lang": "1",
+    "name": "Lesotho"
+  },
+  {
+    "id_country": "128",
+    "id_lang": "1",
+    "name": "Lib\u00e9ria"
+  },
+  {
+    "id_country": "129",
+    "id_lang": "1",
+    "name": "Libyenne, Jamahiriya Arabe"
+  },
+  {
+    "id_country": "130",
+    "id_lang": "1",
+    "name": "Liechtenstein"
+  },
+  {
+    "id_country": "131",
+    "id_lang": "1",
+    "name": "Lituanie"
+  },
+  {
+    "id_country": "132",
+    "id_lang": "1",
+    "name": "Macao"
+  },
+  {
+    "id_country": "133",
+    "id_lang": "1",
+    "name": "Mac\u00e9doine"
+  },
+  {
+    "id_country": "134",
+    "id_lang": "1",
+    "name": "Madagascar"
+  },
+  {
+    "id_country": "135",
+    "id_lang": "1",
+    "name": "Malawi"
+  },
+  {
+    "id_country": "136",
+    "id_lang": "1",
+    "name": "Malaisie"
+  },
+  {
+    "id_country": "137",
+    "id_lang": "1",
+    "name": "Maldives"
+  },
+  {
+    "id_country": "138",
+    "id_lang": "1",
+    "name": "Mali"
+  },
+  {
+    "id_country": "139",
+    "id_lang": "1",
+    "name": "Malte"
+  },
+  {
+    "id_country": "140",
+    "id_lang": "1",
+    "name": "Marshall, \u00celes"
+  },
+  {
+    "id_country": "141",
+    "id_lang": "1",
+    "name": "Martinique"
+  },
+  {
+    "id_country": "142",
+    "id_lang": "1",
+    "name": "Mauritanie"
+  },
+  {
+    "id_country": "143",
+    "id_lang": "1",
+    "name": "Hongrie"
+  },
+  {
+    "id_country": "144",
+    "id_lang": "1",
+    "name": "Mayotte"
+  },
+  {
+    "id_country": "145",
+    "id_lang": "1",
+    "name": "Mexique"
+  },
+  {
+    "id_country": "146",
+    "id_lang": "1",
+    "name": "Micron\u00e9sie"
+  },
+  {
+    "id_country": "147",
+    "id_lang": "1",
+    "name": "Moldova"
+  },
+  {
+    "id_country": "148",
+    "id_lang": "1",
+    "name": "Monaco"
+  },
+  {
+    "id_country": "149",
+    "id_lang": "1",
+    "name": "Mongolie"
+  },
+  {
+    "id_country": "150",
+    "id_lang": "1",
+    "name": "Mont\u00e9n\u00e9gro"
+  },
+  {
+    "id_country": "151",
+    "id_lang": "1",
+    "name": "Montserrat"
+  },
+  {
+    "id_country": "152",
+    "id_lang": "1",
+    "name": "Maroc"
+  },
+  {
+    "id_country": "153",
+    "id_lang": "1",
+    "name": "Mozambique"
+  },
+  {
+    "id_country": "154",
+    "id_lang": "1",
+    "name": "Namibie"
+  },
+  {
+    "id_country": "155",
+    "id_lang": "1",
+    "name": "Nauru"
+  },
+  {
+    "id_country": "156",
+    "id_lang": "1",
+    "name": "N\u00e9pal"
+  },
+  {
+    "id_country": "157",
+    "id_lang": "1",
+    "name": "Antilles N\u00e9erlandaises"
+  },
+  {
+    "id_country": "158",
+    "id_lang": "1",
+    "name": "Nouvelle-Cal\u00e9donie"
+  },
+  {
+    "id_country": "159",
+    "id_lang": "1",
+    "name": "Nicaragua"
+  },
+  {
+    "id_country": "160",
+    "id_lang": "1",
+    "name": "Niger"
+  },
+  {
+    "id_country": "161",
+    "id_lang": "1",
+    "name": "Niu\u00e9"
+  },
+  {
+    "id_country": "162",
+    "id_lang": "1",
+    "name": "Norfolk, \u00cele"
+  },
+  {
+    "id_country": "163",
+    "id_lang": "1",
+    "name": "Mariannes du Nord, \u00celes"
+  },
+  {
+    "id_country": "164",
+    "id_lang": "1",
+    "name": "Oman"
+  },
+  {
+    "id_country": "165",
+    "id_lang": "1",
+    "name": "Pakistan"
+  },
+  {
+    "id_country": "166",
+    "id_lang": "1",
+    "name": "Palaos"
+  },
+  {
+    "id_country": "167",
+    "id_lang": "1",
+    "name": "Palestinien Occup\u00e9, Territoire"
+  },
+  {
+    "id_country": "168",
+    "id_lang": "1",
+    "name": "Panama"
+  },
+  {
+    "id_country": "169",
+    "id_lang": "1",
+    "name": "Papouasie-Nouvelle-Guin\u00e9e"
+  },
+  {
+    "id_country": "170",
+    "id_lang": "1",
+    "name": "Paraguay"
+  },
+  {
+    "id_country": "171",
+    "id_lang": "1",
+    "name": "P\u00e9rou"
+  },
+  {
+    "id_country": "172",
+    "id_lang": "1",
+    "name": "Philippines"
+  },
+  {
+    "id_country": "173",
+    "id_lang": "1",
+    "name": "Pitcairn"
+  },
+  {
+    "id_country": "174",
+    "id_lang": "1",
+    "name": "Porto Rico"
+  },
+  {
+    "id_country": "175",
+    "id_lang": "1",
+    "name": "Qatar"
+  },
+  {
+    "id_country": "176",
+    "id_lang": "1",
+    "name": "R\u00e9union, \u00cele de la"
+  },
+  {
+    "id_country": "177",
+    "id_lang": "1",
+    "name": "Russie, F\u00e9d\u00e9ration de"
+  },
+  {
+    "id_country": "178",
+    "id_lang": "1",
+    "name": "Rwanda"
+  },
+  {
+    "id_country": "179",
+    "id_lang": "1",
+    "name": "Saint-Barth\u00e9lemy"
+  },
+  {
+    "id_country": "180",
+    "id_lang": "1",
+    "name": "Saint-Kitts-et-Nevis"
+  },
+  {
+    "id_country": "181",
+    "id_lang": "1",
+    "name": "Sainte-Lucie"
+  },
+  {
+    "id_country": "182",
+    "id_lang": "1",
+    "name": "Saint-Martin"
+  },
+  {
+    "id_country": "183",
+    "id_lang": "1",
+    "name": "Saint-Pierre-et-Miquelon"
+  },
+  {
+    "id_country": "184",
+    "id_lang": "1",
+    "name": "Saint-Vincent-et-Les Grenadines"
+  },
+  {
+    "id_country": "185",
+    "id_lang": "1",
+    "name": "Samoa"
+  },
+  {
+    "id_country": "186",
+    "id_lang": "1",
+    "name": "Saint-Marin"
+  },
+  {
+    "id_country": "187",
+    "id_lang": "1",
+    "name": "Sao Tom\u00e9-et-Principe"
+  },
+  {
+    "id_country": "188",
+    "id_lang": "1",
+    "name": "Arabie Saoudite"
+  },
+  {
+    "id_country": "189",
+    "id_lang": "1",
+    "name": "S\u00e9n\u00e9gal"
+  },
+  {
+    "id_country": "190",
+    "id_lang": "1",
+    "name": "Serbie"
+  },
+  {
+    "id_country": "191",
+    "id_lang": "1",
+    "name": "Seychelles"
+  },
+  {
+    "id_country": "192",
+    "id_lang": "1",
+    "name": "Sierra Leone"
+  },
+  {
+    "id_country": "193",
+    "id_lang": "1",
+    "name": "Slov\u00e9nie"
+  },
+  {
+    "id_country": "194",
+    "id_lang": "1",
+    "name": "Salomon, \u00celes"
+  },
+  {
+    "id_country": "195",
+    "id_lang": "1",
+    "name": "Somalie"
+  },
+  {
+    "id_country": "196",
+    "id_lang": "1",
+    "name": "G\u00e9orgie du Sud et les \u00celes Sandwich du Sud"
+  },
+  {
+    "id_country": "197",
+    "id_lang": "1",
+    "name": "Sri Lanka"
+  },
+  {
+    "id_country": "198",
+    "id_lang": "1",
+    "name": "Soudan"
+  },
+  {
+    "id_country": "199",
+    "id_lang": "1",
+    "name": "Suriname"
+  },
+  {
+    "id_country": "200",
+    "id_lang": "1",
+    "name": "Svalbard et \u00cele Jan Mayen"
+  },
+  {
+    "id_country": "201",
+    "id_lang": "1",
+    "name": "Swaziland"
+  },
+  {
+    "id_country": "202",
+    "id_lang": "1",
+    "name": "Syrienne"
+  },
+  {
+    "id_country": "203",
+    "id_lang": "1",
+    "name": "Ta\u00efwan"
+  },
+  {
+    "id_country": "204",
+    "id_lang": "1",
+    "name": "Tadjikistan"
+  },
+  {
+    "id_country": "205",
+    "id_lang": "1",
+    "name": "Tanzanie"
+  },
+  {
+    "id_country": "206",
+    "id_lang": "1",
+    "name": "Tha\u00eflande"
+  },
+  {
+    "id_country": "207",
+    "id_lang": "1",
+    "name": "Tokelau"
+  },
+  {
+    "id_country": "208",
+    "id_lang": "1",
+    "name": "Tonga"
+  },
+  {
+    "id_country": "209",
+    "id_lang": "1",
+    "name": "Trinit\u00e9-et-Tobago"
+  },
+  {
+    "id_country": "210",
+    "id_lang": "1",
+    "name": "Tunisie"
+  },
+  {
+    "id_country": "211",
+    "id_lang": "1",
+    "name": "Turquie"
+  },
+  {
+    "id_country": "212",
+    "id_lang": "1",
+    "name": "Turkm\u00e9nistan"
+  },
+  {
+    "id_country": "213",
+    "id_lang": "1",
+    "name": "Turks et Caiques, \u00celes"
+  },
+  {
+    "id_country": "214",
+    "id_lang": "1",
+    "name": "Tuvalu"
+  },
+  {
+    "id_country": "215",
+    "id_lang": "1",
+    "name": "Ouganda"
+  },
+  {
+    "id_country": "216",
+    "id_lang": "1",
+    "name": "Ukraine"
+  },
+  {
+    "id_country": "217",
+    "id_lang": "1",
+    "name": "\u00c9mirats Arabes Unis"
+  },
+  {
+    "id_country": "218",
+    "id_lang": "1",
+    "name": "Uruguay"
+  },
+  {
+    "id_country": "219",
+    "id_lang": "1",
+    "name": "Ouzb\u00e9kistan"
+  },
+  {
+    "id_country": "220",
+    "id_lang": "1",
+    "name": "Vanuatu"
+  },
+  {
+    "id_country": "221",
+    "id_lang": "1",
+    "name": "Venezuela"
+  },
+  {
+    "id_country": "222",
+    "id_lang": "1",
+    "name": "Vietnam"
+  },
+  {
+    "id_country": "223",
+    "id_lang": "1",
+    "name": "\u00celes Vierges Britanniques"
+  },
+  {
+    "id_country": "224",
+    "id_lang": "1",
+    "name": "\u00celes Vierges des \u00c9tats-Unis"
+  },
+  {
+    "id_country": "225",
+    "id_lang": "1",
+    "name": "Wallis et Futuna"
+  },
+  {
+    "id_country": "226",
+    "id_lang": "1",
+    "name": "Sahara Occidental"
+  },
+  {
+    "id_country": "227",
+    "id_lang": "1",
+    "name": "Y\u00e9men"
+  },
+  {
+    "id_country": "228",
+    "id_lang": "1",
+    "name": "Zambie"
+  },
+  {
+    "id_country": "229",
+    "id_lang": "1",
+    "name": "Zimbabwe"
+  },
+  {
+    "id_country": "230",
+    "id_lang": "1",
+    "name": "Albanie"
+  },
+  {
+    "id_country": "231",
+    "id_lang": "1",
+    "name": "Afghanistan"
+  },
+  {
+    "id_country": "232",
+    "id_lang": "1",
+    "name": "Antarctique"
+  },
+  {
+    "id_country": "233",
+    "id_lang": "1",
+    "name": "Bosnie-Herz\u00e9govine"
+  },
+  {
+    "id_country": "234",
+    "id_lang": "1",
+    "name": "Bouvet, \u00cele"
+  },
+  {
+    "id_country": "235",
+    "id_lang": "1",
+    "name": "Oc\u00e9an Indien, Territoire Britannique de L'"
+  },
+  {
+    "id_country": "236",
+    "id_lang": "1",
+    "name": "Bulgarie"
+  },
+  {
+    "id_country": "237",
+    "id_lang": "1",
+    "name": "Ca\u00efmans, \u00celes"
+  },
+  {
+    "id_country": "238",
+    "id_lang": "1",
+    "name": "Christmas, \u00cele"
+  },
+  {
+    "id_country": "239",
+    "id_lang": "1",
+    "name": "Cocos (Keeling), \u00celes"
+  },
+  {
+    "id_country": "240",
+    "id_lang": "1",
+    "name": "Cook, \u00celes"
+  },
+  {
+    "id_country": "241",
+    "id_lang": "1",
+    "name": "Guyane Fran\u00e7aise"
+  },
+  {
+    "id_country": "242",
+    "id_lang": "1",
+    "name": "Polyn\u00e9sie Fran\u00e7aise"
+  },
+  {
+    "id_country": "243",
+    "id_lang": "1",
+    "name": "Terres Australes Fran\u00e7aises"
+  },
+  {
+    "id_country": "244",
+    "id_lang": "1",
+    "name": "\u00c5land, \u00celes"
+  }
+]
