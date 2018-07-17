@@ -23,6 +23,7 @@ class Country extends Controller
             "countries" => $countries
         ));
     }
+
     public function modal(Request $request)
     {
         $limit = $request->input('limit', 15);
