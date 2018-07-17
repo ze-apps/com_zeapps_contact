@@ -44,7 +44,11 @@ app.config(["$provide",
 				},
 				code_naf : {
 					modal : modal_codeNaf
-				}
+				},
+                accounting_number : {
+                    modal : modal_accountingNumber,
+                    save : save_accountingNumber
+                },
 			};
 
 			zeHttp.config = angular.extend(zeHttp.config || {}, {
@@ -79,6 +83,11 @@ app.config(["$provide",
                 return "/com_zeapps_contact/companies/get_export/";
             }
 
+
+
+
+
+
 			function context_contact(){
 				return zeHttp.get("/com_zeapps_contact/contacts/context/");
 			}
@@ -106,6 +115,11 @@ app.config(["$provide",
                 return "/com_zeapps_contact/contacts/get_export/";
             }
 
+
+
+
+
+
 			function get_accountFamilies(id){
 				return zeHttp.get("/com_zeapps_contact/account_families/get/" + id);
 			}
@@ -121,6 +135,11 @@ app.config(["$provide",
 			function delete_accountFamilies(id){
 				return zeHttp.get("/com_zeapps_contact/account_families/delete/" + id);
 			}
+
+
+
+
+
 
 			function get_topologies(id){
 				return zeHttp.get("/com_zeapps_contact/topologies/get/" + id);
@@ -138,8 +157,25 @@ app.config(["$provide",
 				return zeHttp.get("/com_zeapps_contact/topologies/delete/" + id);
 			}
 
+
+
+
+
+
 			function modal_codeNaf(limit, offset, filters){
                 return zeHttp.post("/com_zeapps_contact/code_naf/modal/" + limit + "/" + offset, filters)
 			}
+
+
+
+
+
+            // ACCOUNTING NUMBERS
+            function modal_accountingNumber(limit, offset, filters){
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/modal/" + limit + "/" + offset, filters)
+            }
+            function save_accountingNumber(data){
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/save", data)
+            }
 		}]);
 	}]);

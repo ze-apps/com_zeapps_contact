@@ -1,7 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <div ng-controller="ComZeappsContactCompaniesFormCtrl">
 
     <ul role="tablist" class="nav nav-tabs">

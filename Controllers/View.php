@@ -15,6 +15,11 @@ class View extends Controller
 
     public function companiesFormModal(){
         $data = array();
-        return view("companies/search", $data, BASEPATH . 'App/com_zeapps_contact/views/');
+        return view("companies/form_modal", $data, BASEPATH . 'App/com_zeapps_contact/views/');
+    }
+
+    public function companiesModal(){
+        $data = array();
+        return view("companies/modalCompany", $data, BASEPATH . 'App/com_zeapps_contact/views/');
     }
 }

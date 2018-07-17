@@ -245,6 +245,18 @@ class ComZeappsContactInit
         });
 
 
+        Capsule::schema()->create('com_zeapps_contact_accounting_numbers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('label', 255)->default("");
+            $table->string('number', 255)->default("");
+            $table->integer('type', false, true)->default(0);
+            $table->string('type_label', 255)->default("");
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+
 
         // **** import default data ****
 
@@ -324,5 +336,6 @@ class ComZeappsContactInit
         Capsule::schema()->dropIfExists('com_zeapps_contact_states');
         Capsule::schema()->dropIfExists('com_zeapps_contact_topologies');
         Capsule::schema()->dropIfExists('com_zeapps_contact_zone_address');
+        Capsule::schema()->dropIfExists('com_zeapps_contact_accounting_numbers');
     }
 }
