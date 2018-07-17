@@ -3,6 +3,7 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
 
         var currentTab = 'general';
 
+
 		$scope.accountManagerHttp = zhttp.app.user;
 		$scope.accountManagerFields = [
 			{label:'Prénom',key:'firstname'},
@@ -23,13 +24,13 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
 			{label:'Libellé',key:'libelle'}
 		];
 
-		$scope.countriesHttp = zhttp.app.countries;
+		$scope.countriesHttp = zhttp.contact.countries;
 		$scope.countriesFields = [
 			{label:'Code ISO',key:'iso_code'},
 			{label:'Pays',key:'name'}
 		];
 
-        $scope.statesHttp = zhttp.app.states;
+        $scope.statesHttp = zhttp.contact.states;
         $scope.statesFields = [
             {label:'Code ISO',key:'iso_code'},
             {label:'Etat',key:'name'}

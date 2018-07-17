@@ -1,4 +1,4 @@
-<div ng-controller="ComZeappsContactCompaniesFormCtrl">
+<div ng-controller="ComZeappsContactContactsFormCtrl">
 
     <ul role="tablist" class="nav nav-tabs">
         <li ng-class="isTabActive('general')"><a href="#" ng-click="setTab('general')">Informations générales</a></li>
@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <label>Type de compte</label>
                     <select ng-model="form.id_account_family" class="form-control" ng-change="updateAccountFamily()">
-                        <option ng-repeat="account_family in account_families" ng-value="@{{account_family.id}}">
+                        <option ng-repeat="account_family in account_families" value="@{{account_family.id}}">
                             @{{ account_family.label }}
                         </option>
                     </select>
@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <label>Topologie</label>
                     <select ng-model="form.id_topology" class="form-control" ng-change="updateTopology()">
-                        <option ng-repeat="topology in topologies" ng-value="@{{topology.id}}">
+                        <option ng-repeat="topology in topologies" value="@{{topology.id}}">
                             @{{ topology.label }}
                         </option>
                     </select>
@@ -54,21 +54,35 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-2">
                 <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" ng-model="form.company_name" class="form-control">
+                    <label>Salutation</label>
+                    <select ng-model="form.title_name" class="form-control">
+                        <option value="M.">M.</option>
+                        <option value="Mme">Mme</option>
+                        <option value="Mlle">Mlle</option>
+                    </select>
                 </div>
             </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" ng-model="form.last_name" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>Prénom</label>
+                    <input type="text" ng-model="form.first_name" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Société Mère</label>
-
-                    <span   ze-modalsearch="loadParentCompany"
-                            data-http="parentCompanyHttp"
-                            data-model="form.name_parent_company"
-                            data-fields="parentCompanyFields"
-                            data-title="Choisir une entreprise"></span>
+                    <label>Date de naissance</label>
+                    <input type="date" ng-model="form.date_of_birth" class="form-control">
                 </div>
             </div>
         </div>
@@ -84,7 +98,7 @@
                 <div class="form-group">
                     <label>Modalité de paiement</label>
                     <select ng-model="form.id_modality" class="form-control" ng-change="updateModality()">
-                        <option ng-repeat="modality in modalities" ng-value="@{{modality.id}}">
+                        <option ng-repeat="modality in modalities" value="@{{modality.id}}">
                             @{{ modality.label }}
                         </option>
                     </select>
@@ -95,29 +109,27 @@
 
     <div ng-if="displayTab('activity')">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
-                    <label>SIRET</label>
-                    <input type="text" ng-model="form.company_number" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Code NAF</label>
-                    <span   ze-modalsearch="loadCodeNaf"
-                            data-http="codeNafHttp"
-                            data-model="form.code_naf_libelle"
-                            data-fields="codeNafFields"
-                            data-title="Choisir un code NAF"></span>
-                </div>
-            </div>
-        </div>
+                    <label>Société</label>
 
-        <div class="row">
-            <div class="col-md-6">
+                    <span   ze-modalsearch="loadCompany"
+                            data-http="companyHttp"
+                            data-model="form.name_company"
+                            data-fields="companyFields"
+                            data-title="Choisir une entreprise"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="form-group">
-                    <label>Chiffre d’affaires</label>
-                    <input type="text" ng-model="form.turnover" class="form-control">
+                    <label>Service</label>
+                    <input type="text" ng-model="form.department" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Fonction</label>
+                    <input type="text" ng-model="form.job" class="form-control">
                 </div>
             </div>
         </div>
@@ -145,14 +157,56 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" ng-model="form.mobile" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
                     <label>Téléphone</label>
                     <input type="text" ng-model="form.phone" class="form-control">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
+                    <label>Autre téléphone</label>
+                    <input type="text" ng-model="form.other_phone" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Assistant(e)</label>
+                    <input type="text" ng-model="form.assistant" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Assistant(e) téléphone</label>
+                    <input type="text" ng-model="form.assistant_phone" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
                     <label>Télécopie</label>
                     <input type="text" ng-model="form.fax" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Skype ID</label>
+                    <input type="text" ng-model="form.skype_id" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Twitter</label>
+                    <input type="text" ng-model="form.twitter" class="form-control">
                 </div>
             </div>
             <div class="col-md-4">
@@ -163,83 +217,48 @@
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Adresse de facturation</label>
-                    <input type="text" ng-model="form.billing_address_1" class="form-control">
-                    <input type="text" ng-model="form.billing_address_2" class="form-control">
-                    <input type="text" ng-model="form.billing_address_3" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label>Code postal</label>
-                    <input type="text" ng-model="form.billing_zipcode" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label>Ville</label>
-                    <input type="text" ng-model="form.billing_city" class="form-control">
+                    <label>Adresse</label>
+                    <input type="text" ng-model="form.address_1" class="form-control">
+                    <input type="text" ng-model="form.address_2" class="form-control">
+                    <input type="text" ng-model="form.address_3" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label>État</label>
 
-                    <span   ze-modalsearch="loadStateBilling"
+                    <span   ze-modalsearch="loadState"
                             data-http="statesHttp"
-                            data-model="form.billing_state"
-                            data-filters="{id_country: form.billing_country_id}"
+                            data-model="form.state"
+                            data-filters="{id_country: form.country_id}"
                             data-fields="statesFields"
                             data-title="Choisir un état"></span>
-                </div>
-
-                <div class="form-group">
-                    <label>Pays</label>
-
-                    <span   ze-modalsearch="loadCountryBilling"
-                            data-http="countriesHttp"
-                            data-model="form.billing_country_name"
-                            data-fields="countriesFields"
-                            data-title="Choisir un pays"></span>
                 </div>
             </div>
 
+
+
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Adresse de livraison</label>
-                    <input type="text" ng-model="form.delivery_address_1" class="form-control">
-                    <input type="text" ng-model="form.delivery_address_2" class="form-control">
-                    <input type="text" ng-model="form.delivery_address_3" class="form-control">
-                </div>
-
-                <div class="form-group">
                     <label>Code postal</label>
-                    <input type="text" ng-model="form.delivery_zipcode" class="form-control">
+                    <input type="text" ng-model="form.zipcode" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label>Ville</label>
-                    <input type="text" ng-model="form.delivery_city" class="form-control">
+                    <input type="text" ng-model="form.city" class="form-control">
                 </div>
 
-                <div class="form-group">
-                    <label>État</label>
 
-                    <span   ze-modalsearch="loadStateDelivery"
-                            data-http="statesHttp"
-                            data-model="form.delivery_state"
-                            data-filters="{id_country: form.delivery_country_id}"
-                            data-fields="statesFields"
-                            data-title="Choisir un état"></span>
-                </div>
 
                 <div class="form-group">
                     <label>Pays</label>
 
-                    <span   ze-modalsearch="loadCountryDelivery"
+                    <span   ze-modalsearch="loadCountry"
                             data-http="countriesHttp"
-                            data-model="form.delivery_country_name"
+                            data-model="form.country_name"
                             data-fields="countriesFields"
                             data-title="Choisir un pays"></span>
                 </div>
@@ -251,8 +270,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label>Commentaires</label>
-                    <textarea class="form-control" rows="10" ng-model="form.comment"></textarea>
+                    <label>Commentaire</label>
+                    <textarea class="form-control" rows="3" ng-model="form.comment"></textarea>
                 </div>
             </div>
         </div>

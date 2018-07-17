@@ -49,6 +49,19 @@ app.config(["$provide",
                     modal : modal_accountingNumber,
                     save : save_accountingNumber
                 },
+                countries : {
+					all : getAll_countries,
+						modal : modal_countries
+				},
+				states : {
+					modal : modal_states
+				},
+                modality : {
+                    get : get_modality,
+                    get_all : getAll_modality,
+                    save : post_modality,
+                    del : del_modality
+                },
 			};
 
 			zeHttp.config = angular.extend(zeHttp.config || {}, {
@@ -177,5 +190,39 @@ app.config(["$provide",
             function save_accountingNumber(data){
                 return zeHttp.post("/com_zeapps_contact/accounting_numbers/save", data)
             }
+
+
+
+            // COUNTRIES
+            function getAll_countries(){
+                return zeHttp.get("/com_zeapps_contact/country/get_all/");
+            }
+            function modal_countries(limit, offset, filters){
+                return zeHttp.post("/com_zeapps_contact/country/modal/" + limit + "/" + offset, filters);
+            }
+
+
+
+            // STATES
+            function modal_states(limit, offset, filters){
+                return zeHttp.post("/com_zeapps_contact/state/modal/" + limit + "/" + offset, filters);
+            }
+
+
+
+            // MODALITY
+            function get_modality(id){
+                return zeHttp.get("/com_zeapps_contact/modalities/get/" + id);
+            }
+            function getAll_modality(){
+                return zeHttp.get("/com_zeapps_contact/modalities/getAll/");
+            }
+            function post_modality(data){
+                return zeHttp.post("/com_zeapps_contact/modalities/save", data);
+            }
+            function del_modality(id){
+                return zeHttp.delete("/com_zeapps_contact/modalities/delete/" + id);
+            }
+
 		}]);
 	}]);

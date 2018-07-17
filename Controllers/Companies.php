@@ -135,7 +135,7 @@ class Companies extends Controller
             $topologies = [];
         }
 
-        if(!$contacts = Contacts::orderBy('last_name')->get()){
+        if(!$contacts = Contacts::orderBy('last_name')->where('id_company', $id)->get()){
             $contacts = [];
         }
 
