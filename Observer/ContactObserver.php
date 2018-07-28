@@ -14,4 +14,12 @@ class ContactObserver implements iObserver
 
 
     }
+
+
+    public static function getHook() {
+        $retour = array();
+
+        return $retour ;
+    }
+
 }

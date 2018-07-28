@@ -77,7 +77,11 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
         function initNavigation() {
 
             // calcul le nombre de résultat
-            $scope.nb_companies = $rootScope.companies_ids.length;
+            if ($rootScope.companies_ids) {
+                $scope.nb_companies = $rootScope.companies_ids.length;
+            } else {
+                $scope.nb_companies = 0 ;
+            }
 
 
             // calcul la position du résultat actuel
@@ -87,27 +91,29 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
             $scope.company_next = 0;
             $scope.company_last = 0;
 
-            for (var i = 0; i < $rootScope.companies_ids.length; i++) {
-                if ($rootScope.companies_ids[i] == $routeParams.id_company) {
-                    $scope.companie_order = i + 1;
-                    if (i > 0) {
-                        $scope.company_previous = $rootScope.companies_ids[i - 1];
-                    }
+            if ($rootScope.companies_ids) {
+                for (var i = 0; i < $rootScope.companies_ids.length; i++) {
+                    if ($rootScope.companies_ids[i] == $routeParams.id_company) {
+                        $scope.companie_order = i + 1;
+                        if (i > 0) {
+                            $scope.company_previous = $rootScope.companies_ids[i - 1];
+                        }
 
-                    if ((i + 1) < $rootScope.companies_ids.length) {
-                        $scope.company_next = $rootScope.companies_ids[i + 1];
+                        if ((i + 1) < $rootScope.companies_ids.length) {
+                            $scope.company_next = $rootScope.companies_ids[i + 1];
+                        }
                     }
                 }
-            }
 
-            // recherche la première companie de la liste
-            if ($rootScope.companies_ids[0] != $routeParams.id_company) {
-                $scope.company_first = $rootScope.companies_ids[0];
-            }
+                // recherche la première companie de la liste
+                if ($rootScope.companies_ids[0] != $routeParams.id_company) {
+                    $scope.company_first = $rootScope.companies_ids[0];
+                }
 
-            // recherche la dernière companie de la liste
-            if ($rootScope.companies_ids[$rootScope.companies_ids.length - 1] != $routeParams.id_company) {
-                $scope.company_last = $rootScope.companies_ids[$rootScope.companies_ids.length - 1];
+                // recherche la dernière companie de la liste
+                if ($rootScope.companies_ids[$rootScope.companies_ids.length - 1] != $routeParams.id_company) {
+                    $scope.company_last = $rootScope.companies_ids[$rootScope.companies_ids.length - 1];
+                }
             }
         }
 
