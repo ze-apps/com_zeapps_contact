@@ -20,7 +20,7 @@ class Companies extends Controller
         $offset = $request->input('offset', 0);
         $context = $request->input('context', false);
 
-        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
+        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && (isset($_SERVER['CONTENT_TYPE']) && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE)) {
             // POST is actually in json format, do an internal translation
             $filters = json_decode(file_get_contents('php://input'), true);
         }
