@@ -21,9 +21,7 @@
             <div class="form-group">
                 <label>Type de compte comptable</label>
                 <select class="form-control" ng-model="form.type" ng-change="updateType()">
-                    <option ng-repeat="type in types" value="type.id">
-                        @{{ type.label }}
-                    </option>
+                    <option ng-repeat="type in types" ng-value="type.id">@{{ type.label }}</option>
                 </select>
             </div>
         </div>
