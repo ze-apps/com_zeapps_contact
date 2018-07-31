@@ -7,12 +7,28 @@ use App\com_zeapps_contact\Models\CodeNaf;
 use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Modalities;
 use App\com_zeapps_contact\Models\ModalitiesLang;
+use App\com_zeapps_contact\Models\AccountingNumbers;
 
 
 class ComZeappsContactInitSeeds
 {
     public function run()
     {
+        // import de AccountingNumbers
+        Capsule::table('com_zeapps_contact_accounting_numbers')->truncate();
+        $json_content = json_decode(file_get_contents(dirname(__FILE__) . "/AccountingNumbers.json"));
+        foreach ($json_content as $data_json) {
+            $obj_data = new AccountingNumbers();
+
+            foreach ($data_json as $key => $value) {
+                $obj_data->$key = $value ;
+            }
+
+            $obj_data->save();
+        }
+
+
+
         // import de compagnies
         Capsule::table('com_zeapps_contact_companies')->truncate();
         $compagnies = json_decode(file_get_contents(dirname(__FILE__) . "/compagnies.json"));
