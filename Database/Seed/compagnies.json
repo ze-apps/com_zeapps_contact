@@ -38,10 +38,11 @@
     "code_naf": "18.13Z",
     "code_naf_libelle": "18.13Z - Activit\u00e9s de pr\u00e9-presse",
     "company_number": "",
-    "accounting_number": "",
+    "accounting_number": "411APPLE",
     "discount": "0.00",
     "id_modality": "0",
-    "label_modality": ""
+    "label_modality": "",
+    "last_order":null
   },
   {
     "id": "2",
@@ -82,9 +83,10 @@
     "code_naf": "73.11Z",
     "code_naf_libelle": "73.11Z - Activit\u00e9s des agences de publicit\u00e9",
     "company_number": "",
-    "accounting_number": "",
+    "accounting_number": "411MICROSO",
     "discount": "0.00",
     "id_modality": "0",
-    "label_modality": ""
+    "label_modality": "",
+    "last_order":null
   }
 ]

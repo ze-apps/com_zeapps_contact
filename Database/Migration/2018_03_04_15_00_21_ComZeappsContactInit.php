@@ -46,7 +46,7 @@ class ComZeappsContactInit
             $table->string('delivery_state', 100)->default("");
             $table->integer('delivery_country_id', false, true)->default(0);
             $table->string('delivery_country_name', 100)->default("");
-            $table->text('comment')->default("");
+            $table->text('comment');
             $table->string('email', 255)->default("");
             $table->tinyInteger('opt_out', false, true)->default(0);
             $table->string('phone', 25)->default("");
@@ -56,6 +56,7 @@ class ComZeappsContactInit
             $table->string('code_naf_libelle', 255)->default("");
             $table->string('company_number', 30)->default("");
             $table->string('accounting_number', 15)->default("");
+            $table->timestamp('last_order')->nullable();
             $table->float('discount', 5,2)->default(0);
             $table->integer('id_modality', false, true)->default(0);
             $table->string('label_modality', 255)->default("");
@@ -101,10 +102,10 @@ class ComZeappsContactInit
             $table->string('state', 100)->default("");
             $table->integer('country_id', false, true)->default(0);
             $table->string('country_name', 100)->default("");
-            $table->text('comment')->default("");
+            $table->text('comment');
             $table->string('website_url', 255)->default("");
             $table->string('accounting_number', 15)->default("");
-            $table->timestamp('last_order');
+            $table->timestamp('last_order')->nullable();
             $table->float('discount', 5,2)->default(0);
             $table->integer('id_modality', false, true)->default(0);
             $table->string('label_modality', 255)->default("");
@@ -142,7 +143,7 @@ class ComZeappsContactInit
         Capsule::schema()->create('com_zeapps_contact_address_format', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_country', false, true)->default(0);
-            $table->text('format')->default("");
+            $table->text('format');
 
             $table->timestamps();
             $table->softDeletes();
