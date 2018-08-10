@@ -49,12 +49,18 @@
             <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooks">
                 <a href="#" ng-click="setTab(hook.label)">@{{ hook.label }}</a>
             </li>
+
+            <li role="presentation" ng-class="isTabActive('email') ? 'active' : ''"><a href="#" ng-click="setTab('email')">Email</a></li>
         </ul>
 
         <div ng-show="isTabActive(hook.label)" ng-repeat="hook in hooks">
             <div ng-include="hook.template">
             </div>
         </div>
+
+
+
+
 
         <div ng-show="isTabActive('summary')">
             <div class="row">
@@ -178,6 +184,12 @@
                 </div>
             </div>
         </div>
+
+
+        <div ng-if="isTabActive('email')">
+            <div ng-include="'/zeapps/email/list_partial'" ng-init="module = 'com_zeapps_contact'; id = 'contacts_' + contact.id"></div>
+        </div>
+
 
     </form>
 </div>
