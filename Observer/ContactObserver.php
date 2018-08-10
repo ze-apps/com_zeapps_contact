@@ -22,4 +22,16 @@ class ContactObserver implements iObserver
         return $retour ;
     }
 
+
+
+    public static function getCron() {
+        $retour = array();
+
+        return $retour ;
+    }
+
+
+
+
+
 }
