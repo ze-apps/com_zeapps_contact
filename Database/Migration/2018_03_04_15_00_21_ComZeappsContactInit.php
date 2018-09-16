@@ -92,7 +92,7 @@ class ComZeappsContactInit
             $table->tinyInteger('opt_out', false, true)->default(0);
             $table->string('skype_id', 100)->default("");
             $table->string('twitter', 100)->default("");
-            $table->date('date_of_birth');
+            $table->date('date_of_birth')->nullable();
             $table->string('address_1', 100)->default("");
             $table->string('address_2', 100)->default("");
             $table->string('address_3', 100)->default("");
