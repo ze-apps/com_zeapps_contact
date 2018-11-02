@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <label>Type de compte</label>
                     <select ng-model="form.id_account_family" class="form-control" ng-change="updateAccountFamily()">
-                        <option ng-repeat="account_family in account_families" value="@{{account_family.id}}">
+                        <option ng-repeat="account_family in account_families" ng-value="@{{account_family.id}}">
                             @{{ account_family.label }}
                         </option>
                     </select>
@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label>Topologie</label>
                     <select ng-model="form.id_topology" class="form-control" ng-change="updateTopology()">
-                        <option ng-repeat="topology in topologies" value="@{{topology.id}}">
+                        <option ng-repeat="topology in topologies" ng-value="@{{topology.id}}">
                             @{{ topology.label }}
                         </option>
                     </select>

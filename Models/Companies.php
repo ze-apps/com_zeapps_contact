@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+use Zeapps\Core\ModelHelper;
+
 class Companies extends Model {
     use SoftDeletes;
 
