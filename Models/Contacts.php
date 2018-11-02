@@ -15,6 +15,8 @@ class Contacts extends Model {
     static protected $_table = 'com_zeapps_contact_contacts';
     protected $table ;
 
+    protected $fieldModelInfo ;
+
 
     public function __construct(array $attributes = [])
     {
