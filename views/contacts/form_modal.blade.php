@@ -2,7 +2,6 @@
 
     <ul role="tablist" class="nav nav-tabs">
         <li ng-class="isTabActive('general')"><a href="#" ng-click="setTab('general')">Informations générales</a></li>
-        <li ng-class="isTabActive('activity')"><a href="#" ng-click="setTab('activity')">Activité</a></li>
         <li ng-class="isTabActive('contact')"><a href="#" ng-click="setTab('contact')">Coordonnées</a></li>
         <li ng-class="isTabActive('comments')"><a href="#" ng-click="setTab('comments')">Commentaires</a></li>
     </ul>
@@ -81,8 +80,35 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
+                    <label>Société</label>
+
+                    <span   ze-modalsearch="loadCompany"
+                            data-http="companyHttp"
+                            data-model="form.name_company"
+                            data-fields="companyFields"
+                            data-title="Choisir une entreprise"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
                     <label>Date de naissance</label>
                     <input type="date" ng-model="form.date_of_birth" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Service</label>
+                    <input type="text" ng-model="form.department" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Fonction</label>
+                    <input type="text" ng-model="form.job" class="form-control">
                 </div>
             </div>
         </div>
@@ -107,33 +133,9 @@
         </div>
     </div>
 
-    <div ng-if="displayTab('activity')">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Société</label>
 
-                    <span   ze-modalsearch="loadCompany"
-                            data-http="companyHttp"
-                            data-model="form.name_company"
-                            data-fields="companyFields"
-                            data-title="Choisir une entreprise"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Service</label>
-                    <input type="text" ng-model="form.department" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Fonction</label>
-                    <input type="text" ng-model="form.job" class="form-control">
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 
     <div ng-if="displayTab('contact')">
         <div class="row">
