@@ -20,5 +20,3 @@ Routeur::post("/com_zeapps_contact/companies/make_export/", 'App\\com_zeapps_con
 Routeur::get("/com_zeapps_contact/companies/get_export/", 'App\\com_zeapps_contact\\Controllers\\Companies@get_export');
 
 
-
-Routeur::get('/com_zeapps_contact/test', 'App\\com_zeapps_contact\\Controllers\\Test@index');
