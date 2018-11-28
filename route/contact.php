@@ -21,6 +21,3 @@ Routeur::post("/com_zeapps_contact/contacts/delete/{id}", 'App\\com_zeapps_conta
 Routeur::post("/com_zeapps_contact/contacts/make_export/", 'App\\com_zeapps_contact\\Controllers\\Contacts@make_export');
 Routeur::get("/com_zeapps_contact/contacts/get_export/", 'App\\com_zeapps_contact\\Controllers\\Contacts@get_export');
 
-
-
-Routeur::get('/com_zeapps_contact/test', 'App\\com_zeapps_contact\\Controllers\\Contacts@test');

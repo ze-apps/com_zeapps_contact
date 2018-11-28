@@ -357,13 +357,4 @@ class Contacts extends Controller
         header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\"");
         readfile($file_url);
     }
-
-    public function test() {
-        $tabModel = ModelRequest::getRequestContent() ;
-
-        var_dump($tabModel);
-    }
-
-
-
 }
