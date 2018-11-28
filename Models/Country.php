@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class Country extends Model {
+use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
+
+class Country extends Model implements iModelExport {
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_country';
@@ -18,11 +22,32 @@ class Country extends Model {
     {
         $this->table = self::$_table;
 
+        $this->fieldModelInfo = new ModelHelper();
+        $this->fieldModelInfo->integer('id_zone', false, true)->default(0);
+        $this->fieldModelInfo->integer('id_currency', false, true)->default(0);
+
+        $this->fieldModelInfo->string('iso_code', 3)->default('');
+
+        $this->fieldModelInfo->integer('call_prefix', false, true)->default(0);
+
+        $this->fieldModelInfo->tinyInteger('active', false, true)->default(0);
+        $this->fieldModelInfo->tinyInteger('contains_states', false, true)->default(0);
+        $this->fieldModelInfo->tinyInteger('need_identification_number', false, true)->default(0);
+        $this->fieldModelInfo->tinyInteger('need_zip_code', false, true)->default(0);
+
+        $this->fieldModelInfo->string('zip_code_format', 12)->default('');
+
+        $this->fieldModelInfo->tinyInteger('display_tax_label', false, true)->default(0);
+
         parent::__construct($attributes);
     }
 
     public static function getSchema() {
         return $schema = Capsule::schema()->getColumnListing(self::$_table) ;
+    }
+
+    public function getFields() {
+        return $this->fieldModelInfo->getFields();
     }
 
     public function save(array $options = []) {
@@ -38,5 +63,13 @@ class Country extends Model {
         /**** end to delete unwanted field ****/
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Pays" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 }

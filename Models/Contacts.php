@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
 
-class Contacts extends Model {
+class Contacts extends Model implements iModelExport {
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_contacts';
@@ -90,5 +92,13 @@ class Contacts extends Model {
         $this->fieldModelInfo->removeFieldUnwanted($this) ;
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Contact" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 }

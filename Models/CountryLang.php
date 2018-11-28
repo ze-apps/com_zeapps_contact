@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class CountryLang extends Model {
+use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
+
+class CountryLang extends Model implements iModelExport {
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_country_lang';
@@ -18,11 +22,20 @@ class CountryLang extends Model {
     {
         $this->table = self::$_table;
 
+        $this->fieldModelInfo = new ModelHelper();
+        $this->fieldModelInfo->integer('id_country', false, true)->default(0);
+        $this->fieldModelInfo->integer('id_lang', false, true)->default(0);
+        $this->fieldModelInfo->string('name', 64)->default('');
+
         parent::__construct($attributes);
     }
 
     public static function getSchema() {
         return $schema = Capsule::schema()->getColumnListing(self::$_table) ;
+    }
+
+    public function getFields() {
+        return $this->fieldModelInfo->getFields();
     }
 
     public function save(array $options = []) {
@@ -38,5 +51,13 @@ class CountryLang extends Model {
         /**** end to delete unwanted field ****/
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Pays - langue" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 }

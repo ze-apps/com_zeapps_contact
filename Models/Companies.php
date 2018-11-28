@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
 
-class Companies extends Model {
+class Companies extends Model implements iModelExport{
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_companies';
@@ -79,6 +81,10 @@ class Companies extends Model {
         return $schema = Capsule::schema()->getColumnListing(self::$_table) ;
     }
 
+    public function getFields() {
+        return $this->fieldModelInfo->getFields();
+    }
+
     public function save(array $options = []) {
 
         /******** clean data **********/
@@ -89,5 +95,13 @@ class Companies extends Model {
         $this->fieldModelInfo->removeFieldUnwanted($this) ;
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Entreprise" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 }

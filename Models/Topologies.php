@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class Topologies extends Model {
+use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
+
+class Topologies extends Model implements iModelExport {
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_topologies';
@@ -18,11 +22,19 @@ class Topologies extends Model {
     {
         $this->table = self::$_table;
 
+        $this->fieldModelInfo = new ModelHelper();
+        $this->fieldModelInfo->string('label', 255)->default('');
+        $this->fieldModelInfo->integer('sort', false, true)->default(0);
+
         parent::__construct($attributes);
     }
 
     public static function getSchema() {
         return $schema = Capsule::schema()->getColumnListing(self::$_table) ;
+    }
+
+    public function getFields() {
+        return $this->fieldModelInfo->getFields();
     }
 
     public function save(array $options = []) {
@@ -38,5 +50,13 @@ class Topologies extends Model {
         /**** end to delete unwanted field ****/
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Topologie" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 }

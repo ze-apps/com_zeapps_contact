@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class Modalities extends Model {
+use Zeapps\Core\ModelHelper;
+use Zeapps\Core\iModelExport;
+use Zeapps\Core\ModelExportType;
+
+class Modalities extends Model implements iModelExport {
     use SoftDeletes;
 
     static protected $_table = 'com_zeapps_contact_modalities';
@@ -18,11 +22,27 @@ class Modalities extends Model {
     {
         $this->table = self::$_table;
 
+        $this->fieldModelInfo = new ModelHelper();
+        $this->fieldModelInfo->tinyInteger('type_modality', false, true)->default(0);
+        $this->fieldModelInfo->string('id_cheque', 255)->default('');
+        $this->fieldModelInfo->tinyInteger('situation', false, true)->default(0);
+        $this->fieldModelInfo->string('accounting_account', 255)->default('');
+        $this->fieldModelInfo->string('journal', 20);
+        $this->fieldModelInfo->tinyInteger('settlement_type', false, true)->default(0);
+        $this->fieldModelInfo->tinyInteger('settlement_date', false, true)->default(0);
+        $this->fieldModelInfo->integer('settlement_delay', false, true)->default(0);
+        $this->fieldModelInfo->string('export', 255);
+        $this->fieldModelInfo->integer('sort', false, true)->default(0);
+
         parent::__construct($attributes);
     }
 
     public static function getSchema() {
         return $schema = Capsule::schema()->getColumnListing(self::$_table) ;
+    }
+
+    public function getFields() {
+        return $this->fieldModelInfo->getFields();
     }
 
     public function save(array $options = []) {
@@ -38,6 +58,14 @@ class Modalities extends Model {
         /**** end to delete unwanted field ****/
 
         return parent::save($options);
+    }
+
+    public function getModelExport() : ModelExportType {
+        $objModelExport = new ModelExportType() ;
+        $objModelExport->table = $this->table ;
+        $objModelExport->tableLabel = "Modalités" ;
+        $objModelExport->fields = $this->getFields() ;
+        return $objModelExport;
     }
 
     public static function getAll() {
