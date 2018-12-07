@@ -27,6 +27,7 @@ class AccountingNumbers extends Model implements iModelExport {
         $this->fieldModelInfo->string('label', 255);
         $this->fieldModelInfo->string('number', 255);
         $this->fieldModelInfo->integer('type', false, true)->default(0);
+        $this->fieldModelInfo->string('type_label', 255);
         parent::__construct($attributes);
     }
 
