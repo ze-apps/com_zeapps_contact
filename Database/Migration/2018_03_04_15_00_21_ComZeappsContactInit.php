@@ -18,6 +18,7 @@ class ComZeappsContactInit
             $table->increments('id');
             $table->integer('id_user_account_manager', false, true)->default(0);
             $table->string('name_user_account_manager', 100)->default("");
+            $table->integer('id_price_list')->default(0);
             $table->string('company_name', 255)->default("");
             $table->integer('id_parent_company', false, true)->default(0);
             $table->string('name_parent_company', 255)->default("");
@@ -71,6 +72,7 @@ class ComZeappsContactInit
             $table->increments('id');
             $table->integer('id_user_account_manager', false, true)->default(0);
             $table->string('name_user_account_manager', 100)->default("");
+            $table->integer('id_price_list')->default(0);
             $table->integer('id_company', false, true)->default(0);
             $table->string('name_company', 255)->default("");
             $table->integer('id_account_family', false, true)->default(0);

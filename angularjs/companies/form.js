@@ -44,6 +44,17 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
             {label:'Type',key:'type_label'}
         ];
 
+
+        // charge la liste des grilles de prix
+        $scope.price_lists = false;
+        zhttp.crm.price_list.get_all().then(function (response) {
+            if (response.status == 200) {
+                $scope.price_lists = response.data;
+            }
+        });
+
+
+
         $scope.isTabActive = isTabActive;
         $scope.setTab = setTab;
         $scope.displayTab = displayTab;

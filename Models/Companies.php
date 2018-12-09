@@ -29,6 +29,7 @@ class Companies extends Model implements iModelExport{
         $this->fieldModelInfo = new ModelHelper();
         $this->fieldModelInfo->integer('id_user_account_manager', false, true)->default(0);
         $this->fieldModelInfo->string('name_user_account_manager', 100)->default("");
+        $this->fieldModelInfo->integer('id_price_list')->default(0);
         $this->fieldModelInfo->string('company_name', 255)->default("");
         $this->fieldModelInfo->integer('id_parent_company', false, true)->default(0);
         $this->fieldModelInfo->string('name_parent_company', 255)->default("");

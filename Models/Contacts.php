@@ -30,6 +30,7 @@ class Contacts extends Model implements iModelExport {
         $this->fieldModelInfo->increments('id');
         $this->fieldModelInfo->integer('id_user_account_manager', false, true)->default(0);
         $this->fieldModelInfo->string('name_user_account_manager', 100)->default("");
+        $this->fieldModelInfo->integer('id_price_list')->default(0);
         $this->fieldModelInfo->integer('id_company', false, true)->default(0);
         $this->fieldModelInfo->string('name_company', 255)->default("");
         $this->fieldModelInfo->integer('id_account_family', false, true)->default(0);
