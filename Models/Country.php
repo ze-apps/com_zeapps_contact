@@ -23,6 +23,7 @@ class Country extends Model implements iModelExport {
         $this->table = self::$_table;
 
         $this->fieldModelInfo = new ModelHelper();
+        $this->fieldModelInfo->integer('id', true, true);
         $this->fieldModelInfo->integer('id_zone', false, true)->default(0);
         $this->fieldModelInfo->integer('id_currency', false, true)->default(0);
 
