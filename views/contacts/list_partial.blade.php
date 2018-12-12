@@ -26,7 +26,10 @@
                 <tr>
                     <th>Nom</th>
                     <th>Téléphone</th>
+                    <th>Code postal</th>
                     <th>Ville</th>
+                    <th>Etat</th>
+                    <th>Pays</th>
                     <th>Gestionnaire du compte</th>
                     <th></th>
                 </tr>
@@ -35,7 +38,10 @@
                 <tr ng-repeat="contact in contacts">
                     <td ng-click="goTo(contact.id)">@{{contact.last_name}} @{{contact.first_name}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.phone}}</td>
+                    <td ng-click="goTo(contact.id)">@{{contact.zipcode}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.city}}</td>
+                    <td ng-click="goTo(contact.id)">@{{contact.state}}</td>
+                    <td ng-click="goTo(contact.id)">@{{contact.country_name}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.name_user_account_manager}}</td>
                     <td class="text-right">
                         <ze-btn fa="pencil" color="info" hint="Editer" direction="left"
