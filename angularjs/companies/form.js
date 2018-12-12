@@ -77,8 +77,10 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
                 $scope.account_families = response.data.account_families;
                 $scope.topologies = response.data.topologies;
 
-                $scope.$parent.form.id_user_account_manager = $rootScope.user.id;
-                $scope.$parent.form.name_user_account_manager =  $rootScope.user.firstname + " " +  $rootScope.user.lastname;
+                if (!$scope.form.id) {
+                    $scope.$parent.form.id_user_account_manager = $rootScope.user.id;
+                    $scope.$parent.form.name_user_account_manager = $rootScope.user.firstname + " " + $rootScope.user.lastname;
+                }
             }
         });
 
