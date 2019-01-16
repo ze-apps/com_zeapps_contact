@@ -78,6 +78,7 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     $scope.contacts = response.data.contacts;
                     angular.forEach($scope.contacts, function(contact){
                         contact.date_of_birth = new Date(contact.date_of_birth);
+                        contact.age_of_contact = get_age_from_date_of_birth(contact.date_of_birth);
                         contact.discount = parseFloat(contact.discount);
                     });
 
@@ -116,6 +117,7 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
         function edit(contact) {
             var formatted_data = angular.toJson(contact);
             zhttp.contact.contact.save(formatted_data);
+            loadList();
         }
 
 		function del(contact) {
@@ -126,5 +128,14 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
             });
 		}
 
+        function get_age_from_date_of_birth(date) {
+            var today = new Date();
+            var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000) );
+            if (age == 1) {
+                return '1 an';
+            } else {
+                return age + ' ans';
+            }
+        }
 
 	}]);

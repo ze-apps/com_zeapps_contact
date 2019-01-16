@@ -107,7 +107,8 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Date de naissance</label>
-                    <input type="date" ng-model="form.date_of_birth" class="form-control">
+                    <input type="date" ng-blur="updateAge(form.date_of_birth)" ng-model="form.date_of_birth" class="form-control">
+                    <span class="pull-right" ng-model="form.age_of_contact" ng-if="form.date_of_birth">@{{form.age_of_contact}}</span>
                 </div>
             </div>
         </div>

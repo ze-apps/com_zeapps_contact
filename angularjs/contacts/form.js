@@ -59,6 +59,8 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
         $scope.loadState = loadState;
         $scope.loadAccountingNumber = loadAccountingNumber;
 
+        $scope.updateAge = updateAge;
+
         zhttp.contact.contact.context().then(function (response) {
             if (response.status == 200) {
                 $scope.account_families = response.data.account_families;
@@ -76,6 +78,10 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
                     loadCompany(response.data.company);
                 }
             });
+        }
+
+        function updateAge(date_of_birth) {
+            $scope.form.age_of_contact = get_age_from_date_of_birth(date_of_birth);
         }
 
         function isTabActive(tab) {
@@ -158,6 +164,16 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
                 $scope.$parent.form.accounting_number = accounting_number.number;
             } else {
                 $scope.$parent.form.accounting_number = "";
+            }
+        }
+
+        function get_age_from_date_of_birth(date) {
+            var today = new Date();
+            var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000) );
+            if (age == 1) {
+                return '1 an';
+            } else {
+                return age + ' ans';
             }
         }
     }]);
