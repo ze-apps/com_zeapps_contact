@@ -34,6 +34,7 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                 if (response.status == 200) {
                     $scope.contact = response.data.contact;
                     $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
+                    $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
                 }
             });
         }
@@ -133,6 +134,16 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
         function last_contact() {
             if ($scope.contact_last) {
                 $location.path("/ng/com_zeapps_contact/contacts/" + $scope.contact_last);
+            }
+        }
+
+        function get_age_from_date_of_birth(date) {
+            var today = new Date();
+            var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000) );
+            if (age == 1) {
+                return '1 an';
+            } else {
+                return age + ' ans';
             }
         }
 	}]);
