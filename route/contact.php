@@ -18,6 +18,8 @@ Routeur::get("/com_zeapps_contact/contacts/get/{id}", 'App\\com_zeapps_contact\\
 Routeur::post("/com_zeapps_contact/contacts/modal/{id_company}/{limit}/{offset}", 'App\\com_zeapps_contact\\Controllers\\Contacts@modal');
 Routeur::post("/com_zeapps_contact/contacts/save/", 'App\\com_zeapps_contact\\Controllers\\Contacts@save');
 Routeur::post("/com_zeapps_contact/contacts/delete/{id}", 'App\\com_zeapps_contact\\Controllers\\Contacts@delete');
+
+
 Routeur::post("/com_zeapps_contact/contacts/make_export/", 'App\\com_zeapps_contact\\Controllers\\Contacts@make_export');
-Routeur::get("/com_zeapps_contact/contacts/get_export/", 'App\\com_zeapps_contact\\Controllers\\Contacts@get_export');
+Routeur::get("/com_zeapps_contact/contacts/get_export/{link}", 'App\\com_zeapps_contact\\Controllers\\Contacts@get_export');
 

@@ -1,5 +1,5 @@
-app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp",
-	function ($scope, $routeParams, $location, $rootScope, zhttp) {
+app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp", "toasts",
+	function ($scope, $routeParams, $location, $rootScope, zhttp, toasts) {
 
         $scope.filters = {
             main: [
@@ -93,14 +93,13 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
             $location.url('/ng/com_zeapps_contact/contacts/'+id);
         }
 
-        function getExcel(){
+        function getExcel() {
             var formatted_filters = angular.toJson($scope.filter_model);
             zhttp.contact.contact.excel.make(formatted_filters).then(function (response) {
-                if (response.data && response.data !== "false") {
-                    window.document.location.href = zhttp.contact.contact.excel.get();
-                }
-                else{
-                    toasts('info', "Aucune compagnie correspondant à vos critères n'a pu etre trouvée");
+                if (response.status == 200 && response.data) {
+                    window.document.location.href = zhttp.contact.contact.excel.get(response.data.link);
+                } else {
+                    toasts('danger', "Une erreur (2) est survenue lors de la génération du fichier Excel");
                 }
             });
         }

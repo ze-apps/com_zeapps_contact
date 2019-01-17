@@ -119,13 +119,12 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
 
 		}
 
-		function getExcel(){
+		function getExcel() {
             var formatted_filters = angular.toJson($scope.filter_model);
             zhttp.contact.company.excel.make(formatted_filters).then(function (response) {
-                if (response.data && response.data !== "false") {
-                    window.document.location.href = zhttp.contact.company.excel.get();
-                }
-                else{
+                if (response.status == 200 && response.data) {
+                    window.document.location.href = zhttp.contact.company.excel.get(response.data.link);
+                } else {
                     toasts('info', "Aucune compagnie correspondant à vos critères n'a pu etre trouvée");
                 }
             });

@@ -92,8 +92,8 @@ app.config(["$provide",
             function makeExcel_company(filters){
                 return zeHttp.post("/com_zeapps_contact/companies/make_export/", filters);
             }
-            function getExcel_company(){
-                return "/com_zeapps_contact/companies/get_export/";
+            function getExcel_company(link){
+                return "/com_zeapps_contact/companies/get_export/"+link;
             }
 
 
@@ -124,8 +124,8 @@ app.config(["$provide",
             function makeExcel_contact(filters){
                 return zeHttp.post("/com_zeapps_contact/contacts/make_export/", filters);
             }
-            function getExcel_contact(){
-                return "/com_zeapps_contact/contacts/get_export/";
+            function getExcel_contact(link){
+                return "/com_zeapps_contact/contacts/get_export/"+link;
             }
 
 
