@@ -46,14 +46,14 @@
         <ul role="tablist" class="nav nav-tabs">
             <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">Résumé</a></li>
 
-            <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooks">
+            <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooksComZeappsContact_ContactHook">
                 <a href="#" ng-click="setTab(hook.label)">@{{ hook.label }}</a>
             </li>
 
             <li role="presentation" ng-class="isTabActive('email') ? 'active' : ''"><a href="#" ng-click="setTab('email')">Email</a></li>
         </ul>
 
-        <div ng-show="isTabActive(hook.label)" ng-repeat="hook in hooks">
+        <div ng-show="isTabActive(hook.label)" ng-repeat="hook in hooksComZeappsContact_ContactHook">
             <div ng-include="hook.template">
             </div>
         </div>

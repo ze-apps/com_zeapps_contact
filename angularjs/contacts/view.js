@@ -12,10 +12,15 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
 			);
 		});
 
-        $scope.templateEdit = "/com_zeapps_contact/contacts/form_modal";
-        $scope.hooks = zeHooks.get("comZeappsContact_ContactHook");
-        $scope.contact = [];
 
+		// to activate hook function
+        $scope.hooksComZeappsContact_ContactHook = zeHooks.get("comZeappsContact_ContactHook");
+
+
+
+
+        $scope.templateEdit = "/com_zeapps_contact/contacts/form_modal";
+        $scope.contact = [];
         $scope.currentTab = $rootScope.comZeappsContactLastShowTabContact || "summary";
 
 		$scope.setTab = setTab;

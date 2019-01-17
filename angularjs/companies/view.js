@@ -12,8 +12,12 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
             );
         });
 
+        // to activate hook function
+        $scope.hooksComZeappsContact_EntrepriseHook = zeHooks.get("comZeappsContact_EntrepriseHook");
+
+
+
         $scope.templateEdit = "/com_zeapps_contact/companies/form_modal";
-        $scope.hooks = zeHooks.get("comZeappsContact_EntrepriseHook");
         $scope.companies = [];
 
         $scope.currentTab = $rootScope.comZeappsContactLastShowTabEntreprise || "summary";

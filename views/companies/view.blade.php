@@ -49,14 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">Résumé</a></li>
         <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#" ng-click="setTab('contacts')">Contacts</a></li>
 
-        <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooks">
+        <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
             <a href="#" ng-click="setTab(hook.label)">@{{ hook.label }}</a>
         </li>
 
         <li role="presentation" ng-class="isTabActive('email') ? 'active' : ''"><a href="#" ng-click="setTab('email')">Email</a></li>
     </ul>
 
-    <div ng-if="isTabActive(hook.label)" ng-repeat="hook in hooks">
+    <div ng-if="isTabActive(hook.label)" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
         <div ng-include="hook.template"></div>
     </div>
 
