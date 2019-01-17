@@ -16,7 +16,9 @@ Routeur::post("/com_zeapps_contact/companies/context/", 'App\\com_zeapps_contact
 Routeur::get("/com_zeapps_contact/companies/get/{id}", 'App\\com_zeapps_contact\\Controllers\\Companies@get');
 Routeur::post("/com_zeapps_contact/companies/save", 'App\\com_zeapps_contact\\Controllers\\Companies@save');
 Routeur::post("/com_zeapps_contact/companies/delete/{id}", 'App\\com_zeapps_contact\\Controllers\\Companies@delete');
+
+
 Routeur::post("/com_zeapps_contact/companies/make_export/", 'App\\com_zeapps_contact\\Controllers\\Companies@make_export');
-Routeur::get("/com_zeapps_contact/companies/get_export/", 'App\\com_zeapps_contact\\Controllers\\Companies@get_export');
+Routeur::get("/com_zeapps_contact/companies/get_export/{link}", 'App\\com_zeapps_contact\\Controllers\\Companies@get_export');
 
 

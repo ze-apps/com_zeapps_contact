@@ -66,6 +66,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <strong>Date de naissance : </strong>@{{contact.date_of_birth | date:'dd/MM/yyyy'}}
+                    <span>(@{{ contact.age_of_contact }})</span>
                 </div>
                 <div class="col-md-4">
                     <strong>Service : </strong>@{{contact.name_activity_area}}
