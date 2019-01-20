@@ -17,8 +17,6 @@ class Contacts extends Controller
 
     private $sheet_name;
 
-    const EXPORTED_FILE_FULL_NAME = '/Users/azizbennane/Documents/contacts.xls';
-
     public function search()
     {
         $data = array();
