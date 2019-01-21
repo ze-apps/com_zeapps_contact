@@ -4,7 +4,8 @@ namespace App\com_zeapps_contact\Controllers;
 
 use Zeapps\Core\Controller;
 use Zeapps\Core\Request;
-use Zeapps\Core\Session;
+use Zeapps\Core\Storage;
+
 use App\com_zeapps_contact\Models\Companies as CompaniesModel;
 use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Topologies;
@@ -260,7 +261,7 @@ class Companies extends Controller
             $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 4);
 
             // Gnérer une url temporaire unique pour le fichier Excel dans /tmp
-            $link = BASEPATH . 'tmp/companies_' . self::generateRandomString() . '.xlsx';
+            $link = BASEPATH . 'tmp/companies_' . Storage::generateRandomString() . '.xlsx';
             $writer->writeToFile($link);
 
             echo json_encode(array(
@@ -293,15 +294,5 @@ class Companies extends Controller
 
         // Suppression du fichier zip sur le serveur
         unlink($link);
-    }
-
-    public static function generateRandomString($length = 10) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
     }
 }

@@ -2,10 +2,9 @@
 
 namespace App\com_zeapps_contact\Controllers;
 
-use Zeapps\Core\ModelRequest;
-
 use Zeapps\Core\Controller;
 use Zeapps\Core\Request;
+use Zeapps\Core\Storage;
 use Zeapps\libraries\XLSXWriter;
 
 use App\com_zeapps_contact\Models\Contacts as ContactsModel;
@@ -309,7 +308,7 @@ class Contacts extends Controller
             $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 4);
 
             // Gnérer une url temporaire unique pour le fichier Excel dans /tmp
-            $link = BASEPATH . 'tmp/contacts_' . self::generateRandomString() . '.xlsx';
+            $link = BASEPATH . 'tmp/contacts_' . Storage::generateRandomString() . '.xlsx';
             $writer->writeToFile($link);
 
             echo json_encode(array(
@@ -342,16 +341,6 @@ class Contacts extends Controller
 
         // Suppression du fichier zip sur le serveur
         unlink($link);
-    }
-
-    public static function generateRandomString($length = 10) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
     }
 
 }
