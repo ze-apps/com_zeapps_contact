@@ -10,6 +10,8 @@ use Zeapps\libraries\XLSXWriter;
 use App\com_zeapps_contact\Models\Contacts as ContactsModel;
 use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Topologies;
+use App\com_zeapps_crm\Models\Order\Orders;
+use App\com_zeapps_crm\Models\Invoice\Invoices;
 
 class Contacts extends Controller
 {
@@ -47,15 +49,14 @@ class Contacts extends Controller
     }
 
 
-
-
-    public function getAll(Request $request) {
+    public function getAll(Request $request)
+    {
         $id_company = $request->input('id_company', "0");
         $limit = $request->input('limit', 15);
         $offset = $request->input('offset', 0);
         $context = $request->input('context', false);
 
-        $filters = array() ;
+        $filters = array();
 
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
             // POST is actually in json format, do an internal translation
@@ -67,30 +68,29 @@ class Contacts extends Controller
         }
 
 
-        $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name') ;
+        $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name');
         foreach ($filters as $key => $value) {
             if (strpos($key, " LIKE")) {
                 $key = str_replace(" LIKE", "", $key);
-                $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%') ;
+                $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%');
             } else {
-                $contacts_rs = $contacts_rs->where($key, $value) ;
+                $contacts_rs = $contacts_rs->where($key, $value);
             }
         }
 
         $total = $contacts_rs->count();
-        $contacts_rs_id = $contacts_rs ;
+        $contacts_rs_id = $contacts_rs;
 
 
         $contacts = $contacts_rs->limit($limit)->offset($offset)->get();
 
-        if(!$contacts) {
+        if (!$contacts) {
             $contacts = array();
         }
 
 
-
         $ids = [];
-        if($total < 500) {
+        if ($total < 500) {
             if ($rows = $contacts_rs_id->select(array("id"))->get()) {
                 foreach ($rows as $row) {
                     array_push($ids, $row->id);
@@ -98,16 +98,15 @@ class Contacts extends Controller
             }
         }
 
-        if($context){
-            if(!$account_families = AccountFamilies::orderBy('sort')->get()){
+        if ($context) {
+            if (!$account_families = AccountFamilies::orderBy('sort')->get()) {
                 $account_families = array();
             }
 
-            if(!$topologies = Topologies::orderBy('sort')->get()){
+            if (!$topologies = Topologies::orderBy('sort')->get()) {
                 $topologies = array();
             }
-        }
-        else{
+        } else {
             $account_families = array();
             $topologies = array();
         }
@@ -121,12 +120,13 @@ class Contacts extends Controller
         ));
     }
 
-    public function context() {
-        if(!$account_families = AccountFamilies::orderBy('sort')->get()){
+    public function context()
+    {
+        if (!$account_families = AccountFamilies::orderBy('sort')->get()) {
             $account_families = array();
         }
 
-        if(!$topologies = Topologies::orderBy('sort')->get()){
+        if (!$topologies = Topologies::orderBy('sort')->get()) {
             $topologies = array();
         }
 
@@ -134,54 +134,53 @@ class Contacts extends Controller
     }
 
 
-
-
-    public function get(Request $request) {
+    public function get(Request $request)
+    {
         $id = $request->input('id', 0);
 
-        if(!$account_families = AccountFamilies::orderBy('sort')->get()){
+        if (!$account_families = AccountFamilies::orderBy('sort')->get()) {
             $account_families = array();
         }
 
-        if(!$topologies = Topologies::orderBy('sort')->get()){
+        if (!$topologies = Topologies::orderBy('sort')->get()) {
             $topologies = array();
         }
 
-        if($contact = ContactsModel::where('id', $id)->first()){
-            //$contact->average_order = $this->orders->frequencyOf($id, 'contact');
-            //$contact->turnovers = $this->invoices->turnoverByYearsOf($id, 'contact');
-        }
-        else{
+        if ($contact = ContactsModel::where('id', $id)->first()) {
+            $contact->average_order = Orders::frequencyOf($id, 'contact');
+            $contact->turnovers = Invoices::turnoverByYearsOf($id, 'contact');
+        } else {
             $contact = array();
         }
 
         echo json_encode(array('account_families' => $account_families, 'topologies' => $topologies, 'contact' => $contact));
     }
 
-    public function modal(Request $request) {
+    public function modal(Request $request)
+    {
         $id_company = $request->input('id_company', 0);
         $limit = $request->input('limit', 15);
         $offset = $request->input('offset', 0);
 
-        $filters = array() ;
+        $filters = array();
 
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
             // POST is actually in json format, do an internal translation
             $filters = json_decode(file_get_contents('php://input'), true);
         }
 
-        if($id_company !== "0") {
+        if ($id_company !== "0") {
             $filters['id_company'] = $id_company;
         }
 
 
-        $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name') ;
+        $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name');
         foreach ($filters as $key => $value) {
             if (strpos($key, " LIKE")) {
                 $key = str_replace(" LIKE", "", $key);
-                $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%') ;
+                $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%');
             } else {
-                $contacts_rs = $contacts_rs->where($key, $value) ;
+                $contacts_rs = $contacts_rs->where($key, $value);
             }
         }
 
@@ -190,16 +189,17 @@ class Contacts extends Controller
 
         $contacts = $contacts_rs->limit($limit)->offset($offset)->get();
 
-        if(!$contacts) {
+        if (!$contacts) {
             $contacts = array();
         }
 
         echo json_encode(array("data" => $contacts, "total" => $total));
     }
 
-    public function save() {
+    public function save()
+    {
         // constitution du tableau
-        $data = array() ;
+        $data = array();
 
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
             // POST is actually in json format, do an internal translation
@@ -209,11 +209,11 @@ class Contacts extends Controller
         $contact = new ContactsModel();
 
         if (isset($data["id"])) {
-            $contact = ContactsModel::where('id', $data["id"])->first() ;
+            $contact = ContactsModel::where('id', $data["id"])->first();
         }
 
         foreach ($data as $key => $value) {
-            $contact->$key = $value ;
+            $contact->$key = $value;
         }
 
         $contact->save();
@@ -221,7 +221,8 @@ class Contacts extends Controller
         echo $contact->id;
     }
 
-    public function delete(Request $request) {
+    public function delete(Request $request)
+    {
         $id = $request->input('id', 0);
 
         echo json_encode(ContactsModel::where('id', $id)->delete());
@@ -229,7 +230,7 @@ class Contacts extends Controller
 
     public function make_export()
     {
-        $contacts = ContactsModel::orderBy('id', 'ASC') ;
+        $contacts = ContactsModel::orderBy('id', 'ASC');
 
         // Filters
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
@@ -276,7 +277,7 @@ class Contacts extends Controller
                 'font-style' => 'bold,italic',
                 'border' => 'top, right, left, bottom',
                 'color' => '#000',
-                'halign'=>'center');
+                'halign' => 'center');
 
             $writer->writeSheetRow($this->sheet_name, $row1, $format);
 
@@ -300,7 +301,7 @@ class Contacts extends Controller
                 );
 
                 // Formatage
-                $format = array('halign'=>'center');
+                $format = array('halign' => 'center');
 
                 $writer->writeSheetRow($this->sheet_name, $row3, $format);
             }
@@ -326,14 +327,14 @@ class Contacts extends Controller
         $link = $request->input('link', 0);
 
         // Verifier si l'url commence par /tmp/ et ne contient pas ..
-        if ( !strpos($link, '/tmp/') || (strpos($link, '/tmp/') && strpos($link, '/tmp/') == 0) || strpos($link, '..') ) {
+        if (!strpos($link, '/tmp/') || (strpos($link, '/tmp/') && strpos($link, '/tmp/') == 0) || strpos($link, '..')) {
             abort(404);
         }
 
         header('Content-Type: application/octet-stream');
         header("Content-Transfer-Encoding: Binary");
         header("Content-disposition: attachment; filename=\"" . basename($link) . "\"");
-        header('Content-Length: '. filesize($link));
+        header('Content-Length: ' . filesize($link));
         header('Expires: 0');
         header('Pragma: no-cache');
 
