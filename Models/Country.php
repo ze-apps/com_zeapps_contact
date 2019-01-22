@@ -18,6 +18,7 @@ class Country extends Model implements iModelExport {
     static protected $_table = 'com_zeapps_contact_country';
     protected $table ;
 
+    protected $fieldModelInfo ;
 
     public function __construct(array $attributes = [])
     {

@@ -18,6 +18,7 @@ class States extends Model implements iModelExport {
     static protected $_table = 'com_zeapps_contact_states';
     protected $table ;
 
+    protected $fieldModelInfo ;
 
     public function __construct(array $attributes = [])
     {

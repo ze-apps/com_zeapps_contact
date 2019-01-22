@@ -19,6 +19,7 @@ class CodeNaf extends Model implements iModelExport {
     static protected $_table = 'com_zeapps_contact_code_naf';
     protected $table ;
 
+    protected $fieldModelInfo ;
 
     public function __construct(array $attributes = [])
     {

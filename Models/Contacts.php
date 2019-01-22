@@ -20,7 +20,6 @@ class Contacts extends Model implements iModelExport {
 
     protected $fieldModelInfo ;
 
-
     public function __construct(array $attributes = [])
     {
         $this->table = self::$_table;

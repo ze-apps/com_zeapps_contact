@@ -18,6 +18,7 @@ class CountryLang extends Model implements iModelExport {
     static protected $_table = 'com_zeapps_contact_country_lang';
     protected $table ;
 
+    protected $fieldModelInfo ;
 
     public function __construct(array $attributes = [])
     {
