@@ -225,7 +225,11 @@ class Contacts extends Controller
     {
         $id = $request->input('id', 0);
 
-        echo json_encode(ContactsModel::where('id', $id)->delete());
+        $contactModel = ContactsModel::where('id', $id)->first();
+
+        $deleted = $contactModel->delete();
+
+        echo json_encode($deleted);
     }
 
     public function make_export()

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model ;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Zeapps\Core\ObjectHistory;
 
 class Currency extends Model {
     use SoftDeletes;
@@ -27,6 +28,9 @@ class Currency extends Model {
 
     public function save(array $options = []) {
 
+        // for history
+        $valueOriginal = $this->original ;
+
         /**** to delete unwanted field ****/
         $schema = self::getSchema();
         foreach ($this->getAttributes() as $key => $value) {
@@ -37,6 +41,27 @@ class Currency extends Model {
         }
         /**** end to delete unwanted field ****/
 
-        return parent::save($options);
+        $reponse = parent::save($options) ;
+
+        // save to ObjectHistory
+        ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), $this, $valueOriginal);
+
+        return $reponse;
+    }
+
+    public function delete() {
+
+        // for history
+        $valueOriginal = $this->original;
+
+        $deleted = parent::delete();
+
+        // save to ObjectHistory
+        if ($deleted) {
+            ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), null, $valueOriginal);
+            return true;
+        }
+
+        return false;
     }
 }

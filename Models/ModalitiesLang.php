@@ -10,6 +10,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Zeapps\Core\ModelHelper;
 use Zeapps\Core\iModelExport;
 use Zeapps\Core\ModelExportType;
+use Zeapps\Core\ObjectHistory;
 
 class ModalitiesLang extends Model implements iModelExport {
     use SoftDeletes;
@@ -41,6 +42,9 @@ class ModalitiesLang extends Model implements iModelExport {
 
     public function save(array $options = []) {
 
+        // for history
+        $valueOriginal = $this->original ;
+
         /**** to delete unwanted field ****/
         $schema = self::getSchema();
         foreach ($this->getAttributes() as $key => $value) {
@@ -51,7 +55,28 @@ class ModalitiesLang extends Model implements iModelExport {
         }
         /**** end to delete unwanted field ****/
 
-        return parent::save($options);
+        $reponse = parent::save($options) ;
+
+        // save to ObjectHistory
+        ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), $this, $valueOriginal);
+
+        return $reponse;
+    }
+
+    public function delete() {
+
+        // for history
+        $valueOriginal = $this->original;
+
+        $deleted = parent::delete();
+
+        // save to ObjectHistory
+        if ($deleted) {
+            ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), null, $valueOriginal);
+            return true;
+        }
+
+        return false;
     }
 
     public function getModelExport() : ModelExportType {

@@ -185,7 +185,11 @@ class Companies extends Controller
     public function delete(Request $request) {
         $id = $request->input('id', 0);
 
-        echo json_encode(CompaniesModel::where('id', $id)->delete());
+        $companyModel = CompaniesModel::where('id', $id)->first();
+
+        $deleted = $companyModel->delete();
+
+        echo json_encode($deleted);
     }
 
     public function make_export()

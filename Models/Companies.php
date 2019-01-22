@@ -10,6 +10,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Zeapps\Core\ModelHelper;
 use Zeapps\Core\iModelExport;
 use Zeapps\Core\ModelExportType;
+use Zeapps\Core\ObjectHistory;
 
 class Companies extends Model implements iModelExport{
     use SoftDeletes;
@@ -91,11 +92,42 @@ class Companies extends Model implements iModelExport{
         /******** clean data **********/
         $this->fieldModelInfo->cleanData($this) ;
 
+        // for history
+        $valueOriginal = $this->original ;
 
         /**** to delete unwanted field ****/
         $this->fieldModelInfo->removeFieldUnwanted($this) ;
+        $schema = self::getSchema();
+        foreach ($this->getAttributes() as $key => $value) {
+            if (!in_array($key, $schema)) {
+                //echo $key . "\n" ;
+                unset($this->$key);
+            }
+        }
+        /**** end to delete unwanted field ****/
 
-        return parent::save($options);
+        $reponse = parent::save($options) ;
+
+        // save to ObjectHistory
+        ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), $this, $valueOriginal);
+
+        return $reponse;
+    }
+
+    public function delete() {
+
+        // for history
+        $valueOriginal = $this->original;
+
+        $deleted = parent::delete();
+
+        // save to ObjectHistory
+        if ($deleted) {
+            ObjectHistory::addHistory(self::$_table, $this->id, $this->getFields(), null, $valueOriginal);
+            return true;
+        }
+
+        return false;
     }
 
     public function getModelExport() : ModelExportType {

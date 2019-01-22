@@ -63,6 +63,8 @@ class Modalities extends Controller
 
     public function delete($id) {
         ModalitiesLang::where('id_modality', $id)->delete();
-        echo json_encode(ModalitiesModel::where('id', $id)->delete());
+        $modalityModel = ModalitiesModel::where('id', $id)->first();
+        $deleted = $modalityModel->delete();
+        echo json_encode($deleted);
     }
 }
