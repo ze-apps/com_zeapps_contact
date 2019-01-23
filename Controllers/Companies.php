@@ -11,6 +11,9 @@ use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Topologies;
 use App\com_zeapps_contact\Models\Contacts;
 
+use App\com_zeapps_crm\Models\Order\Orders;
+use App\com_zeapps_crm\Models\Invoice\Invoices;
+
 use Zeapps\libraries\XLSXWriter;
 
 class Companies extends Controller
@@ -144,8 +147,8 @@ class Companies extends Controller
         }
 
         if($company = CompaniesModel::where('id', $id)->first()){
-            //$company->average_order = $this->orders->frequencyOf($id, 'company');
-            //$company->turnovers = $this->invoices->turnoverByYearsOf($id, 'company');
+            $company->average_order = Orders::frequencyOf($id, 'company');
+            $company->turnovers = Invoices::turnoverByYearsOf($id, 'company');
         } else{
             $company = [];
         }
