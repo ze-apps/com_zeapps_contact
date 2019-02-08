@@ -77,8 +77,10 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
 
                     $scope.contacts = response.data.contacts;
                     angular.forEach($scope.contacts, function(contact){
-                        contact.date_of_birth = new Date(contact.date_of_birth);
-                        contact.age_of_contact = get_age_from_date_of_birth(contact.date_of_birth);
+                        if (contact.date_of_birth) {
+                            contact.date_of_birth = new Date(contact.date_of_birth);
+                            contact.age_of_contact = get_age_from_date_of_birth(contact.date_of_birth);
+                        }
                         contact.discount = parseFloat(contact.discount);
                     });
 
