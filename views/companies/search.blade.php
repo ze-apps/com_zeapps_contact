@@ -42,7 +42,7 @@
                     <td ng-click="goTo(company.id)">@{{company.billing_city}}</td>
                     <td ng-click="goTo(company.id)">@{{company.name_user_account_manager}}</td>
                     <td class="text-right">
-                        <ze-btn fa="pencil" color="info" hint="Editer" direction="left"
+                        <ze-btn fa="edit" color="info" hint="Editer" direction="left"
                                 ze-modalform="edit"
                                 data-edit="company"
                                 data-template="templateForm"

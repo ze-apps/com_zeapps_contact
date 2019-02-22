@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 @{{ modality.label }}
             </td>
             <td class="text-right">
-                <ze-btn fa="pencil" color="info" hint="Editer" direction="left"
+                <ze-btn fa="edit" color="info" hint="Editer" direction="left"
                         ze-modalform="edit"
                         data-edit="modality"
                         data-template="templateForm"

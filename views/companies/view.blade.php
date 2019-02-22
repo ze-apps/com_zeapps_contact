@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-3">
                 <div class="pull-right">
                     <ze-btn fa="arrow-left" color="primary" hint="Retour" direction="left" ng-click="back()"></ze-btn>
-                    <ze-btn fa="pencil" color="info" hint="Editer" direction="left"
+                    <ze-btn fa="edit" color="info" hint="Editer" direction="left"
                             ze-modalform="edit"
                             data-edit="company"
                             data-template="templateEdit"

@@ -44,7 +44,7 @@
                     <td ng-click="goTo(contact.id)">@{{contact.country_name}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.name_user_account_manager}}</td>
                     <td class="text-right">
-                        <ze-btn fa="pencil" color="info" hint="Editer" direction="left"
+                        <ze-btn fa="edit" color="info" hint="Editer" direction="left"
                                 ze-modalform="edit"
                                 data-edit="contact"
                                 data-template="templateForm"
