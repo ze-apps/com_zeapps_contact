@@ -9,6 +9,27 @@
 
     <div ng-if="displayTab('general')">
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" ng-model="form.company_name" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Société Mère</label>
+
+                    <span   ze-modalsearch="loadParentCompany"
+                            data-http="parentCompanyHttp"
+                            data-model="form.name_parent_company"
+                            data-fields="parentCompanyFields"
+                            data-title="Choisir une entreprise"></span>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="row">
             <div class="col-md-12">
@@ -24,9 +45,19 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>N° de TVA</label>
+                    <input type="text" ng-model="form.tva_intracom" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label>Type de compte</label>
                     <select ng-model="form.id_account_family" class="form-control" ng-change="updateAccountFamily()">
@@ -36,14 +67,25 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label>Topologie</label>
-                    <select ng-model="form.id_topology" class="form-control" ng-change="updateTopology()">
-                        <option ng-repeat="topology in topologies" ng-value="@{{topology.id}}">
-                            @{{ topology.label }}
+                    <label>Modalité de paiement</label>
+                    <select ng-model="form.id_modality" class="form-control" ng-change="updateModality()">
+                        <option ng-repeat="modality in modalities" ng-value="@{{modality.id}}">
+                            @{{ modality.label }}
                         </option>
                     </select>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Remise par défault</label>
+                    <input type="number" ng-model="form.discount" class="form-control">
                 </div>
             </div>
             <div class="col-md-3">
@@ -66,45 +108,6 @@
                             data-model="form.name_user_account_manager"
                             data-fields="accountManagerFields"
                             data-title="Choisir un utilisateur"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" ng-model="form.company_name" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Société Mère</label>
-
-                    <span   ze-modalsearch="loadParentCompany"
-                            data-http="parentCompanyHttp"
-                            data-model="form.name_parent_company"
-                            data-fields="parentCompanyFields"
-                            data-title="Choisir une entreprise"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Remise par défault</label>
-                    <input type="number" ng-model="form.discount" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Modalité de paiement</label>
-                    <select ng-model="form.id_modality" class="form-control" ng-change="updateModality()">
-                        <option ng-repeat="modality in modalities" ng-value="@{{modality.id}}">
-                            @{{ modality.label }}
-                        </option>
-                    </select>
                 </div>
             </div>
         </div>
