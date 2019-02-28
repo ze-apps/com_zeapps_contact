@@ -267,7 +267,7 @@ class Contacts extends Controller
             $header = array("string");
 
             $row1 = array("Liste des contacts");
-            $row2 = array("#", "Nom", "Téléphone", "Code postal", "Ville", "Etat", "Pays", "Gestionnaire du compte");
+            $row2 = array("#", "Nom", "Téléphone", "Autre Téléphone", "Portable", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "Gestionnaire du compte");
 
             $writer = new XLSXWriter();
 
@@ -292,25 +292,31 @@ class Contacts extends Controller
             $writer->writeSheetRow($this->sheet_name, $row2, $format);
 
             foreach ($contacts as $key => $contact) {
-
                 $row3 = array(
                     $contact->id,
-                    $contact->last_name . ' ' . $contact->first_name,
+                    $contact->first_name . ' ' . $contact->last_name,
                     $contact->phone,
+                    $contact->other_phone,
+                    $contact->mobile,
+                    $contact->address_1,
+                    $contact->address_2,
+                    $contact->address_3,
                     $contact->zipcode,
                     $contact->city,
                     $contact->state,
                     $contact->country_name,
+                    $contact->email,
                     $contact->name_user_account_manager
                 );
 
                 // Formatage
-                $format = array('halign' => 'center');
+                /*$format = array('halign' => 'center');*/
+                $format = array();
 
                 $writer->writeSheetRow($this->sheet_name, $row3, $format);
             }
 
-            $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 4);
+            $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 13);
 
             // Gnérer une url temporaire unique pour le fichier Excel dans /tmp
             $link = BASEPATH . 'tmp/contacts_' . Storage::generateRandomString() . '.xlsx';
