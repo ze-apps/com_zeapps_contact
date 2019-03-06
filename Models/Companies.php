@@ -74,6 +74,7 @@ class Companies extends Model implements iModelExport{
         $this->fieldModelInfo->integer('id_modality', false, true)->default(0);
         $this->fieldModelInfo->string('label_modality', 255)->default("");
         $this->fieldModelInfo->string('tva_intracom', 255)->default("");
+        $this->fieldModelInfo->tinyInteger('client_failure', false, true)->default(0);;
         $this->fieldModelInfo->timestamps();
         $this->fieldModelInfo->softDeletes();
 

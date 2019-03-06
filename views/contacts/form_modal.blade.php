@@ -146,6 +146,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="checkbox" ng-model="form.client_failure"
+                               ng-true-value="1" ng-false-value="0" ng-checked="form.client_failure == 1">
+                        Client défaillant
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 
 

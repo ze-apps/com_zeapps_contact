@@ -69,6 +69,7 @@ class Contacts extends Model implements iModelExport {
         $this->fieldModelInfo->float('discount', 5,2)->default(0);
         $this->fieldModelInfo->integer('id_modality', false, true)->default(0);
         $this->fieldModelInfo->string('label_modality', 255)->default("");
+        $this->fieldModelInfo->tinyInteger('client_failure', false, true)->default(0);;
         $this->fieldModelInfo->timestamps();
         $this->fieldModelInfo->softDeletes();
 

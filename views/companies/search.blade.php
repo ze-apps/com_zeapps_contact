@@ -36,8 +36,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="company in companies">
-                    <td ng-click="goTo(company.id)">@{{company.company_name}}</td>
+                <tr ng-repeat="company in companies" ng-class="company.client_failure?'text-danger':''">
+                    <td ng-click="goTo(company.id)"><i class="fas fa-ban text-danger" ng-if="company.client_failure"></i> @{{company.company_name}}</td>
                     <td ng-click="goTo(company.id)">@{{company.phone}}</td>
                     <td ng-click="goTo(company.id)">@{{company.billing_city}}</td>
                     <td ng-click="goTo(company.id)">@{{company.name_user_account_manager}}</td>
