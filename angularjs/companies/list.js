@@ -134,7 +134,8 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
 			var formatted_data = angular.toJson(company);
             zhttp.contact.company.save(formatted_data).then(function (response) {
                 if (response.data && response.data != "false") {
-                    loadList();
+                    $location.path("/ng/com_zeapps_contact/companies/" + response.data);
+                    //loadList();
                 }
             });
         }

@@ -110,7 +110,7 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
             var formatted_data = angular.toJson(contact);
             zhttp.contact.contact.save(formatted_data).then(function (response) {
                 if (response.data && response.data != "false") {
-                    loadList();
+                    $location.path("/ng/com_zeapps_contact/contacts/" + response.data);
                 }
             });
         }
