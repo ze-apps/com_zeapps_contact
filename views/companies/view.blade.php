@@ -1,12 +1,10 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <div id="content">
     <div class="well">
         <div class="row">
             <div class="col-md-3">
                 <div class="titleWell">
-                    @{{company.company_name}}
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3em; color:#dd0000;" ng-if="company.client_failure"></i>
+                    <b>@{{company.company_name}}</b>
                 </div>
                 <div>
                     <small>@{{company.name_parent_company}}</small>

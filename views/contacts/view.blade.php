@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="titleWell">
-                        @{{contact.title_name + ' ' + contact.first_name + ' ' + contact.last_name}}
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3em; color:#dd0000;" ng-if="contact.client_failure"></i>
+                        <b>@{{contact.title_name + ' ' + contact.first_name + ' ' + contact.last_name}}</b>
                     </div>
                     <div>
                         <small>@{{contact.name_company}}</small>
