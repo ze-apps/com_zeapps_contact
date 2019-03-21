@@ -51,7 +51,7 @@ app.config(["$provide",
                 },
                 countries : {
 					all : getAll_countries,
-						modal : modal_countries
+					modal : modal_countries
 				},
 				states : {
 					modal : modal_states
