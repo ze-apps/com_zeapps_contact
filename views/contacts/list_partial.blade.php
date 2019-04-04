@@ -24,6 +24,7 @@
             <table class="table table-hover table-condensed table-responsive" ng-show="contacts.length">
                 <thead>
                 <tr>
+                    <th>Société</th>
                     <th>Nom</th>
                     <th>Téléphone</th>
                     <th>Code postal</th>
@@ -36,6 +37,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="contact in contacts" ng-class="contact.client_failure?'text-danger':''">
+                    <td ng-click="goTo(contact.id)">@{{contact.name_company}}</td>
                     <td ng-click="goTo(contact.id)"><i class="fas fa-ban text-danger" ng-if="contact.client_failure"></i> @{{contact.last_name}} @{{contact.first_name}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.phone}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.zipcode}}</td>

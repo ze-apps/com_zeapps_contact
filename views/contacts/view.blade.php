@@ -8,7 +8,7 @@
                         <b>@{{contact.title_name + ' ' + contact.first_name + ' ' + contact.last_name}}</b>
                     </div>
                     <div>
-                        <small>@{{contact.name_company}}</small>
+                        <small><a href="/ng/com_zeapps_contact/companies/@{{contact.id_company}}">@{{contact.name_company}}</a></small>
                     </div>
                 </div>
 
