@@ -66,6 +66,29 @@ class ComZeappsContactInit
             $table->softDeletes();
         });
 
+        Capsule::schema()->create('com_zeapps_contact_companies_address', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_company', false, true)->default(0);
+            $table->string('company_name', 255)->default("");
+            $table->string('title_name', 30)->default("");
+            $table->string('first_name', 50)->default("");
+            $table->string('last_name', 50)->default("");
+            $table->string('address_1', 100)->default("");
+            $table->string('address_2', 100)->default("");
+            $table->string('address_3', 100)->default("");
+            $table->string('city', 100)->default("");
+            $table->string('zipcode', 50)->default("");
+            $table->integer('state_id')->default(0);
+            $table->string('state', 100)->default("");
+            $table->integer('country_id', false, true)->default(0);
+            $table->string('country_name', 100)->default("");
+            $table->string('email', 255)->default("");
+            $table->string('phone', 25)->default("");
+            $table->string('fax', 25)->default("");
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
 
         
         Capsule::schema()->create('com_zeapps_contact_contacts', function (Blueprint $table) {
@@ -111,6 +134,30 @@ class ComZeappsContactInit
             $table->float('discount', 5,2)->default(0);
             $table->integer('id_modality', false, true)->default(0);
             $table->string('label_modality', 255)->default("");
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Capsule::schema()->create('com_zeapps_contact_contacts_address', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_contact', false, true)->default(0);
+            $table->string('company_name', 255)->default("");
+            $table->string('title_name', 30)->default("");
+            $table->string('first_name', 50)->default("");
+            $table->string('last_name', 50)->default("");
+            $table->string('address_1', 100)->default("");
+            $table->string('address_2', 100)->default("");
+            $table->string('address_3', 100)->default("");
+            $table->string('city', 100)->default("");
+            $table->string('zipcode', 50)->default("");
+            $table->integer('state_id')->default(0);
+            $table->string('state', 100)->default("");
+            $table->integer('country_id', false, true)->default(0);
+            $table->string('country_name', 100)->default("");
+            $table->string('email', 255)->default("");
+            $table->string('phone', 25)->default("");
+            $table->string('fax', 25)->default("");
 
             $table->timestamps();
             $table->softDeletes();
@@ -328,7 +375,9 @@ class ComZeappsContactInit
     public function down()
     {
         Capsule::schema()->dropIfExists('com_zeapps_contact_companies');
+        Capsule::schema()->dropIfExists('com_zeapps_contact_companies_address');
         Capsule::schema()->dropIfExists('com_zeapps_contact_contacts');
+        Capsule::schema()->dropIfExists('com_zeapps_contact_contacts_address');
         Capsule::schema()->dropIfExists('com_zeapps_contact_code_naf');
         Capsule::schema()->dropIfExists('com_zeapps_contact_account_families');
         Capsule::schema()->dropIfExists('com_zeapps_contact_address_format');
