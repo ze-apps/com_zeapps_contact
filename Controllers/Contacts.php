@@ -12,6 +12,7 @@ use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Topologies;
 use App\com_zeapps_crm\Models\Order\Orders;
 use App\com_zeapps_crm\Models\Invoice\Invoices;
+use App\com_zeapps_contact\Models\ContactAddresses;
 
 class Contacts extends Controller
 {
@@ -153,7 +154,14 @@ class Contacts extends Controller
             $contact = array();
         }
 
-        echo json_encode(array('account_families' => $account_families, 'topologies' => $topologies, 'contact' => $contact));
+        if ($id) {
+            $addresses = ContactAddresses::where("id_contact", $id)->get();
+        } else {
+            $addresses = array();
+        }
+
+
+        echo json_encode(array('account_families' => $account_families, 'topologies' => $topologies, 'contact' => $contact, 'addresses' => $addresses));
     }
 
     public function modal(Request $request)
