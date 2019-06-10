@@ -160,8 +160,16 @@ class Contacts extends Controller
             $addresses = array();
         }
 
+        $contact->sub_adresses = $addresses ;
 
-        echo json_encode(array('account_families' => $account_families, 'topologies' => $topologies, 'contact' => $contact, 'addresses' => $addresses));
+
+        echo json_encode(
+            array(
+                'account_families' => $account_families,
+                'topologies' => $topologies,
+                'contact' => $contact,
+                'addresses' => $addresses
+            ));
     }
 
     public function modal(Request $request)
@@ -199,6 +207,11 @@ class Contacts extends Controller
 
         if (!$contacts) {
             $contacts = array();
+        }
+
+        // recherche les adressses des contacts
+        foreach ($contacts as &$contact) {
+            $contact->sub_adresses = ContactAddresses::where("id_contact", $contact->id)->get();
         }
 
         echo json_encode(array("data" => $contacts, "total" => $total));

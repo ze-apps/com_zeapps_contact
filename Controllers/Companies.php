@@ -10,6 +10,7 @@ use App\com_zeapps_contact\Models\Companies as CompaniesModel;
 use App\com_zeapps_contact\Models\AccountFamilies;
 use App\com_zeapps_contact\Models\Topologies;
 use App\com_zeapps_contact\Models\Contacts;
+use App\com_zeapps_contact\Models\CompaniesAddresses;
 
 use App\com_zeapps_crm\Models\Order\Orders;
 use App\com_zeapps_crm\Models\Invoice\Invoices;
@@ -116,6 +117,16 @@ class Companies extends Controller
             $companies = array();
         }
 
+
+
+        // recherche les adressses des contacts
+        foreach ($companies as &$company) {
+            $company->sub_adresses = CompaniesAddresses::where("id_company", $company->id)->get();
+        }
+
+
+
+
         echo json_encode(array("data" => $companies, "total" => $total));
     }
 
@@ -152,6 +163,8 @@ class Companies extends Controller
         } else{
             $company = [];
         }
+
+        $company->sub_adresses = CompaniesAddresses::where("id_company", $id)->get();
 
         echo json_encode(array(
             'account_families' => $account_families,
