@@ -79,11 +79,13 @@ class Contacts extends Controller
 
         $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name');
         foreach ($filters as $key => $value) {
-            if (strpos($key, " LIKE")) {
-                $key = str_replace(" LIKE", "", $key);
-                $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%');
-            } else {
-                $contacts_rs = $contacts_rs->where($key, $value);
+            if (trim($value) != "") {
+                if (strpos($key, " LIKE")) {
+                    $key = str_replace(" LIKE", "", $key);
+                    $contacts_rs = $contacts_rs->where($key, 'like', '%' . $value . '%');
+                } else {
+                    $contacts_rs = $contacts_rs->where($key, $value);
+                }
             }
         }
 
