@@ -32,12 +32,14 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
         $scope.last_contact = last_contact;
 
         $scope.edit = edit;
+        $scope.editAddresse = editAddresse;
         $scope.back = back;
 
         if ($routeParams.id_contact && $routeParams.id_contact != 0) {
             zhttp.contact.contact.get($routeParams.id_contact).then(function (response) {
                 if (response.status == 200) {
                     $scope.contact = response.data.contact;
+                    console.log($scope.contact);
                     $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
                     $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
                 }
@@ -73,6 +75,15 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
             var formatted_data = angular.toJson($scope.contact);
             zhttp.contact.contact.save(formatted_data);
 		}
+
+        function editAddresse() {
+            console.log("save addresse");
+            /*var formatted_data = angular.toJson($scope.contact);
+            zhttp.contact.contact.save(formatted_data);*/
+        }
+
+
+
 
 		function back() {
 			$location.path("/ng/com_zeapps_contact/contacts");
