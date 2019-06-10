@@ -43,6 +43,14 @@ class Contacts extends Controller
         return view("contacts/form_modal", $data, BASEPATH . 'App/com_zeapps_contact/views/');
     }
 
+    public function form_addresse_modal()
+    {
+        $data = array();
+        return view("contacts/form_addresse_modal", $data, BASEPATH . 'App/com_zeapps_contact/views/');
+    }
+
+
+
     public function modal_contact()
     {
         $data = array();
@@ -375,4 +383,40 @@ class Contacts extends Controller
         unlink($link);
     }
 
+
+    public function save_address()
+    {
+        // constitution du tableau
+        $data = array();
+
+        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
+            // POST is actually in json format, do an internal translation
+            $data = json_decode(file_get_contents('php://input'), true);
+        }
+
+        $contactAddress = new ContactAddresses();
+
+        if (isset($data["id"])) {
+            $contactAddress = ContactAddresses::where('id', $data["id"])->first();
+        }
+
+        foreach ($data as $key => $value) {
+            $contactAddress->$key = $value;
+        }
+
+        $contactAddress->save();
+
+        echo $contactAddress->id;
+    }
+
+    public function delete_address(Request $request)
+    {
+        $id = $request->input('id', 0);
+
+        $contactModel = ContactAddresses::where('id', $id)->first();
+
+        $deleted = $contactModel->delete();
+
+        echo json_encode($deleted);
+    }
 }

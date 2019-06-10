@@ -45,6 +45,7 @@
 
     <ul role="tablist" class="nav nav-tabs">
         <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">Résumé</a></li>
+        <li role="presentation" ng-class="isTabActive('addresses') ? 'active' : ''"><a href="#" ng-click="setTab('addresses')">Adresses</a></li>
         <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#" ng-click="setTab('contacts')">Contacts</a></li>
 
         <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
@@ -60,6 +61,58 @@
 
     <div ng-if="isTabActive('summary')">
         <div ng-include="'/com_zeapps_contact/companies/summary_partial'"></div>
+    </div>
+
+    <div ng-show="isTabActive('addresses')">
+
+        <div class="row">
+            <div class="col-md-12">
+                <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
+                        ze-modalform="addAddresse"
+                        data-template="templateFormAddresse"
+                        data-title="Ajouter une nouvelle adresse"></ze-btn>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover table-condensed table-responsive" ng-show="company.sub_adresses.length">
+                    <thead>
+                    <tr>
+                        <th>Société</th>
+                        <th>Nom</th>
+                        <th>Adresse</th>
+                        <th>Code postal</th>
+                        <th>Ville</th>
+                        <th>Etat</th>
+                        <th>Pays</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="address in company.sub_adresses">
+                        <td>@{{address.company_name}}</td>
+                        <td>@{{address.first_name}} @{{address.last_name}}</td>
+                        <td>@{{address.address_1}}
+                            <br ng-if="address.address_2 != ''">@{{address.address_2}}
+                            <br ng-if="address.address_3 != ''">@{{address.address_3}}</td>
+                        <td>@{{address.zipcode}}</td>
+                        <td>@{{address.city}}</td>
+                        <td>@{{address.state}}</td>
+                        <td>@{{address.country_name}}</td>
+                        <td class="text-right">
+                            <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                                    ze-modalform="editAddresse"
+                                    data-edit="address"
+                                    data-template="templateFormAddresse"
+                                    data-title="Modifier l'adresse"></ze-btn>
+                            <ze-btn fa="trash" color="danger" hint="Supprimer" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     <div ng-if="isTabActive('contacts')">

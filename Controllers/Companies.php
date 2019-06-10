@@ -322,4 +322,40 @@ class Companies extends Controller
         // Suppression du fichier zip sur le serveur
         unlink($link);
     }
+
+    public function save_address()
+    {
+        // constitution du tableau
+        $data = array();
+
+        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
+            // POST is actually in json format, do an internal translation
+            $data = json_decode(file_get_contents('php://input'), true);
+        }
+
+        $companyAddress = new CompaniesAddresses();
+
+        if (isset($data["id"])) {
+            $companyAddress = CompaniesAddresses::where('id', $data["id"])->first();
+        }
+
+        foreach ($data as $key => $value) {
+            $companyAddress->$key = $value;
+        }
+
+        $companyAddress->save();
+
+        echo $companyAddress->id;
+    }
+
+    public function delete_address(Request $request)
+    {
+        $id = $request->input('id', 0);
+
+        $companyAddress = CompaniesAddresses::where('id', $id)->first();
+
+        $deleted = $companyAddress->delete();
+
+        echo json_encode($deleted);
+    }
 }

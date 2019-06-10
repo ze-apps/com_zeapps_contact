@@ -18,6 +18,7 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
 
 
         $scope.templateEdit = "/com_zeapps_contact/companies/form_modal";
+        $scope.templateFormAddresse = "/com_zeapps_contact/companies/form_addresse_modal";
         $scope.companies = [];
 
         $scope.currentTab = $rootScope.comZeappsContactLastShowTabEntreprise || "summary";
@@ -30,19 +31,26 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
         $scope.next_company = next_company;
         $scope.last_company = last_company;
 
+        $scope.editAddresse = editAddresse;
+        $scope.addAddresse = addAddresse;
+        $scope.deleteAddresse = deleteAddresse;
+
         $scope.edit = edit;
         $scope.back = back;
 
         // charge la fiche
-        if ($routeParams.id_company && $routeParams.id_company != 0) {
-            zhttp.contact.company.get($routeParams.id_company).then(function (response) {
-                if (response.status == 200) {
-                    $scope.company = response.data.company;
-                    $scope.company.discount = parseFloat($scope.company.discount);
-                    $scope.contacts = response.data.contacts;
-                }
-            });
-        }
+        var loadDataCompany = function () {
+            if ($routeParams.id_company && $routeParams.id_company != 0) {
+                zhttp.contact.company.get($routeParams.id_company).then(function (response) {
+                    if (response.status == 200) {
+                        $scope.company = response.data.company;
+                        $scope.company.discount = parseFloat($scope.company.discount);
+                        $scope.contacts = response.data.contacts;
+                    }
+                });
+            }
+        };
+        loadDataCompany() ;
 
         if ($rootScope.companies_ids == undefined) {
             zhttp.contact.company.all(0, 0, "").then(function (response) {
@@ -143,5 +151,27 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
             if ($scope.company_last) {
                 $location.path("/ng/com_zeapps_contact/companies/" + $scope.company_last);
             }
+        }
+
+
+        function addAddresse(dataReturn) {
+            dataReturn.id_company = $routeParams.id_company ;
+            var formatted_data = angular.toJson(dataReturn);
+            zhttp.contact.company.save_address(formatted_data).then(function () {
+                loadDataCompany() ;
+            });
+        }
+
+        function editAddresse(dataReturn) {
+            var formatted_data = angular.toJson(dataReturn);
+            zhttp.contact.company.save_address(formatted_data).then(function () {
+                //loadDataCompany() ;
+            });
+        }
+
+        function deleteAddresse(address) {
+            zhttp.contact.company.del_address(address.id).then(function () {
+                loadDataCompany() ;
+            });
         }
     }]);

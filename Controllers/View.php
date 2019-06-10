@@ -32,4 +32,10 @@ class View extends Controller
         $data = array();
         return view("companies/summary_partial", $data, BASEPATH . 'App/com_zeapps_contact/views/');
     }
+
+    public function form_addresse_modal()
+    {
+        $data = array();
+        return view("companies/form_addresse_modal", $data, BASEPATH . 'App/com_zeapps_contact/views/');
+    }
 }

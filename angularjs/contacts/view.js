@@ -20,6 +20,7 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
 
 
         $scope.templateEdit = "/com_zeapps_contact/contacts/form_modal";
+        $scope.templateFormAddresse = "/com_zeapps_contact/contacts/form_addresse_modal";
         $scope.contact = [];
         $scope.currentTab = $rootScope.comZeappsContactLastShowTabContact || "summary";
 
@@ -32,19 +33,25 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
         $scope.last_contact = last_contact;
 
         $scope.edit = edit;
+
         $scope.editAddresse = editAddresse;
+        $scope.addAddresse = addAddresse;
+        $scope.deleteAddresse = deleteAddresse;
+
         $scope.back = back;
 
-        if ($routeParams.id_contact && $routeParams.id_contact != 0) {
-            zhttp.contact.contact.get($routeParams.id_contact).then(function (response) {
-                if (response.status == 200) {
-                    $scope.contact = response.data.contact;
-                    console.log($scope.contact);
-                    $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
-                    $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
-                }
-            });
-        }
+        var loadDataContact = function () {
+            if ($routeParams.id_contact && $routeParams.id_contact != 0) {
+                zhttp.contact.contact.get($routeParams.id_contact).then(function (response) {
+                    if (response.status == 200) {
+                        $scope.contact = response.data.contact;
+                        $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
+                        $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
+                    }
+                });
+            }
+        };
+        loadDataContact() ;
 
         if($rootScope.contacts_ids == undefined) {
             zhttp.contact.contact.all(0, 0, "").then(function (response) {
@@ -76,13 +83,26 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
             zhttp.contact.contact.save(formatted_data);
 		}
 
-        function editAddresse() {
-            console.log("save addresse");
-            /*var formatted_data = angular.toJson($scope.contact);
-            zhttp.contact.contact.save(formatted_data);*/
+        function addAddresse(dataReturn) {
+            dataReturn.id_contact = $routeParams.id_contact ;
+            var formatted_data = angular.toJson(dataReturn);
+            zhttp.contact.contact.save_address(formatted_data).then(function () {
+                loadDataContact() ;
+            });
         }
 
+        function editAddresse(dataReturn) {
+            var formatted_data = angular.toJson(dataReturn);
+            zhttp.contact.contact.save_address(formatted_data).then(function () {
+                //loadDataContact() ;
+            });
+        }
 
+        function deleteAddresse(address) {
+            zhttp.contact.contact.del_address(address.id).then(function () {
+                loadDataContact() ;
+            });
+        }
 
 
 		function back() {

@@ -11,6 +11,8 @@ app.config(["$provide",
 					modal : modal_company,
 					save : save_company,
 					del : delete_company,
+					save_address : save_company_address,
+					del_address : delete_company_address,
 					excel : {
 						make : makeExcel_company,
 						get : getExcel_company
@@ -23,6 +25,8 @@ app.config(["$provide",
                     modal : modal_contact,
                     save : save_contact,
                     del : delete_contact,
+					save_address : save_contact_address,
+					del_address : delete_contact_address,
                     excel : {
                         make : makeExcel_contact,
                         get : getExcel_contact
@@ -96,6 +100,14 @@ app.config(["$provide",
                 return "/com_zeapps_contact/companies/get_export/"+link;
             }
 
+			function save_company_address(data){
+				return zeHttp.post("/com_zeapps_contact/companies/save_address/", data);
+			}
+
+			function delete_company_address(id){
+				return zeHttp.delete("/com_zeapps_contact/companies/delete_address/" + id);
+			}
+
 
 
 
@@ -127,6 +139,15 @@ app.config(["$provide",
             function getExcel_contact(link){
                 return "/com_zeapps_contact/contacts/get_export/"+link;
             }
+
+			function save_contact_address(data){
+				return zeHttp.post("/com_zeapps_contact/contacts/save_address/", data);
+			}
+
+			function delete_contact_address(id){
+				return zeHttp.delete("/com_zeapps_contact/contacts/delete_address/" + id);
+			}
+
 
 
 
