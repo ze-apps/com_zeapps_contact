@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <strong>Date de naissance : </strong>@{{contact.date_of_birth | date:'dd/MM/yyyy'}}
-                    <span>(@{{ contact.age_of_contact }})</span>
+                    <span ng-if="contact.date_of_birth">(@{{ contact.age_of_contact }})</span>
                 </div>
                 <div class="col-md-4">
                     <strong>Service : </strong>@{{contact.name_activity_area}}
@@ -83,37 +83,42 @@
                         <strong>Information de contact : </strong>
                     </div>
                     <div class="well">
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row" ng-if="contact.mobile != '' || contact.phone != '' || contact.other_phone != ''">
+                            <div class="col-md-4" ng-if="contact.mobile != ''">
                                 <i class="fa fa-fw fa-mobile"></i> @{{contact.mobile}}
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" ng-if="contact.phone != ''">
                                 <i class="fa fa-fw fa-phone"></i> @{{contact.phone}}
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" ng-if="contact.other_phone != ''">
                                 <i class="fa fa-fw fa-phone"></i> @{{contact.other_phone}}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row" ng-if="contact.fax != '' || contact.skype_id != '' || contact.twitter != ''">
+                            <div class="col-md-4" ng-if="contact.fax != ''">
                                 <i class="fa fa-fw fa-fax"></i> @{{contact.fax}}
                             </div>
-                            <div class="col-md-4">
-                                <i class="fa fa-fw fa-skype"></i> @{{contact.skype_id}}
+                            <div class="col-md-4" ng-if="contact.skype_id != ''">
+                                <i class="fab fa-fw fa-skype"></i> @{{contact.skype_id}}
                             </div>
-                            <div class="col-md-4">
-                                <i class="fa fa-fw fa-twitter"></i> @{{contact.twitter}}
+                            <div class="col-md-4" ng-if="contact.twitter != ''">
+                                <i class="fab fa-fw fa-twitter"></i> @{{contact.twitter}}
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" ng-if="contact.website_url != ''">
                             <div class="col-md-12">
                                 <i class="fa fa-fw fa-globe"></i> @{{contact.website_url}}
+                            </div>
+                        </div>
+                        <div class="row" ng-if="contact.email != ''">
+                            <div class="col-md-12">
+                                <i class="fas fa-envelope"></i> <a href="mailto:@{{contact.email}}" target="_blank">@{{contact.email}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" ng-if="contact.assistant != '' || contact.assistant_phone != ''">
                 <div class="col-md-12">
                     <div>
                         <strong>Assistant(e) : </strong>

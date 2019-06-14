@@ -45,7 +45,9 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                 zhttp.contact.contact.get($routeParams.id_contact).then(function (response) {
                     if (response.status == 200) {
                         $scope.contact = response.data.contact;
-                        $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
+                        if ($scope.contact.date_of_birth && $scope.contact.date_of_birth != '0000-00-00') {
+                            $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
+                        }
                         $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
                     }
                 });
