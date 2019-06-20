@@ -33,16 +33,23 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
             secondaries: [
                 {
                     format: 'input',
-                    field: 'billing_city LIKE',
+                    field: 'city LIKE',
                     type: 'text',
                     label: 'Ville',
                     size: 6
                 },
                 {
                     format: 'input',
-                    field: 'billing_zipcode LIKE',
+                    field: 'zipcode LIKE',
                     type: 'text',
                     label: 'Code Postal',
+                    size: 6
+                },
+                {
+                    format: 'input',
+                    field: 'country_name LIKE',
+                    type: 'text',
+                    label: 'Pays',
                     size: 6
                 }
             ]

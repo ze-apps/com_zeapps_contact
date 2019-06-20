@@ -30,7 +30,10 @@
                 <tr>
                     <th>Nom</th>
                     <th>Téléphone</th>
+                    <th>Code postal</th>
                     <th>Ville</th>
+                    <th>Etat</th>
+                    <th>Pays</th>
                     <th>Gestionnaire du compte</th>
                     <th></th>
                 </tr>
@@ -39,7 +42,10 @@
                 <tr ng-repeat="company in companies" ng-class="company.client_failure?'text-danger':''">
                     <td ng-click="goTo(company.id)"><i class="fas fa-ban text-danger" ng-if="company.client_failure"></i> @{{company.company_name}}</td>
                     <td ng-click="goTo(company.id)">@{{company.phone}}</td>
+                    <td ng-click="goTo(contact.id)">@{{company.billing_zipcode}}</td>
                     <td ng-click="goTo(company.id)">@{{company.billing_city}}</td>
+                    <td ng-click="goTo(contact.id)">@{{company.billing_state}}</td>
+                    <td ng-click="goTo(contact.id)">@{{company.billing_country_name}}</td>
                     <td ng-click="goTo(company.id)">@{{company.name_user_account_manager}}</td>
                     <td class="text-right">
                         <ze-btn fa="edit" color="info" hint="Editer" direction="left"
