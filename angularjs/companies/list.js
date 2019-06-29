@@ -47,6 +47,13 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
                     type: 'text',
                     label: 'Pays',
                     size: 6
+                },
+                {
+                    format: 'input',
+                    field: 'accounting_number LIKE',
+                    type: 'text',
+                    label: 'Compte comptable',
+                    size: 6
                 }
             ]
         };
