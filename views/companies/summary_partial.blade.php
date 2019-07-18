@@ -34,6 +34,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 <div class="row">
     <div class="col-md-6">
         <div>
@@ -63,6 +67,28 @@
         </div>
     </div>
 </div>
+
+
+<div class="row" ng-show="company.sub_adresses.length">
+    <div class="col-md-12">
+        <div>
+            <strong>Adresse(s) secondaire(s) :</strong>
+        </div>
+        <div class="well" ng-repeat="address in company.sub_adresses">
+            <span ng-if="address.company_name != ''">@{{address.company_name}}<br></span>
+            <span ng-if="address.first_name != '' || address.last_name != ''">@{{address.first_name}} @{{address.last_name}}<br></span>
+            <span ng-if="address.address_1 != ''">@{{address.address_1}}<br></span>
+            <span ng-if="address.address_2 != ''">@{{address.address_2}}<br></span>
+            <span ng-if="address.address_3 != ''">@{{address.address_3}}<br></span>
+            <span ng-if="address.zipcode != '' || address.city != ''">@{{address.zipcode}} @{{address.city}}<br></span>
+            <span ng-if="address.state != ''">@{{address.state}}<br></span>
+            <span ng-if="address.country_name != ''">@{{address.country_name}}<br></span>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="row">
     <div class="col-md-12">
         <div>
