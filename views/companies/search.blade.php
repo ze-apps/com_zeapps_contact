@@ -39,7 +39,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="company in companies" ng-class="company.client_failure?'text-danger':''">
+                <tr ng-repeat="company in companies" ng-class="company.client_failure?'bg-danger text-danger':''">
                     <td ng-click="goTo(company.id)"><i class="fas fa-ban text-danger" ng-if="company.client_failure"></i> @{{company.company_name}}</td>
                     <td ng-click="goTo(company.id)">@{{company.phone}}</td>
                     <td ng-click="goTo(contact.id)">@{{company.billing_zipcode}}</td>
