@@ -28,10 +28,10 @@ app.config(["$routeProvider",
 				templateUrl: "/com_zeapps_contact/account_families/config",
 				controller: "ComZeappsContactAccountFamiliesConfigCtrl"
 			})
-			.when("/ng/com_zeapps/topologies", {
+			/*.when("/ng/com_zeapps/topologies", {
 				templateUrl: "/com_zeapps_contact/topologies/config",
 				controller: "ComZeappsContactTopologiesConfigCtrl"
-			})
+			})*/
 		;
 	}]);
 

@@ -50,7 +50,6 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
         $scope.displayTab = displayTab;
 
         $scope.updateAccountFamily = updateAccountFamily;
-        $scope.updateTopology = updateTopology;
         $scope.updateModality = updateModality;
 
         $scope.loadAccountManager = loadAccountManager;
@@ -64,7 +63,6 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
         zhttp.contact.contact.context().then(function (response) {
             if (response.status == 200) {
                 $scope.account_families = response.data.account_families;
-                $scope.topologies = response.data.topologies;
 
                 if (!$scope.form.id) {
                     $scope.$parent.form.id_user_account_manager = $rootScope.user.id;
@@ -101,14 +99,6 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
                 if ($scope.form.id_account_family == account_family.id) {
                     $scope.form.name_account_family = account_family.label;
                     console.log("name_account_family = " + $scope.form.name_account_family);
-                }
-            });
-        }
-
-        function updateTopology() {
-            angular.forEach($scope.topologies, function (topology) {
-                if ($scope.form.id_topology == topology.id) {
-                    $scope.form.name_topology = topology.label;
                 }
             });
         }

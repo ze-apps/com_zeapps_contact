@@ -158,10 +158,10 @@ app.config(["$provide",
 				return zeHttp.get("/com_zeapps_contact/account_families/get/" + id);
 			}
 			function getAll_accountFamilies(){
-				return zeHttp.get("/com_zeapps_contact/account_families/get_all/");
+				return zeHttp.get("/com_zeapps_contact/account_families/get_all");
 			}
 			function save_accountFamilies(data){
-				return zeHttp.post("/com_zeapps_contact/account_families/save/", data);
+				return zeHttp.post("/com_zeapps_contact/account_families/save", data);
 			}
 			function saveAll_accountFamilies(data){
 				return zeHttp.post("/com_zeapps_contact/account_families/save_all/", data);

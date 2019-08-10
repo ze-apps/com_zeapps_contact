@@ -22,7 +22,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Type de compte</label>
                     <select ng-model="form.id_account_family" class="form-control" ng-change="updateAccountFamily()">
@@ -32,17 +32,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label>Topologie</label>
-                    <select ng-model="form.id_topology" class="form-control" ng-change="updateTopology()">
-                        <option ng-repeat="topology in topologies" ng-value="@{{topology.id}}">
-                            @{{ topology.label }}
-                        </option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Compte comptable</label>
                     <span   ze-modalsearch="loadAccountingNumber"
@@ -53,7 +43,7 @@
                             data-title="Choisir un compte comptable"></span>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Gestionnaire du Compte</label>
 

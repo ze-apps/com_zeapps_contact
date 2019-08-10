@@ -4,7 +4,7 @@
 $tabMenu = array () ;
 $tabMenu["id"] = "com_ze_apps_contact_account_families" ;
 $tabMenu["space"] = "com_ze_apps_config" ;
-$tabMenu["label"] = "Familles de compte" ;
+$tabMenu["label"] = "Type de compte" ;
 $tabMenu["fa-icon"] = "tasks" ;
 $tabMenu["url"] = "/ng/com_zeapps/account_families" ;
 $tabMenu["access"] = "com_zeapps_contact_read" ;
@@ -13,7 +13,7 @@ $menuLeft[] = $tabMenu ;
 
 
 
-$tabMenu = array () ;
+/*$tabMenu = array () ;
 $tabMenu["id"] = "com_ze_apps_contact_topologies" ;
 $tabMenu["space"] = "com_ze_apps_config" ;
 $tabMenu["label"] = "Topologies" ;
@@ -21,7 +21,7 @@ $tabMenu["fa-icon"] = "tasks" ;
 $tabMenu["url"] = "/ng/com_zeapps/topologies" ;
 $tabMenu["access"] = "com_zeapps_contact_read" ;
 $tabMenu["order"] = 36 ;
-$menuLeft[] = $tabMenu ;
+$menuLeft[] = $tabMenu ;*/
 
 
 

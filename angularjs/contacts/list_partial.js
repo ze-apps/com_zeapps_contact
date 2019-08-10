@@ -19,14 +19,7 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     format: 'select',
                     field: 'id_account_family',
                     type: 'text',
-                    label: 'Famille',
-                    options: []
-                },
-                {
-                    format: 'select',
-                    field: 'id_topology',
-                    type: 'text',
-                    label: 'Topologie',
+                    label: 'Type de compte',
                     options: []
                 }
             ],
@@ -79,7 +72,6 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
 				if (response.status == 200) {
                     if(context) {
                         $scope.filters.main[2].options = response.data.account_families;
-                        $scope.filters.main[3].options = response.data.topologies;
                     }
 
                     $scope.contacts = response.data.contacts;
