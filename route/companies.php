@@ -11,6 +11,7 @@ Routeur::get('/com_zeapps_contact/companies/modal_company', 'App\\com_zeapps_con
 Routeur::get('/com_zeapps_contact/companies/summary_partial', 'App\\com_zeapps_contact\\Controllers\\View@summary_partial');
 
 Routeur::post("/com_zeapps_contact/companies/getAll/{limit}/{offset}/{context}", 'App\\com_zeapps_contact\\Controllers\\Companies@getAll');
+Routeur::post("/com_zeapps_contact/companies/searchDuplicate", 'App\\com_zeapps_contact\\Controllers\\Companies@searchDuplicate');
 
 Routeur::post("/com_zeapps_contact/companies/modal/{limit}/{offset}", 'App\\com_zeapps_contact\\Controllers\\Companies@modal');
 Routeur::post("/com_zeapps_contact/companies/context/", 'App\\com_zeapps_contact\\Controllers\\Companies@context');

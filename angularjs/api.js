@@ -8,6 +8,7 @@ app.config(["$provide",
 					context : context_company,
 					get : get_company,
 					all : getAll_company,
+					searchDuplicate : searchDuplicate_company,
 					modal : modal_company,
 					save : save_company,
 					del : delete_company,
@@ -22,6 +23,7 @@ app.config(["$provide",
                     context : context_contact,
 					get : get_contact,
 					all : getAll_contact,
+					searchDuplicate : searchDuplicate_contact,
                     modal : modal_contact,
                     save : save_contact,
                     del : delete_contact,
@@ -84,6 +86,9 @@ app.config(["$provide",
 			function getAll_company(limit, offset, context, filters){
 				return zeHttp.post("/com_zeapps_contact/companies/getAll/" + limit + "/" + offset + "/" + context, filters);
 			}
+			function searchDuplicate_company(filters) {
+				return zeHttp.post("/com_zeapps_contact/companies/searchDuplicate", filters);
+			}
 			function modal_company(limit, offset, filters){
 				return zeHttp.post("/com_zeapps_contact/companies/modal/" + limit + "/" + offset, filters);
 			}
@@ -122,6 +127,9 @@ app.config(["$provide",
 			function getAll_contact(id, limit, offset, context, filters){
 				id = id || 0;
 				return zeHttp.post("/com_zeapps_contact/contacts/getAll/" + id + "/" + limit + "/" + offset + "/" + context, filters);
+			}
+			function searchDuplicate_contact(filters){
+				return zeHttp.post("/com_zeapps_contact/contacts/searchDuplicate", filters);
 			}
             function modal_contact(limit, offset, filters, id_company){
 				id_company = id_company || 0;

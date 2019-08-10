@@ -11,6 +11,7 @@ Routeur::get('/com_zeapps_contact/contacts/modal_contact', 'App\\com_zeapps_cont
 Routeur::get('/com_zeapps_contact/contacts/context/', 'App\\com_zeapps_contact\\Controllers\\Contacts@context');
 
 Routeur::post("/com_zeapps_contact/contacts/getAll/{id_company}/{limit}/{offset}/{context}", 'App\\com_zeapps_contact\\Controllers\\Contacts@getAll');
+Routeur::post("/com_zeapps_contact/contacts/searchDuplicate", 'App\\com_zeapps_contact\\Controllers\\Contacts@searchDuplicate');
 
 
 

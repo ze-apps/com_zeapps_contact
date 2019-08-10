@@ -3,6 +3,8 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
 
         var currentTab = 'general';
 
+        $scope.companyTplNew = "/com_zeapps_contact/companies/form_modal" ;
+
         $scope.accountManagerHttp = zhttp.app.user;
         $scope.accountManagerFields = [
             {label: 'Prénom', key: 'firstname'},
@@ -59,6 +61,25 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
         $scope.loadAccountingNumber = loadAccountingNumber;
 
         $scope.updateAge = updateAge;
+
+
+        $scope.listContactsDuplicate = [] ;
+        $scope.updateContactName = function () {
+            $scope.listContactsDuplicate = [] ;
+            var formatted_filters = angular.toJson({first_name:$scope.form.first_name, last_name:$scope.form.last_name});
+            zhttp.contact.contact.searchDuplicate(formatted_filters).then(function (response) {
+                if (response.status == 200) {
+                    $scope.listContactsDuplicate = response.data.contacts ;
+                    $scope.listContactsDuplicateTotal = response.data.total;
+                }
+            });
+        };
+        $scope.changeToDuplicateContact = function (objContact) {
+            $scope.form.executeSave(objContact);
+        };
+
+
+
 
         zhttp.contact.contact.context().then(function (response) {
             if (response.status == 200) {

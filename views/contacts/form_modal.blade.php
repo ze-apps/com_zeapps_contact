@@ -70,16 +70,36 @@
             <div class="col-md-5">
                 <div class="form-group">
                     <label>Nom</label>
-                    <input type="text" ng-model="form.last_name" class="form-control">
+                    <input type="text" ng-model="form.last_name" class="form-control" ng-change="updateContactName()" ng-model-options="{debounce: 500}">
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="form-group">
                     <label>Prénom</label>
-                    <input type="text" ng-model="form.first_name" class="form-control">
+                    <input type="text" ng-model="form.first_name" class="form-control" ng-change="updateContactName()" ng-model-options="{debounce: 500}">
                 </div>
             </div>
         </div>
+
+
+
+
+        <div class="row bg-danger" ng-show="listContactsDuplicate.length">
+            <div class="col-md-12">
+                <b>Votre création ne serait-elle pas un doublon ?</b>
+            </div>
+        </div>
+        <div class="row bg-danger" ng-show="listContactsDuplicate.length" style="max-height: 150px; overflow: scroll;">
+            <div class="col-md-12">
+                <ul>
+                    <li ng-repeat="listContactDuplicate in listContactsDuplicate"><a href="#" ng-click="changeToDuplicateContact(listContactDuplicate)">@{{ listContactDuplicate.first_name }} @{{ listContactDuplicate.last_name }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
 
         <div class="row">
             <div class="col-md-6">
@@ -90,7 +110,9 @@
                             data-http="companyHttp"
                             data-model="form.name_company"
                             data-fields="companyFields"
-                            data-title="Choisir une entreprise"></span>
+                            data-title="Choisir une entreprise"
+                            data-template-new="companyTplNew"
+                    ></span>
                 </div>
             </div>
 

@@ -141,7 +141,6 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
             zhttp.contact.company.save(formatted_data).then(function (response) {
                 if (response.data && response.data != "false") {
                     $location.path("/ng/com_zeapps_contact/companies/" + response.data);
-                    //loadList();
                 }
             });
         }

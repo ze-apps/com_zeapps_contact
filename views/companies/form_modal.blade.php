@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Nom</label>
-                    <input type="text" ng-model="form.company_name" class="form-control">
+                    <input type="text" ng-model="form.company_name" class="form-control" ng-change="updateCompanyName()" ng-model-options="{debounce: 500}">
                 </div>
             </div>
             <div class="col-md-6">
@@ -24,10 +24,27 @@
                             data-http="parentCompanyHttp"
                             data-model="form.name_parent_company"
                             data-fields="parentCompanyFields"
-                            data-title="Choisir une entreprise"></span>
+                            data-title="Choisir une entreprise"
+                            data-template-new="companyTplNew"
+                    ></span>
                 </div>
             </div>
         </div>
+
+
+        <div class="row bg-danger" ng-show="listCompaniesDuplicate.length">
+            <div class="col-md-12">
+                <b>Votre création ne serait-elle pas un doublon ?</b>
+            </div>
+        </div>
+        <div class="row bg-danger" ng-show="listCompaniesDuplicate.length" style="max-height: 150px; overflow: scroll;">
+            <div class="col-md-12">
+                <ul>
+                    <li ng-repeat="listCompanyDuplicate in listCompaniesDuplicate"><a href="#" ng-click="changeToDuplicateCompany(listCompanyDuplicate)">@{{ listCompanyDuplicate.company_name }}</a></li>
+                </ul>
+            </div>
+        </div>
+
 
 
 

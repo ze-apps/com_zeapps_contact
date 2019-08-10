@@ -87,6 +87,35 @@ class Companies extends Controller
         ));
     }
 
+    public function searchDuplicate(Request $request) {
+        $filters = array() ;
+
+        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && (isset($_SERVER['CONTENT_TYPE']) && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE)) {
+            // POST is actually in json format, do an internal translation
+            $filters = json_decode(file_get_contents('php://input'), true);
+        }
+
+        if (isset($filters["company_name"]) && trim($filters["company_name"]) != "") {
+            $companies_rs = CompaniesModel::orderBy('company_name');
+            $companies_rs = $companies_rs->where('company_name', 'like', '%' . $filters["company_name"] . '%');
+
+            $total = $companies_rs->count();
+            $companies = $companies_rs->get();
+
+            if (!$companies) {
+                $companies = array();
+            }
+        } else {
+            $companies = [] ;
+            $total = 0 ;
+        }
+
+        echo json_encode(array(
+            'companies' => $companies,
+            'total' => $total
+        ));
+    }
+
     public function modal(Request $request) {
         $limit = $request->input('limit', 15);
         $offset = $request->input('offset', 0);

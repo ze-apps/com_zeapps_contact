@@ -131,6 +131,44 @@ class Contacts extends Controller
         ));
     }
 
+    public function searchDuplicate(Request $request)
+    {
+        $filters = array();
+
+        if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
+            // POST is actually in json format, do an internal translation
+            $filters = json_decode(file_get_contents('php://input'), true);
+        }
+
+
+        if ((isset($filters["first_name"]) && trim($filters["first_name"]) != "") || (isset($filters["last_name"]) && trim($filters["last_name"]) != "")) {
+            $contacts_rs = ContactsModel::orderBy('last_name')->orderBy('first_name');
+
+            if (isset($filters["first_name"]) && trim($filters["first_name"]) != "") {
+                $contacts_rs = $contacts_rs->where("first_name", 'like', '%' . $filters["first_name"] . '%');
+            }
+
+            if (isset($filters["last_name"]) && trim($filters["last_name"]) != "") {
+                $contacts_rs = $contacts_rs->where("last_name", 'like', '%' . $filters["last_name"] . '%');
+            }
+
+            $total = $contacts_rs->count();
+            $contacts = $contacts_rs->get();
+
+            if (!$contacts) {
+                $contacts = array();
+            }
+        } else {
+            $contacts = [];
+            $total = 0 ;
+        }
+
+        echo json_encode(array(
+            'contacts' => $contacts,
+            "total" => $total
+        ));
+    }
+
     public function context()
     {
         if (!$account_families = AccountFamilies::orderBy('sort')->get()) {
