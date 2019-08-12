@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+use App\com_zeapps_contact\Models\Companies;
+
 use Zeapps\Core\ModelHelper;
 use Zeapps\Core\iModelExport;
 use Zeapps\Core\ModelExportType;
@@ -91,6 +93,21 @@ class Contacts extends Model implements iModelExport {
 
         // for history
         $valueOriginal = $this->original ;
+
+
+        if (!isset($valueOriginal["id_company"]) || $valueOriginal["id_company"] != $this->id_company) {
+            if ($this->id_company) {
+                $objCompany = Companies::find($this->id_company);
+                if ($objCompany) {
+                    $this->name_company = $objCompany->company_name ;
+                } else {
+                    $this->name_company = "" ;
+                }
+            } else {
+                $this->name_company = "" ;
+            }
+        }
+
 
         /**** to delete unwanted field ****/
         $this->fieldModelInfo->removeFieldUnwanted($this) ;

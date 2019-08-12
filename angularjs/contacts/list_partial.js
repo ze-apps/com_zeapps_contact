@@ -1,5 +1,5 @@
-app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp", "toasts",
-	function ($scope, $routeParams, $location, $rootScope, zhttp, toasts) {
+app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp", "toasts", "$uibModal",
+	function ($scope, $routeParams, $location, $rootScope, zhttp, toasts, $uibModal) {
 
         $scope.filters = {
             main: [
@@ -53,6 +53,8 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
         $scope.total = 0;
         $scope.templateForm = '/com_zeapps_contact/contacts/form_modal';
 
+        $scope.btn_adding_existing_contact = false ;
+
         $scope.loadList = loadList;
         $scope.goTo = goTo;
         $scope.getExcel = getExcel;
@@ -60,13 +62,81 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
         $scope.edit = edit;
 		$scope.delete = del;
 
-		loadList(true) ;
 
+
+        $scope.contactHttp = zhttp.contact.contact;
+        $scope.contactFields = [
+            {label:'Nom',key:'last_name'},
+            {label:'Prénom',key:'first_name'},
+            {label:'Entreprise',key:'name_company'},
+            {label:'Téléphone',key:'phone'},
+            {label:'Ville',key:'city'},
+            {label:'Gestionnaire du compte',key:'name_user_account_manager'}
+        ];
+        $scope.loadContact = loadContact;
+        function loadContact(contact) {
+            // tester si le contact est déjà affecté a une entreprise
+            if (contact.id_company != 0 && contact.id_company != id_company) {
+                var modalInstance = $uibModal.open({
+                    animation: true,
+                    templateUrl: "/assets/angular/popupModalDeBase.html",
+                    controller: "ZeAppsPopupModalDeBaseCtrl",
+                    size: "lg",
+                    resolve: {
+                        titre: function () {
+                            return "Attention";
+                        },
+                        msg: function () {
+                            return "Ce contact est déjà associé à une autre entreprise, souhaitez-vous relier ce contact avec cette société ?<br>(il ne sera plus associé à l'autre société)";
+                        },
+                        action_danger: function () {
+                            return "Annuler";
+                        },
+                        action_primary: function () {
+                            return false;
+                        },
+                        action_success: function () {
+                            return "Confirmer";
+                        }
+                    }
+                });
+
+                modalInstance.result.then(
+                    function (selectedItem) {
+                        if (selectedItem.action === "success") {
+                            saveContact(contact);
+                        }
+                    }
+                );
+            } else if (contact.id_company != id_company) {
+                saveContact(contact);
+            }
+        }
+
+        var saveContact = function(contact) {
+            contact.id_company = id_company ;
+            var formatted_data = angular.toJson(contact);
+            zhttp.contact.contact.save(formatted_data).then(function (response) {
+                loadList(false);
+            });
+        };
+
+
+
+
+
+        var id_company = 0 ;
+		loadList(true) ;
 		function loadList(context) {
             context = context || "";
             var offset = ($scope.page - 1) * $scope.pageSize;
             var formatted_filters = angular.toJson($scope.filter_model);
-            var id_company = $routeParams.id_company || '';
+            id_company = $routeParams.id_company || '';
+            if (id_company) {
+                $scope.btn_adding_existing_contact = true;
+            } else {
+                $scope.btn_adding_existing_contact = false;
+            }
 
 			zhttp.contact.contact.all(id_company, $scope.pageSize, offset, context, formatted_filters).then(function (response) {
 				if (response.status == 200) {
