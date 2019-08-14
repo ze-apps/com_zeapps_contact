@@ -176,14 +176,13 @@ class Address
             $adresse->fax = $objContact->fax;
         }
 
+        $adresse->full_text = self::generateFullTextAdress($adresse);
 
         return $adresse;
     }
 
-    public static function getTextAddress($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing")
-    {
+    private static function generateFullTextAdress($address) {
         $textReturn = "" ;
-        $address = self::getAddresseObject($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse);
 
         $formatAddress = "firstname lastname
                 company
@@ -246,6 +245,15 @@ class Address
             }
         }
 
-        return $textReturn ;
+        return $textReturn;
+    }
+
+
+
+    public static function getTextAddress($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing")
+    {
+        $address = self::getAddresseObject($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse);
+
+        return $address->full_text ;
     }
 }
