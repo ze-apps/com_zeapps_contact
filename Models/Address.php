@@ -22,6 +22,7 @@ class Address
     public $email = "";
     public $phone = "";
     public $fax = "";
+    public $full_text = "";
 
     public static function getAddresseObject($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing", $showPhone = false)
     {
