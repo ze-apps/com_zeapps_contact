@@ -23,7 +23,7 @@ class Address
     public $phone = "";
     public $fax = "";
 
-    public static function getAddresseObject($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing")
+    public static function getAddresseObject($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing", $showPhone = false)
     {
         $adresse = new Address();
         $objCompany = null;
@@ -181,7 +181,7 @@ class Address
         return $adresse;
     }
 
-    private static function generateFullTextAdress($address) {
+    private static function generateFullTextAdress($address, $showPhone = false) {
         $textReturn = "" ;
 
         $formatAddress = "firstname lastname
@@ -206,19 +206,31 @@ class Address
         $formatAddress = str_replace("phone_mobile", "mobile", $formatAddress);
 
 
+        // add address3
+        $formatAddress = str_replace("address2", "address2\naddress3", $formatAddress);
+
+
+
         $wordReplace = [];
         $wordReplace[] = array("firstname", "first_name");
         $wordReplace[] = array("lastname", "last_name");
         $wordReplace[] = array("company", "company");
         $wordReplace[] = array("vat_number", "");
         $wordReplace[] = array("address1", "address_1");
-        $wordReplace[] = array("address2", "address_2"); // $address_3
+        $wordReplace[] = array("address2", "address_2");
+        $wordReplace[] = array("address3", "address_3");
         $wordReplace[] = array("postcode", "zipcode");
         $wordReplace[] = array("city", "city");
         $wordReplace[] = array("Country:name", "country_name");
         $wordReplace[] = array("State:name", "state");
-        $wordReplace[] = array("mobile", "");
-        $wordReplace[] = array("phone", "phone");
+
+        if ($showPhone) {
+            $wordReplace[] = array("mobile", "");
+            $wordReplace[] = array("phone", "phone");
+        } else {
+            $wordReplace[] = array("mobile", ""); // to hide phone number in address
+            $wordReplace[] = array("phone", ""); // to hide phone number in address
+        }
 
         foreach ($wordReplace as $word) {
             $formatAddress = str_replace($word[0], "%" . $word[0] . "%", $formatAddress);
@@ -250,7 +262,7 @@ class Address
 
 
 
-    public static function getTextAddress($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing")
+    public static function getTextAddress($id_company, $id_address_company = 0, $id_contact = 0, $id_address_contact = 0, $typeAdresse = "billing", $showPhone = false)
     {
         $address = self::getAddresseObject($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse);
 

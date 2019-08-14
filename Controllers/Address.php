@@ -23,8 +23,9 @@ class Address extends Controller
         $id_contact = isset($filters["id_contact"])?$filters["id_contact"]:0;
         $id_address_contact = isset($filters["id_address_contact"])?$filters["id_address_contact"]:0;
         $typeAdresse = isset($filters["typeAdresse"])?$filters["typeAdresse"]:"billing";
+        $showPhone = isset($filters["showPhone"])?$filters["showPhone"]:false;
 
-        $address = AddressModel::getAddresseObject($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse) ;
+        $address = AddressModel::getAddresseObject($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse, $showPhone) ;
         echo json_encode($address);
     }
 
@@ -42,7 +43,8 @@ class Address extends Controller
         $id_contact = isset($filters["id_contact"])?$filters["id_contact"]:0;
         $id_address_contact = isset($filters["id_address_contact"])?$filters["id_address_contact"]:0;
         $typeAdresse = isset($filters["typeAdresse"])?$filters["typeAdresse"]:"billing";
+        $showPhone = isset($filters["showPhone"])?$filters["showPhone"]:false;
 
-        echo AddressModel::getTextAddress($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse);
+        echo AddressModel::getTextAddress($id_company, $id_address_company, $id_contact, $id_address_contact, $typeAdresse, $showPhone);
     }
 }
