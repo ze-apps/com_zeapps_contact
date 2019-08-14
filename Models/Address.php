@@ -119,6 +119,13 @@ class Address
             $adresse->civility = "";
             $adresse->first_name = "";
             $adresse->last_name = "";
+
+            if ($objContact) {
+                $adresse->civility = $objContact->title_name;
+                $adresse->first_name = $objContact->first_name;
+                $adresse->last_name = $objContact->last_name;
+            }
+
             $adresse->address_1 = $objCompany->$address_1;
             $adresse->address_2 = $objCompany->$address_2;
             $adresse->address_3 = $objCompany->$address_3;
@@ -159,9 +166,9 @@ class Address
 
         } else if ($objContact) {
             $adresse->company = "";
-            $adresse->civility = $objContact->company_name;
-            $adresse->first_name = $objContact->company_name;
-            $adresse->last_name = $objContact->company_name;
+            $adresse->civility = $objContact->title_name;
+            $adresse->first_name = $objContact->first_name;
+            $adresse->last_name = $objContact->last_name;
             $adresse->address_1 = $objContact->address_1;
             $adresse->address_2 = $objContact->address_2;
             $adresse->address_3 = $objContact->address_3;
