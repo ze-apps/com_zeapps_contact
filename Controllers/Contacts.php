@@ -217,6 +217,14 @@ class Contacts extends Controller
 
         $currentDue = Invoices::getCurrentDue($id,"contact") ;
 
+        // calculate outstanding amount authorized
+        if ($authozied_outstanding_amount == 0) {
+            $objConfig = Config::where("id", "crm_outstanding_amount")->first();
+            if ($objConfig) {
+                $authozied_outstanding_amount = $objConfig->value ;
+            }
+        }
+
         echo json_encode(
             array(
                 'account_families' => $account_families,

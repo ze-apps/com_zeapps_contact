@@ -51,6 +51,12 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                         $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
 
                         if (response.data.currentDue > response.data.authozied_outstanding_amount) {
+                            var message = "Le client a dépassé l'encours autorisé" ;
+                            message += "<br>" ;
+                            message += "Montant dû : " + response.data.currentDue ;
+                            message += "<br>" ;
+                            message += "Encours autorisé : " + response.data.authozied_outstanding_amount;
+
                             var modalInstance = $uibModal.open({
                                 animation: true,
                                 templateUrl: "/assets/angular/popupModalDeBase.html",
@@ -61,7 +67,7 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                                         return "Attention";
                                     },
                                     msg: function () {
-                                        return "Le client a dépassé l'encours autorisé";
+                                        return message;
                                     },
                                     action_danger: function () {
                                         return "OK";
