@@ -1,5 +1,5 @@
-app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp", "zeHooks", "menu",
-	function ($scope, $routeParams, $location, $rootScope, zhttp, zeHooks, menu) {
+app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$location", "$rootScope", "zeHttp", "zeHooks", "menu", "$uibModal",
+	function ($scope, $routeParams, $location, $rootScope, zhttp, zeHooks, menu, $uibModal) {
 
         menu("com_ze_apps_sales", "com_zeapps_sales_contact");
 
@@ -49,6 +49,39 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                             $scope.contact.date_of_birth = new Date($scope.contact.date_of_birth);
                         }
                         $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
+
+                        if (response.data.currentDue > response.data.authozied_outstanding_amount) {
+                            var modalInstance = $uibModal.open({
+                                animation: true,
+                                templateUrl: "/assets/angular/popupModalDeBase.html",
+                                controller: "ZeAppsPopupModalDeBaseCtrl",
+                                size: "lg",
+                                resolve: {
+                                    titre: function () {
+                                        return "Attention";
+                                    },
+                                    msg: function () {
+                                        return "Le client a dépassé l'encours autorisé";
+                                    },
+                                    action_danger: function () {
+                                        return "OK";
+                                    },
+                                    action_primary: function () {
+                                        return false;
+                                    },
+                                    action_success: function () {
+                                        return false;
+                                    }
+                                }
+                            });
+                            modalInstance.result.then(function (selectedItem) {
+                                if (selectedItem.action == "danger") {
+
+                                }
+                            }, function () {
+                                //console.log("rien");
+                            });
+                        }
                     }
                 });
             }

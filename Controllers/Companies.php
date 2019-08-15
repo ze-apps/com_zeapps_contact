@@ -15,6 +15,9 @@ use App\com_zeapps_contact\Models\CompaniesAddresses;
 use App\com_zeapps_crm\Models\Order\Orders;
 use App\com_zeapps_crm\Models\Invoice\Invoices;
 
+
+use Zeapps\Models\Config;
+
 use Zeapps\libraries\XLSXWriter;
 
 class Companies extends Controller
@@ -186,20 +189,35 @@ class Companies extends Controller
             $contacts = [];
         }
 
+        $authozied_outstanding_amount = 0 ;
         if($company = CompaniesModel::where('id', $id)->first()){
             $company->average_order = Orders::frequencyOf($id, 'company');
             $company->turnovers = Invoices::turnoverByYearsOf($id, 'company');
+            $authozied_outstanding_amount = $company->outstanding_amount ;
         } else{
             $company = [];
         }
 
         $company->sub_adresses = CompaniesAddresses::where("id_company", $id)->get();
 
+
+        $currentDue = Invoices::getCurrentDue($id,"company") ;
+
+        // calculate outstanding amount authorized
+        if ($authozied_outstanding_amount == 0) {
+            $objConfig = Config::where("id", "crm_outstanding_amount")->first();
+            if ($objConfig) {
+                $authozied_outstanding_amount = $objConfig->value ;
+            }
+        }
+
         echo json_encode(array(
             'account_families' => $account_families,
             'topologies' => $topologies,
             'contacts' => $contacts,
-            'company' => $company
+            'company' => $company,
+            'currentDue' => $currentDue,
+            'authozied_outstanding_amount' => $authozied_outstanding_amount
         ));
     }
 

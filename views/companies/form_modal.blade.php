@@ -106,12 +106,20 @@
 
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group">
                     <label>Remise par défault</label>
                     <input type="number" ng-model="form.discount" class="form-control">
                 </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Encours autorisé</label>
+                    <input type="text" ng-model="form.outstanding_amount" class="form-control">
+                </div>
+            </div>
+
             <div class="col-md-3">
                 <div class="form-group">
                     <label>Compte comptable</label>

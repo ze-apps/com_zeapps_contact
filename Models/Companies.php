@@ -72,6 +72,7 @@ class Companies extends Model implements iModelExport{
         $this->fieldModelInfo->string('accounting_number', 15)->default("");
         $this->fieldModelInfo->timestamp('last_order')->nullable();
         $this->fieldModelInfo->float('discount', 5,2)->default(0);
+        $this->fieldModelInfo->decimal('outstanding_amount', 8, 2)->default(0);
         $this->fieldModelInfo->integer('id_modality', false, true)->default(0);
         $this->fieldModelInfo->string('label_modality', 255)->default("");
         $this->fieldModelInfo->string('tva_intracom', 255)->default("");

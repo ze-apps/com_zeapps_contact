@@ -14,6 +14,8 @@ use App\com_zeapps_crm\Models\Order\Orders;
 use App\com_zeapps_crm\Models\Invoice\Invoices;
 use App\com_zeapps_contact\Models\ContactAddresses;
 
+use Zeapps\Models\Config;
+
 class Contacts extends Controller
 {
 
@@ -195,9 +197,11 @@ class Contacts extends Controller
             $topologies = array();
         }
 
+        $authozied_outstanding_amount = 0 ;
         if ($contact = ContactsModel::where('id', $id)->first()) {
             $contact->average_order = Orders::frequencyOf($id, 'contact');
             $contact->turnovers = Invoices::turnoverByYearsOf($id, 'contact');
+            $authozied_outstanding_amount = $contact->outstanding_amount ;
         } else {
             $contact = array();
         }
@@ -211,12 +215,16 @@ class Contacts extends Controller
         $contact->sub_adresses = $addresses ;
 
 
+        $currentDue = Invoices::getCurrentDue($id,"contact") ;
+
         echo json_encode(
             array(
                 'account_families' => $account_families,
                 'topologies' => $topologies,
                 'contact' => $contact,
-                'addresses' => $addresses
+                'addresses' => $addresses,
+                'currentDue' => $currentDue,
+                'authozied_outstanding_amount' => $authozied_outstanding_amount
             ));
     }
 
