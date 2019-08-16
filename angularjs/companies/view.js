@@ -47,7 +47,7 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
                         $scope.company.discount = parseFloat($scope.company.discount);
                         $scope.contacts = response.data.contacts;
 
-                        if (response.data.currentDue > response.data.authozied_outstanding_amount) {
+                        if (parseFloat(response.data.currentDue) > parseFloat(response.data.authozied_outstanding_amount)) {
                             var message = "Le client a dépassé l'encours autorisé" ;
                             message += "<br>" ;
                             message += "Montant dû : " + response.data.currentDue ;

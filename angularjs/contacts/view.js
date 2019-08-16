@@ -50,7 +50,7 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                         }
                         $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
 
-                        if (response.data.currentDue > response.data.authozied_outstanding_amount) {
+                        if (parseFloat(response.data.currentDue) > parseFloat(response.data.authozied_outstanding_amount)) {
                             var message = "Le client a dépassé l'encours autorisé" ;
                             message += "<br>" ;
                             message += "Montant dû : " + response.data.currentDue ;
