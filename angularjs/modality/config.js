@@ -9,25 +9,37 @@ app.controller("ComZeappsCrmModalityConfigCtrl", ["$scope", "$rootScope", "zeHtt
         $scope.edit = edit;
 		$scope.delete = del;
 
+		$scope.list_modalities = [];
+
+		var loadModalities = function () {
+            $scope.list_modalities = [];
+            zhttp.contact.modality.get_all().then(function (response) {
+                $scope.list_modalities = response.data ;
+            }) ;
+        };
+        loadModalities();
+
         function add(modality){
             var formatted_data = angular.toJson(modality);
             zhttp.contact.modality.save(formatted_data).then(function(response){
                 if(response.data && response.data != "false"){
                     modality.id = response.data;
-                    $rootScope.modalities.push(modality);
+                    loadModalities();
                 }
             });
         }
 
         function edit(modality){
             var formatted_data = angular.toJson(modality);
-            zhttp.contact.modality.save(formatted_data);
+            zhttp.contact.modality.save(formatted_data).then(function () {
+                loadModalities();
+            });
         }
 
 		function del(modality){
             zhttp.contact.modality.del(modality.id).then(function (response) {
                 if (response.status == 200) {
-                    $rootScope.modalities.splice($rootScope.modalities.indexOf(modality), 1);
+                    loadModalities();
                 }
             });
 		}

@@ -41,7 +41,6 @@ class Modalities extends Controller
             $data = json_decode(file_get_contents('php://input'), true);
         }
 
-
         $modalities = new ModalitiesModel() ;
         $modalitiesLang = new ModalitiesLang() ;
 
@@ -56,15 +55,18 @@ class Modalities extends Controller
         }
 
         $modalities->save();
+
+        $modalitiesLang->id_lang = 1 ; // TODO : traiter les différentes langues, attention seul le francais est enregistré
+        $modalitiesLang->id_modality = $modalities->id ;
         $modalitiesLang->save();
 
         echo json_encode($modalities->id);
     }
 
-    public function delete($id) {
+    public function delete(Request $request) {
+        $id = $request->input('id', 0);
         ModalitiesLang::where('id_modality', $id)->delete();
         $modalityModel = ModalitiesModel::where('id', $id)->first();
-        $deleted = $modalityModel->delete();
-        echo json_encode($deleted);
+        echo json_encode($modalityModel->delete());
     }
 }

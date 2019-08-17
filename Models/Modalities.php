@@ -29,11 +29,11 @@ class Modalities extends Model implements iModelExport {
         $this->fieldModelInfo->string('id_cheque', 255)->default('');
         $this->fieldModelInfo->tinyInteger('situation', false, true)->default(0);
         $this->fieldModelInfo->string('accounting_account', 255)->default('');
-        $this->fieldModelInfo->string('journal', 20);
+        $this->fieldModelInfo->string('journal', 20)->default('');
         $this->fieldModelInfo->tinyInteger('settlement_type', false, true)->default(0);
         $this->fieldModelInfo->tinyInteger('settlement_date', false, true)->default(0);
         $this->fieldModelInfo->integer('settlement_delay', false, true)->default(0);
-        $this->fieldModelInfo->string('export', 255);
+        $this->fieldModelInfo->string('export', 255)->default('');
         $this->fieldModelInfo->integer('sort', false, true)->default(0);
 
         parent::__construct($attributes);

@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <div id="breadcrumb">
     Listes des modalités de paiement
 </div>
@@ -24,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="modality in $root.modalities | orderBy:'sort'">
+        <tr ng-repeat="modality in list_modalities | orderBy:'sort'">
             <td>
                 @{{ modality.label }}
             </td>

@@ -1,6 +1,24 @@
 app.config(["$routeProvider",
 	function ($routeProvider) {
 		$routeProvider
+		// MODALITIES
+			.when("/ng/com_zeapps/modalities", {
+				templateUrl: "/com_zeapps_contact/modalities/config",
+				controller: "ComZeappsCrmModalityConfigCtrl"
+			})
+
+			.when("/ng/com_zeapps/modalities/new", {
+				templateUrl: "/com_zeapps_contact/modalities/form_modal",
+				controller: "ComZeappsCrmModalityConfigFormCtrl"
+			})
+
+			.when("/ng/com_zeapps/modalities/edit/:id", {
+				templateUrl: "/com_zeapps_contact/modalities/form_modal",
+				controller: "ComZeappsCrmModalityConfigFormCtrl"
+			})
+
+
+
 		// COMPANIES
 			.when("/ng/com_zeapps_contact/companies", {
 				templateUrl: "/com_zeapps_contact/companies/search",

@@ -1,7 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <div ng-controller="ComZeappsCrmModalityConfigFormModalCtrl">
     <div class="row">
         <div class="col-md-6">
@@ -22,26 +18,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4">
             <div class="form-group">
                 <label>Type de reglement</label>
-                <select class="form-control" ng-model="form.type">
-                    <option value="0">Autre mode</option>
-                    <option value="1">Cheque</option>
-                    <option value="2">Prélèvement</option>
+                <select class="form-control" ng-model="form.type_modality">
+                    <option ng-value="0">Autre mode</option>
+                    <option ng-value="1">Cheque</option>
+                    <option ng-value="2">Prélèvement</option>
                 </select>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="form-group" ng-model="form.id_cheque">
+            <div class="form-group">
                 <label>Identifiant remise cheque</label>
-                <input type="text" class="form-control">
+                <input type="text" ng-model="form.id_cheque" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label>Situation comptable</label>
                 <select class="form-control" ng-model="form.situation">
-                    <option value="0">Attente règlement</option>
-                    <option value="1">Règlement reçu</option>
-                    <option value="2">Espèce</option>
+                    <option ng-value="0">Attente règlement</option>
+                    <option ng-value="1">Règlement reçu</option>
+                    <option ng-value="2">Espèce</option>
                 </select>
             </div>
         </div>
@@ -55,9 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
         <div class="col-md-6">
-            <div class="form-group" ng-model="form.journal">
+            <div class="form-group">
                 <label>Journal</label>
-                <input type="text" class="form-control">
+                <input type="text" ng-model="form.journal" class="form-control">
             </div>
         </div>
     </div>
@@ -67,8 +63,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group">
                 <label>Type d'échéance</label>
                 <select class="form-control" ng-model="form.settlement_type">
-                    <option value="0">Suivant la date de facture</option>
-                    <option value="1">Echéance fixe</option>
+                    <option ng-value="0">Suivant la date de facture</option>
+                    <option ng-value="1">Echéance fixe</option>
                 </select>
             </div>
         </div>
