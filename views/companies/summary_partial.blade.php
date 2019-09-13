@@ -13,6 +13,9 @@
     <div class="col-md-4">
         <strong>Compte comptable : </strong>@{{company.accounting_number}}
     </div>
+    <div class="col-md-4">
+        <strong>N° TVA Intracomm : </strong>@{{company.tva_intracom}}
+    </div>
 </div>
 <div class="row">
     <div class="col-md-12">
