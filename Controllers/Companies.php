@@ -286,7 +286,7 @@ class Companies extends Controller
             $header = array("string");
 
             $row1 = array("Liste des contacts");
-            $row2 = array("#", "Nom", "Téléphone", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "Gestionnaire du compte");
+            $row2 = array("#", "Nom", "Téléphone", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "TVA Intracom", "N° Compta", "Commentaire", "Gestionnaire du compte");
 
             $writer = new XLSXWriter();
 
@@ -323,6 +323,9 @@ class Companies extends Controller
                     $companie->billing_state,
                     $companie->billing_country_name,
                     $companie->email,
+                    $companie->tva_intracom,
+                    $companie->accounting_number,
+                    $companie->comment,
                     $companie->name_user_account_manager
                 );
 
@@ -332,7 +335,7 @@ class Companies extends Controller
                 $writer->writeSheetRow($this->sheet_name, $row3, $format);
             }
 
-            $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 12);
+            $writer->markMergedCell($this->sheet_name, 0, 0, 0, 15);
 
             // Gnérer une url temporaire unique pour le fichier Excel dans /tmp
             $link = BASEPATH . 'tmp/companies_' . Storage::generateRandomString() . '.xlsx';
