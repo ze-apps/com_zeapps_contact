@@ -319,43 +319,35 @@ class Contacts extends Controller
 
     public function make_export()
     {
-        $contacts = ContactsModel::orderBy('id', 'ASC');
+        $contactsDB = ContactsModel::orderBy('id', 'ASC');
+        $contactsDB = $contactsDB->select("id", "first_name", "last_name", "phone", "other_phone", "mobile", "address_1", "address_2", "address_3", "zipcode", "city", "state", "country_name", "email", "name_user_account_manager") ;
 
         // Filters
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
-
             // Get posted data by json
             $data = json_decode(file_get_contents('php://input'), true);
 
-            if (isset($data['last_name LIKE']) && $data['last_name LIKE']) {
-                $contacts = $contacts->where('last_name', 'like', '%' . $data['last_name LIKE'] . '%');
+            foreach ($data as $key => $value) {
+                if (trim($value) != "") {
+                    if (strpos($key, " LIKE")) {
+                        $key = str_replace(" LIKE", "", $key);
+                        $contactsDB = $contactsDB->where($key, 'like', '%' . $value . '%');
+                    } else {
+                        $contactsDB = $contactsDB->where($key, $value);
+                    }
+                }
             }
-
-            if (isset($data['first_name LIKE']) && $data['first_name LIKE']) {
-                $contacts = $contacts->where('first_name', 'like', '%' . $data['first_name LIKE'] . '%');
-            }
-
-            if (isset($data['id_topology']) && $data['id_topology']) {
-                $contacts = $contacts->where('id_topology', $data['id_topology']);
-            }
-
-            if (isset($data['id_account_family']) && $data['id_account_family']) {
-                $contacts = $contacts->where('id_account_family', $data['id_account_family']);
-            }
-
         }
 
-        $contacts = $contacts->get();
 
-        if ($contacts) {
 
+
+        if ($contactsDB->count()) {
             $header = array("string");
-
             $row1 = array("Liste des contacts");
             $row2 = array("#", "Nom", "Téléphone", "Autre Téléphone", "Portable", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "Gestionnaire du compte");
 
             $writer = new XLSXWriter();
-
             $this->sheet_name = 'Sheet1';
 
             $writer->writeSheetHeader($this->sheet_name, $header, $suppress_header_row = true);
@@ -376,32 +368,41 @@ class Contacts extends Controller
 
             $writer->writeSheetRow($this->sheet_name, $row2, $format);
 
-            foreach ($contacts as $key => $contact) {
-                $row3 = array(
-                    $contact->id,
-                    $contact->first_name . ' ' . $contact->last_name,
-                    $contact->phone,
-                    $contact->other_phone,
-                    $contact->mobile,
-                    $contact->address_1,
-                    $contact->address_2,
-                    $contact->address_3,
-                    $contact->zipcode,
-                    $contact->city,
-                    $contact->state,
-                    $contact->country_name,
-                    $contact->email,
-                    $contact->name_user_account_manager
-                );
+            $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 13);
 
-                // Formatage
-                /*$format = array('halign' => 'center');*/
-                $format = array();
 
-                $writer->writeSheetRow($this->sheet_name, $row3, $format);
+            // pagination des résultats pour ne pas avoir de dépassement mémoire
+            $nbElementPageExport = 2000 ;
+            $pages = ceil($contactsDB->count() / $nbElementPageExport);
+            for ($iPage = 1 ; $iPage <= $pages ; $iPage++) {
+                $contacts = $contactsDB->offset(($iPage-1) * $nbElementPageExport)->limit($nbElementPageExport)->get();
+                foreach ($contacts as $key => $contact) {
+                    $row3 = array(
+                        $contact->id,
+                        $contact->first_name . ' ' . $contact->last_name,
+                        $contact->phone,
+                        $contact->other_phone,
+                        $contact->mobile,
+                        $contact->address_1,
+                        $contact->address_2,
+                        $contact->address_3,
+                        $contact->zipcode,
+                        $contact->city,
+                        $contact->state,
+                        $contact->country_name,
+                        $contact->email,
+                        $contact->name_user_account_manager
+                    );
+
+                    // Formatage
+                    // $format = array('halign' => 'center');
+                    $format = array();
+
+                    $writer->writeSheetRow($this->sheet_name, $row3, $format);
+                }
             }
 
-            $writer->markMergedCell($this->sheet_name, $start_row = 0, $start_col = 0, $end_row = 0, $end_col = 13);
+
 
             // Gnérer une url temporaire unique pour le fichier Excel dans /tmp
             $link = BASEPATH . 'tmp/contacts_' . Storage::generateRandomString() . '.xlsx';

@@ -257,7 +257,10 @@ class Companies extends Controller
 
     public function make_export()
     {
-        $companies = CompaniesModel::orderBy('id', 'ASC') ;
+        $companiesDB = CompaniesModel::orderBy('id', 'ASC') ;
+        $companiesDB = $companiesDB->select("id", "company_name", "phone", "billing_address_1", "billing_address_2",
+            "billing_address_3", "billing_zipcode", "billing_city", "billing_state", "billing_country_name", "email",
+            "tva_intracom", "accounting_number", "comment", "name_user_account_manager");
 
         // Filters
         if (strcasecmp($_SERVER['REQUEST_METHOD'], 'post') === 0 && stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== FALSE) {
@@ -265,23 +268,20 @@ class Companies extends Controller
             // Get posted data by json
             $data = json_decode(file_get_contents('php://input'), true);
 
-            if (isset($data['company_name LIKE']) && $data['company_name LIKE']) {
-                $companies = $companies->where('company_name', 'like', '%' . $data['company_name LIKE'] . '%');
+            foreach ($data as $key => $value) {
+                if (trim($value) != "") {
+                    if (strpos($key, " LIKE")) {
+                        $key = str_replace(" LIKE", "", $key);
+                        $companiesDB = $companiesDB->where($key, 'like', '%' . $value . '%');
+                    } else {
+                        $companiesDB = $companiesDB->where($key, $value);
+                    }
+                }
             }
-
-            if (isset($data['id_topology']) && $data['id_topology']) {
-                $companies = $companies->where('id_topology', $data['id_topology']);
-            }
-
-            if (isset($data['id_account_family']) && $data['id_account_family']) {
-                $companies = $companies->where('id_account_family', $data['id_account_family']);
-            }
-
         }
 
-        $companies = $companies->get();
 
-        if ($companies) {
+        if ($companiesDB->count()) {
 
             $header = array("string");
 
@@ -309,30 +309,36 @@ class Companies extends Controller
 
             $writer->writeSheetRow($this->sheet_name, $row2, $format);
 
-            foreach ($companies as $key => $companie) {
 
-                $row3 = array(
-                    $companie->id,
-                    $companie->company_name,
-                    $companie->phone,
-                    $companie->billing_address_1,
-                    $companie->billing_address_2,
-                    $companie->billing_address_3,
-                    $companie->billing_zipcode,
-                    $companie->billing_city,
-                    $companie->billing_state,
-                    $companie->billing_country_name,
-                    $companie->email,
-                    $companie->tva_intracom,
-                    $companie->accounting_number,
-                    $companie->comment,
-                    $companie->name_user_account_manager
-                );
+            // pagination des résultats pour ne pas avoir de dépassement mémoire
+            $nbElementPageExport = 2000 ;
+            $pages = ceil($companiesDB->count() / $nbElementPageExport);
+            for ($iPage = 1 ; $iPage <= $pages ; $iPage++) {
+                $companies = $companiesDB->offset(($iPage-1) * $nbElementPageExport)->limit($nbElementPageExport)->get();
+                foreach ($companies as $key => $companie) {
+                    $row3 = array(
+                        $companie->id,
+                        $companie->company_name,
+                        $companie->phone,
+                        $companie->billing_address_1,
+                        $companie->billing_address_2,
+                        $companie->billing_address_3,
+                        $companie->billing_zipcode,
+                        $companie->billing_city,
+                        $companie->billing_state,
+                        $companie->billing_country_name,
+                        $companie->email,
+                        $companie->tva_intracom,
+                        $companie->accounting_number,
+                        $companie->comment,
+                        $companie->name_user_account_manager
+                    );
 
-                // Formatage
-                $format = array();
+                    // Formatage
+                    $format = array();
 
-                $writer->writeSheetRow($this->sheet_name, $row3, $format);
+                    $writer->writeSheetRow($this->sheet_name, $row3, $format);
+                }
             }
 
             $writer->markMergedCell($this->sheet_name, 0, 0, 0, 15);
