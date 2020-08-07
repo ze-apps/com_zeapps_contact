@@ -44,6 +44,13 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     type: 'text',
                     label: 'Pays',
                     size: 6
+                },
+                {
+                    format: 'input',
+                    field: 'email LIKE',
+                    type: 'text',
+                    label: 'Email',
+                    size: 6
                 }
             ]
         };
