@@ -101,7 +101,7 @@
                         <td>@{{address.state}}</td>
                         <td>@{{address.country_name}}</td>
                         <td class="text-right">
-                            <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                            <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
                                     ze-modalform="editAddresse"
                                     data-edit="address"
                                     data-template="templateFormAddresse"

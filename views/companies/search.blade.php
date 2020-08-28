@@ -48,12 +48,12 @@
                     <td ng-click="goTo(contact.id)">@{{company.billing_country_name}}</td>
                     <td ng-click="goTo(company.id)">@{{company.name_user_account_manager}}</td>
                     <td class="text-right">
-                        <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                        <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
                                 ze-modalform="edit"
                                 data-edit="company"
                                 data-template="templateForm"
-                                data-title="Modifier l'entreprise"></ze-btn>
-                        <ze-btn fa="trash" color="danger" hint="Supprimer" direction="left" ng-click="delete(company)" ze-confirmation></ze-btn>
+                                data-title="{{ __t("Change company") }}"></ze-btn>
+                        <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="delete(company)" ze-confirmation></ze-btn>
                     </td>
                 </tr>
                 </tbody>
