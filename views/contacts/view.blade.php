@@ -24,11 +24,13 @@
                 <div class="col-md-3">
                     <div class="pull-right">
                         <ze-btn fa="arrow-left" color="primary" hint="Retour" direction="left" ng-click="back()"></ze-btn>
-                        <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
-                                ze-modalform="edit"
-                                data-edit="contact"
-                                data-template="templateEdit"
-                                data-title="{{ __t("Edit contact") }}"></ze-btn>
+                        @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                            <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
+                                    ze-modalform="edit"
+                                    data-edit="contact"
+                                    data-template="templateEdit"
+                                    data-title="{{ __t("Edit contact") }}"></ze-btn>
+                        @endif
 
 
                         <div class="btn-group btn-group-xs" role="group" ng-if="nb_contacts > 0">
@@ -229,10 +231,12 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
-                            ze-modalform="addAddresse"
-                            data-template="templateFormAddresse"
-                            data-title="Ajouter une nouvelle adresse"></ze-btn>
+                    @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                        <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
+                                ze-modalform="addAddresse"
+                                data-template="templateFormAddresse"
+                                data-title="Ajouter une nouvelle adresse"></ze-btn>
+                    @endif
                 </div>
             </div>
 
@@ -248,7 +252,9 @@
                             <th>{{ __t("City") }}</th>
                             <th>{{ __t("State") }}</th>
                             <th>{{ __t("Country") }}</th>
-                            <th></th>
+                            @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                                <th></th>
+                            @endif
                         </tr>
                         </thead>
                         <tbody>
@@ -262,14 +268,16 @@
                             <td>@{{address.city}}</td>
                             <td>@{{address.state}}</td>
                             <td>@{{address.country_name}}</td>
-                            <td class="text-right">
-                                <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
-                                        ze-modalform="editAddresse"
-                                        data-edit="address"
-                                        data-template="templateFormAddresse"
-                                        data-title="{{ __t("Edit address") }}"></ze-btn>
-                                <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
-                            </td>
+                            @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                                <td class="text-right">
+                                        <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
+                                                ze-modalform="editAddresse"
+                                                data-edit="address"
+                                                data-template="templateFormAddresse"
+                                                data-title="{{ __t("Edit address") }}"></ze-btn>
+                                        <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
+                                </td>
+                            @endif
                         </tr>
                         </tbody>
                     </table>

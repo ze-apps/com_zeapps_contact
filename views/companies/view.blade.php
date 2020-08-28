@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="titleWell">
-                    <i class="fas fa-exclamation-triangle" style="font-size: 3em; color:#dd0000;" ng-if="company.client_failure"></i>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3em; color:#dd0000;"
+                       ng-if="company.client_failure"></i>
                     <b>@{{company.company_name}}</b>
                 </div>
                 <div>
@@ -22,20 +23,29 @@
 
             <div class="col-md-3">
                 <div class="pull-right">
-                    <ze-btn fa="arrow-left" color="primary" hint="{{ __t("Return") }}" direction="left" ng-click="back()"></ze-btn>
-                    <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
-                            ze-modalform="edit"
-                            data-edit="company"
-                            data-template="templateEdit"
-                            data-title="{{ __t("Change company") }}"></ze-btn>
+                    <ze-btn fa="arrow-left" color="primary" hint="{{ __t("Return") }}" direction="left"
+                            ng-click="back()"></ze-btn>
+
+                    @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                        <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
+                                ze-modalform="edit"
+                                data-edit="company"
+                                data-template="templateEdit"
+                                data-title="{{ __t("Change company") }}"></ze-btn>
+                    @endif
 
 
                     <div class="btn-group btn-group-xs" role="group" ng-if="nb_companies > 0">
-                        <button type="button" class="btn btn-default" ng-class="company_first == 0 ? 'disabled' :''" ng-click="first_company()"><span class="fa fa-fw fa-fast-backward"></span></button>
-                        <button type="button" class="btn btn-default" ng-class="company_previous == 0 ? 'disabled' :''" ng-click="previous_company()"><span class="fa fa-fw fa-chevron-left"></span></button>
-                        <button type="button" class="btn btn-default disabled">@{{companie_order}}/@{{nb_companies}}</button>
-                        <button type="button" class="btn btn-default" ng-class="company_next == 0 ? 'disabled' :''" ng-click="next_company()"><span class="fa fa-fw fa-chevron-right"></span></button>
-                        <button type="button" class="btn btn-default" ng-class="company_last == 0 ? 'disabled' :''" ng-click="last_company()"><span class="fa fa-fw fa-fast-forward"></span></button>
+                        <button type="button" class="btn btn-default" ng-class="company_first == 0 ? 'disabled' :''"
+                                ng-click="first_company()"><span class="fa fa-fw fa-fast-backward"></span></button>
+                        <button type="button" class="btn btn-default" ng-class="company_previous == 0 ? 'disabled' :''"
+                                ng-click="previous_company()"><span class="fa fa-fw fa-chevron-left"></span></button>
+                        <button type="button" class="btn btn-default disabled">@{{companie_order}}/@{{nb_companies}}
+                        </button>
+                        <button type="button" class="btn btn-default" ng-class="company_next == 0 ? 'disabled' :''"
+                                ng-click="next_company()"><span class="fa fa-fw fa-chevron-right"></span></button>
+                        <button type="button" class="btn btn-default" ng-class="company_last == 0 ? 'disabled' :''"
+                                ng-click="last_company()"><span class="fa fa-fw fa-fast-forward"></span></button>
                     </div>
                 </div>
             </div>
@@ -44,15 +54,23 @@
     </div>
 
     <ul role="tablist" class="nav nav-tabs">
-        <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">{{ __t("Summary") }}</a></li>
-        <li role="presentation" ng-class="isTabActive('addresses') ? 'active' : ''"><a href="#" ng-click="setTab('addresses')">{{ __t("Addresses") }}</a></li>
-        <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#" ng-click="setTab('contacts')">{{ __t("Contacts") }}</a></li>
+        <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#"
+                                                                                     ng-click="setTab('summary')">{{ __t("Summary") }}</a>
+        </li>
+        <li role="presentation" ng-class="isTabActive('addresses') ? 'active' : ''"><a href="#"
+                                                                                       ng-click="setTab('addresses')">{{ __t("Addresses") }}</a>
+        </li>
+        <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#"
+                                                                                      ng-click="setTab('contacts')">{{ __t("Contacts") }}</a>
+        </li>
 
-        <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
+        <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''"
+            ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
             <a href="#" ng-click="setTab(hook.label)">@{{ hook.label }}</a>
         </li>
 
-        <li role="presentation" ng-class="isTabActive('email') ? 'active' : ''"><a href="#" ng-click="setTab('email')">Email</a></li>
+        <li role="presentation" ng-class="isTabActive('email') ? 'active' : ''"><a href="#" ng-click="setTab('email')">Email</a>
+        </li>
     </ul>
 
     <div ng-if="isTabActive(hook.label)" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
@@ -65,14 +83,16 @@
 
     <div ng-show="isTabActive('addresses')">
 
-        <div class="row">
-            <div class="col-md-12">
-                <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
-                        ze-modalform="addAddresse"
-                        data-template="templateFormAddresse"
-                        data-title="{{ __t("add a new address") }}"></ze-btn>
+        @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+            <div class="row">
+                <div class="col-md-12">
+                    <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
+                            ze-modalform="addAddresse"
+                            data-template="templateFormAddresse"
+                            data-title="{{ __t("add a new address") }}"></ze-btn>
+                </div>
             </div>
-        </div>
+        @endif
 
         <div class="row">
             <div class="col-md-12">
@@ -95,18 +115,22 @@
                         <td>@{{address.first_name}} @{{address.last_name}}</td>
                         <td>@{{address.address_1}}
                             <br ng-if="address.address_2 != ''">@{{address.address_2}}
-                            <br ng-if="address.address_3 != ''">@{{address.address_3}}</td>
+                            <br ng-if="address.address_3 != ''">@{{address.address_3}}
+                        </td>
                         <td>@{{address.zipcode}}</td>
                         <td>@{{address.city}}</td>
                         <td>@{{address.state}}</td>
                         <td>@{{address.country_name}}</td>
                         <td class="text-right">
-                            <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
-                                    ze-modalform="editAddresse"
-                                    data-edit="address"
-                                    data-template="templateFormAddresse"
-                                    data-title="{{ __t("Edit address") }}"></ze-btn>
-                            <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
+                            @if (in_array("com_ze_apps_contact_com_write", $zeapps_right_current_user))
+                                <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
+                                        ze-modalform="editAddresse"
+                                        data-edit="address"
+                                        data-template="templateFormAddresse"
+                                        data-title="{{ __t("Edit address") }}"></ze-btn>
+                                <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left"
+                                        ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
+                            @endif
                         </td>
                     </tr>
                     </tbody>
@@ -120,6 +144,7 @@
     </div>
 
     <div ng-if="isTabActive('email')">
-        <div ng-include="'/zeapps/email/list_partial'" ng-init="module = 'com_zeapps_contact'; id = 'compagnies_' + company.id"></div>
+        <div ng-include="'/zeapps/email/list_partial'"
+             ng-init="module = 'com_zeapps_contact'; id = 'compagnies_' + company.id"></div>
     </div>
 </div>
