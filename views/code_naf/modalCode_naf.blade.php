@@ -9,8 +9,8 @@
             <table class="table table-bordered table-striped table-condensed table-responsive" ng-show="code_naf.length">
                 <thead>
                 <tr>
-                    <th>Code NAF</th>
-                    <th>Libellé</th>
+                    <th>{{ __t("NAF Code") }}</th>
+                    <th>{{ __t("Label") }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,5 +25,5 @@
 </div>
 
 <div class="modal-footer">
-    <button class="btn btn-danger" type="button" ng-click="cancel()">Annuler</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()">{{ __t("Cancel") }}</button>
 </div>

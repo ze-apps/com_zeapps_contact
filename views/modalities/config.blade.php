@@ -1,13 +1,13 @@
 <div id="breadcrumb">
-    Listes des modalités de paiement
+    {{ __t("Lists of payment terms") }}
 </div>
 <div id="content">
     <div class="row">
         <div class="col-md-12">
-            <ze-btn fa="plus" color="success" hint="Modalité de paiement" always-on="true"
+            <ze-btn fa="plus" color="success" hint="{{ __t("Method of payment") }}" always-on="true"
                     ze-modalform="add"
                     data-template="templateForm"
-                    data-title="Ajouter une nouvelle modalité de paiement"></ze-btn>
+                    data-title="{{ __t("Add a new payment method") }}"></ze-btn>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
         <thead>
         <tr>
             <th>
-                Label
+                {{ __t("Label") }}
             </th>
             <th></th>
         </tr>
@@ -26,12 +26,12 @@
                 @{{ modality.label }}
             </td>
             <td class="text-right">
-                <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
                         ze-modalform="edit"
                         data-edit="modality"
                         data-template="templateForm"
-                        data-title="Modifier la modalité de paiement"></ze-btn>
-                <ze-btn fa="trash" color="danger" hint="Supprimer" direction="left" ng-click="delete(modality)" ze-confirmation></ze-btn>
+                        data-title="{{ __t("Modify the payment method") }}"></ze-btn>
+                <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="delete(modality)" ze-confirmation></ze-btn>
             </td>
         </tr>
         </tbody>

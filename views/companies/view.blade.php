@@ -12,22 +12,22 @@
             </div>
 
             <div class="col-md-3">
-                <strong>Topologie : </strong>@{{company.name_topology}} <br>
-                <strong>Famille : </strong>@{{company.name_account_family}}
+                <strong>{{ __t("Topology") }} : </strong>@{{company.name_topology}} <br>
+                <strong>{{ __t("Family") }} : </strong>@{{company.name_account_family}}
             </div>
 
             <div class="col-md-3">
-                <strong>Manager : </strong>@{{company.name_user_account_manager}}
+                <strong>{{ __t("Manager") }} : </strong>@{{company.name_user_account_manager}}
             </div>
 
             <div class="col-md-3">
                 <div class="pull-right">
-                    <ze-btn fa="arrow-left" color="primary" hint="Retour" direction="left" ng-click="back()"></ze-btn>
-                    <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                    <ze-btn fa="arrow-left" color="primary" hint="{{ __t("Return") }}" direction="left" ng-click="back()"></ze-btn>
+                    <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
                             ze-modalform="edit"
                             data-edit="company"
                             data-template="templateEdit"
-                            data-title="Modifier l'entreprise"></ze-btn>
+                            data-title="{{ __t("Change company") }}"></ze-btn>
 
 
                     <div class="btn-group btn-group-xs" role="group" ng-if="nb_companies > 0">
@@ -44,9 +44,9 @@
     </div>
 
     <ul role="tablist" class="nav nav-tabs">
-        <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">Résumé</a></li>
-        <li role="presentation" ng-class="isTabActive('addresses') ? 'active' : ''"><a href="#" ng-click="setTab('addresses')">Adresses</a></li>
-        <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#" ng-click="setTab('contacts')">Contacts</a></li>
+        <li role="presentation" ng-class="isTabActive('summary') ? 'active' : ''"><a href="#" ng-click="setTab('summary')">{{ __t("Summary") }}</a></li>
+        <li role="presentation" ng-class="isTabActive('addresses') ? 'active' : ''"><a href="#" ng-click="setTab('addresses')">{{ __t("Addresses") }}</a></li>
+        <li role="presentation" ng-class="isTabActive('contacts') ? 'active' : ''"><a href="#" ng-click="setTab('contacts')">{{ __t("Contacts") }}</a></li>
 
         <li role="presentation" ng-class="isTabActive(hook.label) ? 'active' : ''" ng-repeat="hook in hooksComZeappsContact_EntrepriseHook">
             <a href="#" ng-click="setTab(hook.label)">@{{ hook.label }}</a>
@@ -70,7 +70,7 @@
                 <ze-btn fa="plus" color="success" hint="Adresse" always-on="true"
                         ze-modalform="addAddresse"
                         data-template="templateFormAddresse"
-                        data-title="Ajouter une nouvelle adresse"></ze-btn>
+                        data-title="{{ __t("add a new address") }}"></ze-btn>
             </div>
         </div>
 
@@ -79,13 +79,13 @@
                 <table class="table table-hover table-condensed table-responsive" ng-show="company.sub_adresses.length">
                     <thead>
                     <tr>
-                        <th>Société</th>
-                        <th>Nom</th>
-                        <th>Adresse</th>
-                        <th>Code postal</th>
-                        <th>Ville</th>
-                        <th>Etat</th>
-                        <th>Pays</th>
+                        <th>{{ __t("Company") }}</th>
+                        <th>{{ __t("Name") }}om</th>
+                        <th>{{ __t("Address") }}</th>
+                        <th>{{ __t("Zip code") }}</th>
+                        <th>{{ __t("City") }}</th>
+                        <th>{{ __t("State") }}</th>
+                        <th>{{ __t("Country") }}</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -105,8 +105,8 @@
                                     ze-modalform="editAddresse"
                                     data-edit="address"
                                     data-template="templateFormAddresse"
-                                    data-title="Modifier l'adresse"></ze-btn>
-                            <ze-btn fa="trash" color="danger" hint="Supprimer" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
+                                    data-title="{{ __t("Edit address") }}"></ze-btn>
+                            <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="deleteAddresse(address)" ze-confirmation></ze-btn>
                         </td>
                     </tr>
                     </tbody>

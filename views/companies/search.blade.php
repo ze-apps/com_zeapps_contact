@@ -1,5 +1,5 @@
 <div id="breadcrumb">
-    Entreprises
+    {{ __t("Companies") }}
 </div>
 <div id="content">
 
@@ -7,10 +7,10 @@
         <div class="col-md-12">
             <ze-filters class="pull-right" data-model="filter_model" data-filters="filters" data-update="loadList"></ze-filters>
 
-            <ze-btn fa="plus" color="success" hint="Entreprise" always-on="true"
+            <ze-btn fa="plus" color="success" hint="{{ __t("Company") }}" always-on="true"
                     ze-modalform="add"
                     data-template="templateForm"
-                    data-title="Ajouter une nouvelle entreprise"></ze-btn>
+                    data-title="{{ __t("Add a new company") }}"></ze-btn>
 
             <ze-btn fa="download" color="primary" hint="Excel" always-on="true"
                     ng-click="getExcel()"></ze-btn>
@@ -28,13 +28,13 @@
             <table class="table table-hover table-condensed table-responsive" ng-show="companies.length">
                 <thead>
                 <tr>
-                    <th>Nom</th>
-                    <th>Téléphone</th>
-                    <th>Code postal</th>
-                    <th>Ville</th>
-                    <th>Etat</th>
-                    <th>Pays</th>
-                    <th>Gestionnaire du compte</th>
+                    <th>{{ __t("Name") }}</th>
+                    <th>{{ __t("Phone") }}</th>
+                    <th>{{ __t("Zip code") }}</th>
+                    <th>{{ __t("City") }}</th>
+                    <th>{{ __t("State") }}</th>
+                    <th>{{ __t("Country") }}</th>
+                    <th>{{ __t("Account manager") }}</th>
                     <th></th>
                 </tr>
                 </thead>

@@ -1,26 +1,26 @@
 <div class="row">
     <div class="col-md-4">
-        <strong>Code naf : </strong>@{{company.code_naf_libelle}}
+        <strong>{{ __t("NAF Code") }} : </strong>@{{company.code_naf_libelle}}
     </div>
     <div class="col-md-4">
-        <strong>SIRET : </strong>@{{company.company_number}}
+        <strong>{{ __t("SIRET") }} : </strong>@{{company.company_number}}
     </div>
 </div>
 <div class="row">
     <div class="col-md-4">
-        <strong>Chiffre d'affaires : </strong>@{{company.turnover | currency:'€'}}
+        <strong>{{ __t("Turnover") }} : </strong>@{{company.turnover | currency:'€'}}
     </div>
     <div class="col-md-4">
-        <strong>Compte comptable : </strong>@{{company.accounting_number}}
+        <strong>{{ __t("Accounting Account") }} : </strong>@{{company.accounting_number}}
     </div>
     <div class="col-md-4">
-        <strong>N° TVA Intracomm : </strong>@{{company.tva_intracom}}
+        <strong>{{ __t("VAT number") }} : </strong>@{{company.tva_intracom}}
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
         <div>
-            <strong>Information de contact : </strong>
+            <strong>{{ __t("Information") }} : </strong>
         </div>
         <div class="well">
             <div class="row">
@@ -44,7 +44,7 @@
 <div class="row">
     <div class="col-md-6">
         <div>
-            <strong>Adresse de facturation :</strong>
+            <strong>{{ __t("Billing address") }} :</strong>
         </div>
         <div class="well">
             <span ng-if="company.billing_address_1 != ''">@{{company.billing_address_1}}<br></span>
@@ -58,7 +58,7 @@
 
     <div class="col-md-6">
         <div>
-            <strong>Adresse de livraison :</strong>
+            <strong>{{ __t("Delivery address") }} :</strong>
         </div>
         <div class="well">
             <span ng-if="company.delivery_address_1 != ''">@{{company.delivery_address_1}}<br></span>
@@ -75,7 +75,7 @@
 <div class="row" ng-show="company.sub_adresses.length">
     <div class="col-md-12">
         <div>
-            <strong>Adresse(s) secondaire(s) :</strong>
+            <strong>{{ __t("Secondary address (es)") }} :</strong>
         </div>
         <div class="well" ng-repeat="address in company.sub_adresses">
             <span ng-if="address.company_name != ''">@{{address.company_name}}<br></span>
@@ -95,7 +95,7 @@
 <div class="row">
     <div class="col-md-12">
         <div>
-            <strong>Commentaire :</strong>
+            <strong>{{ __t("Comment") }} :</strong>
         </div>
         <div class="well">
             <span ng-bind-html=" company.comment | nl2br:true "></span>
@@ -106,7 +106,7 @@
     <div class="col-md-6">
         <div ng-show="company.average_order > 0">
             <div>
-                <strong>Temps moyen entre 2 commandes :</strong>
+                <strong>{{ __t("Average time between 2 orders") }} :</strong>
             </div>
             <div class="well">
                 @{{company.average_order | number:0}} jours
@@ -116,14 +116,14 @@
     <div class="col-md-6">
         <div ng-if="company.turnovers && company.turnovers.length">
             <div>
-                <strong>Chiffre d'affaires par année :</strong>
+                <strong>{{ __t("Turnover per year") }} :</strong>
             </div>
             <div class="well">
                 <table class="table table-responsive table-striped table-condensed">
                     <thead>
                     <tr>
-                        <th>Année</th>
-                        <th class="text-right">Chiffre d'affaires HT</th>
+                        <th>{{ __t("Year") }}</th>
+                        <th class="text-right">{{ __t("Tax-free turnover") }}</th>
                     </tr>
                     </thead>
                     <tbody>

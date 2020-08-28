@@ -9,10 +9,10 @@
             <table class="table table-bordered table-striped table-condensed table-responsive" ng-show="companies.length">
                 <thead>
                 <tr>
-                    <th>Nom</th>
-                    <th>Téléphone</th>
-                    <th>Ville</th>
-                    <th>Gestionnaire du compte</th>
+                    <th>{{ __t("Last name") }}</th>
+                    <th>{{ __t("Phone") }}</th>
+                    <th>{{ __t("City") }}</th>
+                    <th>{{ __t("Account manager") }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -29,5 +29,5 @@
 </div>
 
 <div class="modal-footer">
-    <button class="btn btn-danger" type="button" ng-click="cancel()">Annuler</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()">{{ __t("Cancel") }}</button>
 </div>

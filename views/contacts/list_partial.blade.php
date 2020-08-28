@@ -4,22 +4,22 @@
             <ze-filters class="pull-right" data-model="filter_model" data-filters="filters"
                         data-update="loadList"></ze-filters>
 
-            <ze-btn fa="plus" color="success" hint="Contact" always-on="true"
+            <ze-btn fa="plus" color="success" hint="{{ __t("Contact") }}" always-on="true"
                     ze-modalform="add"
                     data-template="templateForm"
-                    data-title="Ajouter un nouveau contact"></ze-btn>
+                    data-title="{{ __t("Add new contact") }}"></ze-btn>
 
             <span ng-show="btn_adding_existing_contact">
 
                 <span ze-modalsearch-btn="loadContact"
                       fa="plus"
                       color="success"
-                      hint="Contact existant"
+                      hint="{{ __t("Existing contact") }}"
                       always-on="true"
                       data-http="contactHttp"
                       data-fields="contactFields"
                       data-template-new="templateForm"
-                      data-title="Choisir un contact"></span>
+                      data-title="{{ __t("Choose a contact") }}"></span>
             </span>
 
             <ze-btn fa="download" color="primary" hint="Excel" always-on="true"
@@ -38,14 +38,14 @@
             <table class="table table-hover table-condensed table-responsive" ng-show="contacts.length">
                 <thead>
                 <tr>
-                    <th>Société</th>
-                    <th>Nom</th>
-                    <th>Téléphone</th>
-                    <th>Code postal</th>
-                    <th>Ville</th>
-                    <th>Etat</th>
-                    <th>Pays</th>
-                    <th>Gestionnaire du compte</th>
+                    <th>{{ __t("Company") }}</th>
+                    <th>{{ __t("Name") }}</th>
+                    <th>{{ __t("Phone") }}</th>
+                    <th>{{ __t("Zip code") }}</th>
+                    <th>{{ __t("City") }}</th>
+                    <th>{{ __t("State") }}</th>
+                    <th>{{ __t("Country") }}</th>
+                    <th>{{ __t("Account manager") }}</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -63,12 +63,12 @@
                     <td ng-click="goTo(contact.id)">@{{contact.country_name}}</td>
                     <td ng-click="goTo(contact.id)">@{{contact.name_user_account_manager}}</td>
                     <td class="text-right">
-                        <ze-btn fa="edit" color="info" hint="Editer" direction="left"
+                        <ze-btn fa="edit" color="info" hint="{{ __t("Edit") }}" direction="left"
                                 ze-modalform="edit"
                                 data-edit="contact"
                                 data-template="templateForm"
-                                data-title="Modifier le contact"></ze-btn>
-                        <ze-btn fa="trash" color="danger" hint="Supprimer" direction="left" ng-click="delete(contact)"
+                                data-title="{{ __t("Edit contact") }}"></ze-btn>
+                        <ze-btn fa="trash" color="danger" hint="{{ __t("Delete") }}" direction="left" ng-click="delete(contact)"
                                 ze-confirmation></ze-btn>
                     </td>
                 </tr>

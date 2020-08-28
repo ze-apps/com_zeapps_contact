@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label>Libellé</label>
+                <label>{{ __t("Label") }}</label>
                 <input type="text" class="form-control" ng-model="form.label">
             </div>
         </div>
@@ -12,14 +12,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label>Numéro</label>
+                <label>{{ __t("Number") }}</label>
                 <input type="text" class="form-control" ng-model="form.number">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                <label>Type de compte comptable</label>
+                <label>{{ __t("Accounting account type") }}</label>
                 <select class="form-control" ng-model="form.type" ng-change="updateType()">
                     <option ng-repeat="type in types" ng-value="type.id">@{{ type.label }}</option>
                 </select>
