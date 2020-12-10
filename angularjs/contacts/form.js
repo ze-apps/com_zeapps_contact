@@ -32,12 +32,14 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
         ];
 
         $scope.accountingNumberHttp = zhttp.contact.accounting_number;
-        $scope.accountingNumberTplNew = '/com_zeapps_contact/accounting_numbers/form_modal/';
+        $scope.accountingNumberTplNew = '/com_zeapps_contact/accounting_numbers/form_modal';
         $scope.accountingNumberFields = [
             {label: 'Numero', key: 'number'},
             {label: 'Libelle', key: 'label'},
             {label: 'Type', key: 'type_label'}
         ];
+
+
 
         // charge la liste des grilles de prix
         $scope.price_lists = false;

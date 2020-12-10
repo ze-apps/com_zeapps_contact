@@ -128,7 +128,7 @@
                             data-model="form.accounting_number"
                             data-fields="accountingNumberFields"
                             data-template-new="accountingNumberTplNew"
-                            data-title="Choisir un compte comptable"></span>
+                            data-title="{{ __t("Choose an accounting account") }}"></span>
                 </div>
             </div>
             <div class="col-md-3">
@@ -139,7 +139,7 @@
                             data-http="accountManagerHttp"
                             data-model="form.name_user_account_manager"
                             data-fields="accountManagerFields"
-                            data-title="Choisir un utilisateur"></span>
+                            data-title="{{ __t("Choose a user") }}"></span>
                 </div>
             </div>
         </div>

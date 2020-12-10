@@ -22,6 +22,17 @@ $tabMenu["order"] = 40 ;
 $menuLeft[] = $tabMenu ;
 
 
+$tabMenu = array () ;
+$tabMenu["id"] = "com_ze_apps_contact_accounting_account" ;
+$tabMenu["space"] = "com_ze_apps_config" ;
+$tabMenu["label"] = __t("Accounting Account") ;
+$tabMenu["fa-icon"] = "list" ;
+$tabMenu["url"] = "/ng/com_zeapps/accounting_account" ;
+$tabMenu["access"] = "com_ze_apps_contact_com_read" ;
+$tabMenu["order"] = 45 ;
+$menuLeft[] = $tabMenu ;
+
+
 
 /********* insert in essential menu *********/
 $tabMenu = array () ;

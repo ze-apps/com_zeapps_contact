@@ -86,4 +86,6 @@ return [
     "Check" => "Check",
     "Debit" => "Debit",
     "Document caption" => "Document caption",
+    "Accounting account" => "Accounting account",
+    "Add new accounting account" => "Add new accounting account",
 ];

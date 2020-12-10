@@ -1,7 +1,7 @@
 app.config(["$routeProvider",
 	function ($routeProvider) {
 		$routeProvider
-		// MODALITIES
+			// MODALITIES
 			.when("/ng/com_zeapps/modalities", {
 				templateUrl: "/com_zeapps_contact/modalities/config",
 				controller: "ComZeappsCrmModalityConfigCtrl"
@@ -19,7 +19,7 @@ app.config(["$routeProvider",
 
 
 
-		// COMPANIES
+			// COMPANIES
 			.when("/ng/com_zeapps_contact/companies", {
 				templateUrl: "/com_zeapps_contact/companies/search",
 				controller: "ComZeappsContactCompaniesListCtrl"
@@ -30,7 +30,7 @@ app.config(["$routeProvider",
 			})
 
 
-		// CONTACT
+			// CONTACT
 			.when("/ng/com_zeapps_contact/contacts", {
 				templateUrl: "/com_zeapps_contact/contacts/search",
 				controller: "ComZeappsContactContactsListCtrl"
@@ -41,15 +41,19 @@ app.config(["$routeProvider",
 			})
 
 
-		// CONFIG
+			// CONFIG
 			.when("/ng/com_zeapps/account_families", {
 				templateUrl: "/com_zeapps_contact/account_families/config",
 				controller: "ComZeappsContactAccountFamiliesConfigCtrl"
+			})
+			.when("/ng/com_zeapps/accounting_account", {
+				templateUrl: "/com_zeapps_contact/accounting_numbers/config",
+				controller: "ComZeappsContactAccountingNumberConfigCtrl"
 			})
 			/*.when("/ng/com_zeapps/topologies", {
 				templateUrl: "/com_zeapps_contact/topologies/config",
 				controller: "ComZeappsContactTopologiesConfigCtrl"
 			})*/
-		;
+			;
 	}]);
 

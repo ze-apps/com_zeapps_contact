@@ -28,7 +28,7 @@ app.controller("ComZeappsCrmAccountingNumberFormCtrl", ["$scope",
 
 		function updateType() {
 		    angular.forEach($scope.types, function(type){
-		        if(type.id === $scope.form.type){
+		        if(type.id == $scope.form.type){
 		            $scope.form.type_label = type.label;
                 }
             })

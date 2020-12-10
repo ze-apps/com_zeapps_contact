@@ -85,4 +85,6 @@ return [
     "Check" => "Chèque",
     "Debit" => "Prélèvement",
     "Document caption" => "Libelle document",
+    "Accounting account" => "Compte comptable",
+    "Add new accounting account" => "Ajouter un nouveau compte comptable",
 ];

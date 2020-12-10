@@ -56,8 +56,10 @@ app.config(["$provide",
                     modal: modal_codeNaf
                 },
                 accounting_number: {
+                    all: getAll_accountingNumber,
                     modal: modal_accountingNumber,
-                    save: save_accountingNumber
+                    save: save_accountingNumber,
+                    del: del_accountingNumber
                 },
                 countries: {
                     all: getAll_countries,
@@ -244,12 +246,20 @@ app.config(["$provide",
 
 
             // ACCOUNTING NUMBERS
+            function getAll_accountingNumber(limit, offset, filters) {
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/getAll/" + limit + "/" + offset, filters);
+            }
+
             function modal_accountingNumber(limit, offset, filters) {
                 return zeHttp.post("/com_zeapps_contact/accounting_numbers/modal/" + limit + "/" + offset, filters)
             }
 
             function save_accountingNumber(data) {
                 return zeHttp.post("/com_zeapps_contact/accounting_numbers/save", data)
+            }
+
+            function del_accountingNumber(id) {
+                return zeHttp.delete("/com_zeapps_contact/accounting_numbers/delete/" + id);
             }
 
 
@@ -285,6 +295,5 @@ app.config(["$provide",
             function del_modality(id) {
                 return zeHttp.delete("/com_zeapps_contact/modalities/delete/" + id);
             }
-
         }]);
     }]);
