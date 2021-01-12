@@ -6,15 +6,19 @@ use Zeapps\Core\Controller;
 use Zeapps\Core\Request;
 use Zeapps\Core\Session;
 
+use Zeapps\Models\Config as Config ;
+
 use App\com_zeapps_contact\Models\Country as CountryModel ;
 
 class Country extends Controller
 {
     public function get_all()
     {
+        $langAffichage = 1 ;
+
         if(!$countries = CountryModel::join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
             ->orderBy('com_zeapps_contact_country_lang.name')
-            ->where("id_lang", 1)
+            ->where("id_lang", $langAffichage)
             ->get()){
             $countries = [];
         }
@@ -26,6 +30,13 @@ class Country extends Controller
 
     public function modal(Request $request)
     {
+        $langAffichage = 1 ;
+
+        $langueParDefaut = Config::find("zeapps_default_language");
+        if ($langueParDefaut) {
+            $langAffichage = $langueParDefaut->value ;
+        }
+
         $limit = $request->input('limit', 15);
         $offset = $request->input('offset', 0);
 
@@ -38,7 +49,7 @@ class Country extends Controller
 
         $contries_rs = CountryModel::join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
             ->orderBy('com_zeapps_contact_country_lang.name')
-            ->where("id_lang", 1) ;
+            ->where("id_lang", $langAffichage) ;
 
         foreach ($filters as $key => $value) {
             if (strpos($key, " LIKE")) {
