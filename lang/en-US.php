@@ -39,7 +39,7 @@ return [
     "Manager" => "Manager",
     "Return" => "Return",
     "Change company" => "Change company",
-    "Summary" => "summary",
+    "Summary" => "Summary",
     "Addresses" => "Addresses",
     "Contacts" => "Contacts",
     "add a new address" => "add a new address",
