@@ -16,7 +16,13 @@ class Country extends Controller
     {
         $langAffichage = 1 ;
 
-        if(!$countries = CountryModel::join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
+        $langueParDefaut = Config::find("zeapps_default_language");
+        if ($langueParDefaut) {
+            $langAffichage = $langueParDefaut->value ;
+        }
+
+        if(!$countries = CountryModel::SELECT("com_zeapps_contact_country.*", "com_zeapps_contact_country_lang.name")
+            ->join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
             ->orderBy('com_zeapps_contact_country_lang.name')
             ->where("id_lang", $langAffichage)
             ->get()){
@@ -47,7 +53,8 @@ class Country extends Controller
             $filters = json_decode(file_get_contents('php://input'), true);
         }
 
-        $contries_rs = CountryModel::join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
+        $contries_rs = CountryModel::SELECT("com_zeapps_contact_country.*", "com_zeapps_contact_country_lang.name")
+            ->join('com_zeapps_contact_country_lang', 'com_zeapps_contact_country.id', '=', 'com_zeapps_contact_country_lang.id_country')
             ->orderBy('com_zeapps_contact_country_lang.name')
             ->where("id_lang", $langAffichage) ;
 
