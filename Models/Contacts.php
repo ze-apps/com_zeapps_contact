@@ -13,6 +13,7 @@ use Zeapps\Core\ModelHelper;
 use Zeapps\Core\iModelExport;
 use Zeapps\Core\ModelExportType;
 use Zeapps\Core\ObjectHistory;
+use App\com_zeapps_crm\Models\PriceList;
 
 class Contacts extends Model implements iModelExport {
     use SoftDeletes;
@@ -94,6 +95,11 @@ class Contacts extends Model implements iModelExport {
 
         // for history
         $valueOriginal = $this->original ;
+
+        if ($this->id_price_list == 0) {
+            $priceListsDefault = PriceList::where("default", 1)->first();
+            $this->id_price_list = $priceListsDefault->id ;
+        }
 
 
         if (!isset($valueOriginal["id_company"]) || $valueOriginal["id_company"] != $this->id_company) {

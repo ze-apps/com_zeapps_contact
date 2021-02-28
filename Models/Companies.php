@@ -2,6 +2,7 @@
 
 namespace App\com_zeapps_contact\Models;
 
+use App\com_zeapps_crm\Models\PriceList;
 use Illuminate\Database\Eloquent\Model ;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -98,6 +99,11 @@ class Companies extends Model implements iModelExport{
 
         // for history
         $valueOriginal = $this->original ;
+
+        if ($this->id_price_list == 0) {
+            $priceListsDefault = PriceList::where("default", 1)->first();
+            $this->id_price_list = $priceListsDefault->id ;
+        }
 
         /**** to delete unwanted field ****/
         $this->fieldModelInfo->removeFieldUnwanted($this) ;
