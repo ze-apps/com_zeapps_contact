@@ -89,7 +89,7 @@ app.config(["$provide",
 				filters.id_contact = id_contact ;
 				filters.id_address_contact = id_address_contact ;
 				filters.typeAdresse = typeAdresse ;
-				return zeHttp.post("/com_zeapps_contact/address/get?" + zeappsUrlRandom(), filters);
+				return zeHttp.post("/com_zeapps_contact/address/get", filters);
 			}
 
 
@@ -100,200 +100,200 @@ app.config(["$provide",
                 filters.id_contact = id_contact ;
                 filters.id_address_contact = id_address_contact ;
                 filters.typeAdresse = typeAdresse ;
-                return zeHttp.post("/com_zeapps_contact/address/getText?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/address/getText", filters);
             }
 
 
 
 
             function context_company() {
-                return zeHttp.get("/com_zeapps_contact/companies/context/?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/companies/context/");
             }
 
             function get_company(id) {
-                return zeHttp.get("/com_zeapps_contact/companies/get/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/companies/get/" + id);
             }
 
             function getAll_company(limit, offset, context, filters) {
-                return zeHttp.post("/com_zeapps_contact/companies/getAll/" + limit + "/" + offset + "/" + context + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/companies/getAll/" + limit + "/" + offset + "/" + context, filters);
             }
 
             function searchDuplicate_company(filters) {
-                return zeHttp.post("/com_zeapps_contact/companies/searchDuplicate?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/companies/searchDuplicate", filters);
             }
 
             function modal_company(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/companies/modal/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/companies/modal/" + limit + "/" + offset, filters);
             }
 
             function save_company(data) {
-                return zeHttp.post("/com_zeapps_contact/companies/save?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/companies/save", data);
             }
 
             function delete_company(id) {
-                return zeHttp.delete("/com_zeapps_contact/companies/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/companies/delete/" + id);
             }
 
             function makeExcel_company(filters) {
-                return zeHttp.post("/com_zeapps_contact/companies/make_export/?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/companies/make_export/", filters);
             }
 
             function getExcel_company(link) {
-                return "/com_zeapps_contact/companies/get_export/" + link + "?" + zeappsUrlRandom();
+                return "/com_zeapps_contact/companies/get_export/" + link;
             }
 
             function save_company_address(data) {
-                return zeHttp.post("/com_zeapps_contact/companies/save_address/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/companies/save_address/", data);
             }
 
             function delete_company_address(id) {
-                return zeHttp.delete("/com_zeapps_contact/companies/delete_address/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/companies/delete_address/" + id);
             }
 
 
             function context_contact() {
-                return zeHttp.get("/com_zeapps_contact/contacts/context/?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/contacts/context/");
             }
 
             function get_contact(id) {
-                return zeHttp.get("/com_zeapps_contact/contacts/get/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/contacts/get/" + id);
             }
 
             function getAll_contact(id, limit, offset, context, filters) {
                 id = id || 0;
-                return zeHttp.post("/com_zeapps_contact/contacts/getAll/" + id + "/" + limit + "/" + offset + "/" + context + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/contacts/getAll/" + id + "/" + limit + "/" + offset + "/" + context, filters);
             }
 
             function searchDuplicate_contact(filters) {
-                return zeHttp.post("/com_zeapps_contact/contacts/searchDuplicate?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/contacts/searchDuplicate", filters);
             }
 
             function modal_contact(limit, offset, filters, id_company) {
                 id_company = id_company || 0;
-                return zeHttp.post("/com_zeapps_contact/contacts/modal/" + id_company + "/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/contacts/modal/" + id_company + "/" + limit + "/" + offset, filters);
             }
 
             function save_contact(data) {
-                return zeHttp.post("/com_zeapps_contact/contacts/save/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/contacts/save/", data);
             }
 
             function delete_contact(id) {
-                return zeHttp.delete("/com_zeapps_contact/contacts/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/contacts/delete/" + id);
             }
 
             function makeExcel_contact(filters) {
-                return zeHttp.post("/com_zeapps_contact/contacts/make_export/?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/contacts/make_export/", filters);
             }
 
             function getExcel_contact(link) {
-                return "/com_zeapps_contact/contacts/get_export/" + link + "?" + zeappsUrlRandom();
+                return "/com_zeapps_contact/contacts/get_export/" + link;
             }
 
             function save_contact_address(data) {
-                return zeHttp.post("/com_zeapps_contact/contacts/save_address/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/contacts/save_address/", data);
             }
 
             function delete_contact_address(id) {
-                return zeHttp.delete("/com_zeapps_contact/contacts/delete_address/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/contacts/delete_address/" + id);
             }
 
 
             function get_accountFamilies(id) {
-                return zeHttp.get("/com_zeapps_contact/account_families/get/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/account_families/get/" + id);
             }
 
             function getAll_accountFamilies() {
-                return zeHttp.get("/com_zeapps_contact/account_families/get_all?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/account_families/get_all");
             }
 
             function save_accountFamilies(data) {
-                return zeHttp.post("/com_zeapps_contact/account_families/save?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/account_families/save", data);
             }
 
             function saveAll_accountFamilies(data) {
-                return zeHttp.post("/com_zeapps_contact/account_families/save_all/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/account_families/save_all/", data);
             }
 
             function delete_accountFamilies(id) {
-                return zeHttp.get("/com_zeapps_contact/account_families/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/account_families/delete/" + id);
             }
 
 
             function get_topologies(id) {
-                return zeHttp.get("/com_zeapps_contact/topologies/get/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/topologies/get/" + id);
             }
 
             function getAll_topologies() {
-                return zeHttp.get("/com_zeapps_contact/topologies/get_all/?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/topologies/get_all/");
             }
 
             function save_topologies(data) {
-                return zeHttp.post("/com_zeapps_contact/topologies/save/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/topologies/save/", data);
             }
 
             function saveAll_topologies(data) {
-                return zeHttp.post("/com_zeapps_contact/topologies/save_all/?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/topologies/save_all/", data);
             }
 
             function delete_topologies(id) {
-                return zeHttp.get("/com_zeapps_contact/topologies/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/topologies/delete/" + id);
             }
 
 
             function modal_codeNaf(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/code_naf/modal/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters)
+                return zeHttp.post("/com_zeapps_contact/code_naf/modal/" + limit + "/" + offset, filters)
             }
 
 
             // ACCOUNTING NUMBERS
             function getAll_accountingNumber(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/accounting_numbers/getAll/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/getAll/" + limit + "/" + offset, filters);
             }
 
             function modal_accountingNumber(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/accounting_numbers/modal/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters)
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/modal/" + limit + "/" + offset, filters)
             }
 
             function save_accountingNumber(data) {
-                return zeHttp.post("/com_zeapps_contact/accounting_numbers/save?" + zeappsUrlRandom(), data)
+                return zeHttp.post("/com_zeapps_contact/accounting_numbers/save", data)
             }
 
             function del_accountingNumber(id) {
-                return zeHttp.delete("/com_zeapps_contact/accounting_numbers/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/accounting_numbers/delete/" + id);
             }
 
 
             // COUNTRIES
             function getAll_countries() {
-                return zeHttp.get("/com_zeapps_contact/country/get_all/?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/country/get_all/");
             }
 
             function modal_countries(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/country/modal/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/country/modal/" + limit + "/" + offset, filters);
             }
 
 
             // STATES
             function modal_states(limit, offset, filters) {
-                return zeHttp.post("/com_zeapps_contact/state/modal/" + limit + "/" + offset + "?" + zeappsUrlRandom(), filters);
+                return zeHttp.post("/com_zeapps_contact/state/modal/" + limit + "/" + offset, filters);
             }
 
 
             // MODALITY
             function get_modality(id) {
-                return zeHttp.get("/com_zeapps_contact/modalities/get/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/modalities/get/" + id);
             }
 
             function getAll_modality() {
-                return zeHttp.get("/com_zeapps_contact/modalities/getAll/?" + zeappsUrlRandom());
+                return zeHttp.get("/com_zeapps_contact/modalities/getAll/");
             }
 
             function post_modality(data) {
-                return zeHttp.post("/com_zeapps_contact/modalities/save?" + zeappsUrlRandom(), data);
+                return zeHttp.post("/com_zeapps_contact/modalities/save", data);
             }
 
             function del_modality(id) {
-                return zeHttp.delete("/com_zeapps_contact/modalities/delete/" + id + "?" + zeappsUrlRandom());
+                return zeHttp.delete("/com_zeapps_contact/modalities/delete/" + id);
             }
         }]);
     }]);
