@@ -40,7 +40,7 @@ return [
     "Return" => "Return",
     "Change company" => "Modifier l'entreprise",
     "Summary" => "Résumé",
-    "Addresses" => "Addresses",
+    "Addresses" => "Adresses",
     "Contacts" => "Contacts",
     "add a new address" => "Ajouter une nouvelle adresse",
     "Edit address" => "Modifier l'adresse",
