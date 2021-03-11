@@ -63,7 +63,7 @@
 
 
             <div class="form-group">
-                <label>{{ __t("Topology") }}Pays</label>
+                <label>{{ __t("Country") }}</label>
 
                 <span   ze-modalsearch="loadCountry"
                         data-http="countriesHttp"
