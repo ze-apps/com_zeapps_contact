@@ -9,13 +9,13 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
                     format: 'input',
                     field: 'company_name LIKE',
                     type: 'text',
-                    label: 'Nom'
+                    label: __t("Name")
                 },
                 {
                     format: 'select',
                     field: 'id_account_family',
                     type: 'text',
-                    label: 'Type de compte',
+                    label: __t("Account family"),
                     options: []
                 }
             ],
@@ -24,28 +24,28 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
                     format: 'input',
                     field: 'billing_city LIKE',
                     type: 'text',
-                    label: 'Ville',
+                    label: __t("City"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'billing_zipcode LIKE',
                     type: 'text',
-                    label: 'Code Postal',
+                    label: __t("Zip code"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'billing_country_name LIKE',
                     type: 'text',
-                    label: 'Pays',
+                    label: __t("Country"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'accounting_number LIKE',
                     type: 'text',
-                    label: 'Compte comptable',
+                    label: __t("Accounting Account"),
                     size: 6
                 }
             ]
@@ -131,7 +131,7 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
                 if (response.status == 200 && response.data) {
                     window.document.location.href = zhttp.contact.company.excel.get(response.data.link);
                 } else {
-                    toasts('info', "Aucune compagnie correspondant à vos critères n'a pu etre trouvée");
+                    toasts('info', __t("No company matching your criteria could be found."));
                 }
             });
         }

@@ -51,11 +51,11 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                         $scope.contact.age_of_contact = get_age_from_date_of_birth($scope.contact.date_of_birth);
 
                         if (parseFloat(response.data.currentDue) > parseFloat(response.data.authozied_outstanding_amount)) {
-                            var message = "Le client a dépassé l'encours autorisé" ;
+                            var message = __t("The customer has exceeded the authorized outstanding amount") ;
                             message += "<br>" ;
-                            message += "Montant dû : " + response.data.currentDue ;
+                            message += __t("Amount") + " : " + response.data.currentDue ;
                             message += "<br>" ;
-                            message += "Encours autorisé : " + response.data.authozied_outstanding_amount;
+                            message += __t("Authorized outstanding") + " : " + response.data.authozied_outstanding_amount;
 
                             var modalInstance = $uibModal.open({
                                 animation: true,
@@ -64,7 +64,7 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
                                 size: "lg",
                                 resolve: {
                                     titre: function () {
-                                        return "Attention";
+                                        return __t("Warning");
                                     },
                                     msg: function () {
                                         return message;
@@ -218,9 +218,9 @@ app.controller("ComZeappsContactContactsViewCtrl", ["$scope", "$routeParams", "$
             var today = new Date();
             var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000) );
             if (age == 1) {
-                return '1 an';
+                return __t("1 year");
             } else {
-                return age + ' ans';
+                return age + ' ' + __t("years");
             }
         }
 	}]);

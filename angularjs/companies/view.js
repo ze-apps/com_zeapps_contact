@@ -48,11 +48,11 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
                         $scope.contacts = response.data.contacts;
 
                         if (parseFloat(response.data.currentDue) > parseFloat(response.data.authozied_outstanding_amount)) {
-                            var message = "Le client a dépassé l'encours autorisé" ;
+                            var message = __t("The customer has exceeded the authorized outstanding amount") ;
                             message += "<br>" ;
-                            message += "Montant dû : " + response.data.currentDue ;
+                            message += __t("Amount") + " : " + response.data.currentDue ;
                             message += "<br>" ;
-                            message += "Encours autorisé : " + response.data.authozied_outstanding_amount;
+                            message += __t("Authorized outstanding") + " : " + response.data.authozied_outstanding_amount;
 
                             var modalInstance = $uibModal.open({
                                 animation: true,
@@ -61,7 +61,7 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
                                 size: "lg",
                                 resolve: {
                                     titre: function () {
-                                        return "Attention";
+                                        return __t("Warning");
                                     },
                                     msg: function () {
                                         return message;

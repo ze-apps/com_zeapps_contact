@@ -4,23 +4,23 @@ app.controller("ComZeappsCrmAccountingNumberFormCtrl", ["$scope",
 		$scope.types = [
             {
                 id: '1',
-                label: 'Client'
+                label: __t("Customer")
             },
             {
                 id: '2',
-                label: 'Fournisseur'
+                label: __t("supplier")
             },
             {
                 id: '3',
-                label: 'TVA'
+                label: __t("VAT")
             },
             {
                 id: '4',
-                label: 'Produit'
+                label: __t("Product")
             },
             {
                 id: '5',
-                label: 'Achat'
+                label: __t("Purchase")
             }
         ];
 

@@ -7,7 +7,7 @@ listModuleModalFunction.push({
 	size:"lg",
 	resolve:{
 		titre: function () {
-			return "Recherche d'un code NAF";
+			return __t("Finding an NAF code");
 		}
 	}
 });

@@ -5,14 +5,14 @@ app.controller("ComZeappsContactCompaniesAddressFormCtrl", ["$scope", "$routePar
 
         $scope.countriesHttp = zhttp.contact.countries;
         $scope.countriesFields = [
-            {label: 'Code ISO', key: 'iso_code'},
-            {label: 'Pays', key: 'name'}
+            {label: __t("ISO code"), key: 'iso_code'},
+            {label: __t("Country"), key: 'name'}
         ];
 
         $scope.statesHttp = zhttp.contact.states;
         $scope.statesFields = [
-            {label: 'Code ISO', key: 'iso_code'},
-            {label: 'Etat', key: 'name'}
+            {label: __t("ISO code"), key: 'iso_code'},
+            {label: __t("State"), key: 'name'}
         ];
 
         $scope.loadState = loadState;

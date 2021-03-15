@@ -7,7 +7,7 @@ listModuleModalFunction.push({
 	size:"lg",
 	resolve:{
 		titre: function () {
-			return "Recherche d'un contact";
+			return __t("Search for a contact");
 		}
 	}
 });

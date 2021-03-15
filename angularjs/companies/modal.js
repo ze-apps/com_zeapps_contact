@@ -7,7 +7,7 @@ listModuleModalFunction.push({
 	size:"lg",
 	resolve:{
 		titre: function () {
-			return "Recherche d'une entreprise";
+			return __t("Search for a company");
 		}
 	}
 });

@@ -7,19 +7,19 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     format: 'input',
                     field: 'first_name LIKE',
                     type: 'text',
-                    label: 'Prénom'
+                    label: __t("First name")
                 },
                 {
                     format: 'input',
                     field: 'last_name LIKE',
                     type: 'text',
-                    label: 'Nom'
+                    label: __t("Last name")
                 },
                 {
                     format: 'select',
                     field: 'id_account_family',
                     type: 'text',
-                    label: 'Type de compte',
+                    label: __t("Account family"),
                     options: []
                 }
             ],
@@ -28,28 +28,28 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     format: 'input',
                     field: 'city LIKE',
                     type: 'text',
-                    label: 'Ville',
+                    label: __t("City"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'zipcode LIKE',
                     type: 'text',
-                    label: 'Code Postal',
+                    label: __t("Zip code"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'country_name LIKE',
                     type: 'text',
-                    label: 'Pays',
+                    label: __t("Country"),
                     size: 6
                 },
                 {
                     format: 'input',
                     field: 'email LIKE',
                     type: 'text',
-                    label: 'Email',
+                    label: __t("Email"),
                     size: 6
                 }
             ]
@@ -73,12 +73,12 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
 
         $scope.contactHttp = zhttp.contact.contact;
         $scope.contactFields = [
-            {label:'Nom',key:'last_name'},
-            {label:'Prénom',key:'first_name'},
-            {label:'Entreprise',key:'name_company'},
-            {label:'Téléphone',key:'phone'},
-            {label:'Ville',key:'city'},
-            {label:'Gestionnaire du compte',key:'name_user_account_manager'}
+            {label: __t("Last name"),key:'last_name'},
+            {label: __t("First name"),key:'first_name'},
+            {label: __t("Compagny"),key:'name_company'},
+            {label: __t("Phone"),key:'phone'},
+            {label: __t("City"),key:'city'},
+            {label: __t("Account manager"),key:'name_user_account_manager'}
         ];
         $scope.loadContact = loadContact;
         function loadContact(contact) {
@@ -91,19 +91,19 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                     size: "lg",
                     resolve: {
                         titre: function () {
-                            return "Attention";
+                            return __t("Warning");
                         },
                         msg: function () {
-                            return "Ce contact est déjà associé à une autre entreprise, souhaitez-vous relier ce contact avec cette société ?<br>(il ne sera plus associé à l'autre société)";
+                            return __t("This contact is already associated with another company, do you want to link this contact with this company? <br> (it will no longer be associated with the other company)");
                         },
                         action_danger: function () {
-                            return "Annuler";
+                            return __t("Cancel");
                         },
                         action_primary: function () {
                             return false;
                         },
                         action_success: function () {
-                            return "Confirmer";
+                            return __t("To confirm");
                         }
                     }
                 });
@@ -177,7 +177,7 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
                 if (response.status == 200 && response.data) {
                     window.document.location.href = zhttp.contact.contact.excel.get(response.data.link);
                 } else {
-                    toasts('danger', "Une erreur (2) est survenue lors de la génération du fichier Excel");
+                    toasts('danger', __t("An error (2) occurred while generating the Excel file"));
                 }
             });
         }
@@ -209,9 +209,9 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
             var today = new Date();
             var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000) );
             if (age == 1) {
-                return '1 an';
+                return __t("1 year");
             } else {
-                return age + ' ans';
+                return age + ' ' + __t("years");
             }
         }
 

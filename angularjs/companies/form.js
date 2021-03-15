@@ -6,42 +6,42 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
 
         $scope.accountManagerHttp = zhttp.app.user;
         $scope.accountManagerFields = [
-            {label: 'Prénom', key: 'firstname'},
-            {label: 'Nom', key: 'lastname'}
+            {label: __t("First name"), key: 'firstname'},
+            {label: __t("Last name"), key: 'lastname'}
         ];
 
         $scope.parentCompanyHttp = zhttp.contact.company;
         $scope.parentCompanyFields = [
-            {label: 'Nom', key: 'company_name'},
-            {label: 'Téléphone', key: 'phone'},
-            {label: 'Ville', key: 'billing_city'},
-            {label: 'Gestionnaire du compte', key: 'name_user_account_manager'}
+            {label: __t("Name"), key: 'company_name'},
+            {label: __t("Phone"), key: 'phone'},
+            {label: __t("City"), key: 'billing_city'},
+            {label: __t("Account manager"), key: 'name_user_account_manager'}
         ];
 
         $scope.codeNafHttp = zhttp.contact.code_naf;
         $scope.codeNafFields = [
-            {label: 'Code NAF', key: 'code_naf'},
-            {label: 'Libellé', key: 'libelle'}
+            {label: __t("NAF Code"), key: 'code_naf'},
+            {label: __t("Label"), key: 'libelle'}
         ];
 
         $scope.countriesHttp = zhttp.contact.countries;
         $scope.countriesFields = [
-            {label: 'Code ISO', key: 'iso_code'},
-            {label: 'Pays', key: 'name'}
+            {label: __t("ISO code"), key: 'iso_code'},
+            {label: __t("Country"), key: 'name'}
         ];
 
         $scope.statesHttp = zhttp.contact.states;
         $scope.statesFields = [
-            {label: 'Code ISO', key: 'iso_code'},
-            {label: 'Etat', key: 'name'}
+            {label: __t("ISO code"), key: 'iso_code'},
+            {label: __t("State"), key: 'name'}
         ];
 
         $scope.accountingNumberHttp = zhttp.contact.accounting_number;
         $scope.accountingNumberTplNew = '/com_zeapps_contact/accounting_numbers/form_modal';
         $scope.accountingNumberFields = [
-            {label: 'Numero', key: 'number'},
-            {label: 'Libelle', key: 'label'},
-            {label: 'Type', key: 'type_label'}
+            {label: __t("Number"), key: 'number'},
+            {label: __t("Label"), key: 'label'},
+            {label: __t("Type"), key: 'type_label'}
         ];
 
 

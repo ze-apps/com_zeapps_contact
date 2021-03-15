@@ -15,19 +15,19 @@ app.controller("ComZeappsContactAccountingNumberConfigCtrl", ["$scope", "$route"
                     format: 'input',
                     field: 'label LIKE',
                     type: 'text',
-                    label: 'Libellé'
+                    label: __t("Label")
                 },
                 {
                     format: 'input',
                     field: 'number LIKE',
                     type: 'text',
-                    label: 'Numéro'
+                    label: __t("Number")
                 },
                 {
                     format: 'input',
                     field: 'type_label LIKE',
                     type: 'text',
-                    label: 'Type'
+                    label: __t("Type")
                 }
             ],
             secondaries: [
@@ -47,10 +47,6 @@ app.controller("ComZeappsContactAccountingNumberConfigCtrl", ["$scope", "$route"
 
 			zhttp.contact.accounting_number.all($scope.pageSize, offset, formatted_filters).then(function (response) {
 				if (response.status == 200) {
-                    // if(context) {
-                    //     $scope.filters.main[2].options = response.data.account_families;
-                    // }
-
                     $scope.accounts = response.data.accounts;
                     $scope.total = response.data.total;
 				}
