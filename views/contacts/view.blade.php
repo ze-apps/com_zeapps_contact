@@ -69,7 +69,7 @@
         <div ng-show="isTabActive('summary')">
             <div class="row">
                 <div class="col-md-4">
-                    <strong>{{ __t("Date of Birth") }} : </strong>@{{contact.date_of_birth | date:'dd/MM/yyyy'}}
+                    <strong>{{ __t("Date of Birth") }} : </strong>@{{contact.date_of_birth | dateConvert:'date' }}
                     <span ng-if="contact.date_of_birth">(@{{ contact.age_of_contact }})</span>
                 </div>
                 <div class="col-md-4">
@@ -217,7 +217,7 @@
                                 <tbody>
                                 <tr ng-repeat="turnover in contact.turnovers">
                                     <td>@{{turnover.year}}</td>
-                                    <td class="text-right">@{{turnover.total_ht | currency:'€':2}}</td>
+                                    <td class="text-right">@{{turnover.total_ht | currencyConvert}}</td>
                                 </tr>
                                 </tbody>
                             </table>
