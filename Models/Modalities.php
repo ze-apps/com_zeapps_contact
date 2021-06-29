@@ -35,6 +35,7 @@ class Modalities extends Model implements iModelExport {
         $this->fieldModelInfo->integer('settlement_delay', false, true)->default(0);
         $this->fieldModelInfo->string('export', 255)->default('');
         $this->fieldModelInfo->integer('sort', false, true)->default(0);
+        $this->fieldModelInfo->string('code_web', 50)->default("");
 
         parent::__construct($attributes);
     }

@@ -83,13 +83,19 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="form-group">
                 <label>{{ __t("Export code") }}</label>
                 <input type="text" class="form-control" ng-model="form.export">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label>{{ __t("Code web") }}</label>
+                <input type="text" class="form-control" ng-model="form.code_web">
+            </div>
+        </div>
+        <div class="col-md-2">
             <div class="form-group">
                 <label>{{ __t("Sequence") }}</label>
                 <input type="number" class="form-control" ng-model="form.sort">
