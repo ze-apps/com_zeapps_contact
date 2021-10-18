@@ -192,7 +192,7 @@
         <div class="row">
             <div class="col-md-10">
                 <div class="form-group">
-                    <label>{{ __t("Payment received") }}Email</label>
+                    <label>{{ __t("Email") }}</label>
                     <input type="text" ng-model="form.email" class="form-control">
                 </div>
             </div>
