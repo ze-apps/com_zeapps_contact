@@ -101,4 +101,5 @@ return [
     "1 year" => "1 an",
     "years" => "ans",
     "Search for a contact" => "Recherche d'un contact",
+    "Code web" => "Code web",
 ];

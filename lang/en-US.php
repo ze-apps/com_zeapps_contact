@@ -102,4 +102,5 @@ return [
     "1 year" => "1 year",
     "years" => "years",
     "Search for a contact" => "Search for a contact",
+    "Code web" => "Code web",
 ];
