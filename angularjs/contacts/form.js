@@ -121,7 +121,6 @@ app.controller("ComZeappsContactContactsFormCtrl", ["$scope", "$routeParams", "$
             angular.forEach($scope.account_families, function (account_family) {
                 if ($scope.form.id_account_family == account_family.id) {
                     $scope.form.name_account_family = account_family.label;
-                    console.log("name_account_family = " + $scope.form.name_account_family);
                 }
             });
         }

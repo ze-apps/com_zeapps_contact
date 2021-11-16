@@ -82,7 +82,6 @@ app.controller("ComZeappsContactCompaniesViewCtrl", ["$scope", "$routeParams", "
 
                                 }
                             }, function () {
-                                //console.log("rien");
                             });
                         }
                     }
