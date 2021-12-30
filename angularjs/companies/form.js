@@ -98,6 +98,16 @@ app.controller("ComZeappsContactCompaniesFormCtrl", ["$scope", "$rootScope", "ze
                 if (!$scope.form.id) {
                     $scope.$parent.form.id_user_account_manager = $rootScope.user.id;
                     $scope.$parent.form.name_user_account_manager = $rootScope.user.firstname + " " + $rootScope.user.lastname;
+
+                    if (typeof JS_CRM_DEFAULT_DISCOUNT_COMPANY !== 'undefined') {
+                        $scope.$parent.form.discount = JS_CRM_DEFAULT_DISCOUNT_COMPANY;
+                    }
+                    if (typeof JS_CRM_DEFAULT_MODALITY_COMPANY !== 'undefined') {
+                        $scope.$parent.form.id_modality = JS_CRM_DEFAULT_MODALITY_COMPANY;
+                    }
+                    if (typeof JS_CRM_DEFAULT_ACCOUNT_NUMBER_COMPANY !== 'undefined') {
+                        $scope.$parent.form.accounting_number=JS_CRM_DEFAULT_ACCOUNT_NUMBER_COMPANY;
+                    }
                 }
             }
         });
