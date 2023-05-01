@@ -33,6 +33,9 @@
                 <div class="col-md-4">
                     <i class="fa fa-fw fa-globe"></i> @{{company.website_url}}
                 </div>
+                <div class="col-md-12" ng-if="company.email != ''">
+                    <i class="fas fa-envelope"></i> <a href="mailto:@{{company.email}}" target="_blank">@{{company.email}}</a>
+                </div>
             </div>
         </div>
     </div>
