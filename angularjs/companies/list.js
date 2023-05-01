@@ -91,8 +91,10 @@ app.controller("ComZeappsContactCompaniesListCtrl", ["$scope", "$location", "$ro
 			});
 		}
 
-        function goTo(id){
-            $location.url('/ng/com_zeapps_contact/companies/'+id);
+        function goTo(id) {
+            if (id !== undefined) {
+                $location.url('/ng/com_zeapps_contact/companies/' + id);
+            }
         }
 
 		function loadCodeNaf() {

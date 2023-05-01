@@ -167,8 +167,10 @@ app.controller("ComZeappsContactContactsListPartialCtrl", ["$scope", "$routePara
 			});
 		}
 
-        function goTo(id){
-            $location.url('/ng/com_zeapps_contact/contacts/'+id);
+        function goTo(id) {
+            if (id !== undefined) {
+                $location.url('/ng/com_zeapps_contact/contacts/' + id);
+            }
         }
 
         function getExcel() {
