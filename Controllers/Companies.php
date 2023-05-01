@@ -286,7 +286,7 @@ class Companies extends Controller
             $header = array("string");
 
             $row1 = array("Liste des contacts");
-            $row2 = array("#", "Nom", "Téléphone", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "TVA Intracom", "N° Compta", "Commentaire", "Gestionnaire du compte");
+            $row2 = array("#", "Nom", "Téléphone", "Mobile", "Adresse (1)", "Adresse (2)", "Adresse (3)", "Code postal", "Ville", "Etat", "Pays", "Email", "TVA Intracom", "N° Compta", "Commentaire", "Gestionnaire du compte");
 
             $writer = new XLSXWriter();
 
@@ -320,6 +320,7 @@ class Companies extends Controller
                         $companie->id,
                         $companie->company_name,
                         $companie->phone,
+                        $companie->mobile,
                         $companie->billing_address_1,
                         $companie->billing_address_2,
                         $companie->billing_address_3,

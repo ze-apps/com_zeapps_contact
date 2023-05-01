@@ -65,6 +65,7 @@ class Companies extends Model implements iModelExport{
         $this->fieldModelInfo->string('email', 255)->default("");
         $this->fieldModelInfo->tinyInteger('opt_out', false, true)->default(0);
         $this->fieldModelInfo->string('phone', 25)->default("");
+        $this->fieldModelInfo->string('mobile', 50)->default("");
         $this->fieldModelInfo->string('fax', 25)->default("");
         $this->fieldModelInfo->string('website_url', 255)->default("");
         $this->fieldModelInfo->string('code_naf', 15)->default("");

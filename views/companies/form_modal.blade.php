@@ -216,11 +216,17 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
+                    <label>{{ __t("Mobile") }}</label>
+                    <input type="text" ng-model="form.mobile" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
                     <label>{{ __t("Fax") }}</label>
                     <input type="text" ng-model="form.fax" class="form-control">
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label>{{ __t("Website") }}</label>
                     <input type="text" ng-model="form.website_url" class="form-control">

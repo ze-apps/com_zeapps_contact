@@ -25,7 +25,7 @@
         <div class="well">
             <div class="row">
                 <div class="col-md-4">
-                    <i class="fa fa-fw fa-phone"></i> @{{company.phone}}
+                    <i class="fa fa-fw fa-phone"></i> @{{company.phone}} <span ng-if="company.phone != '' && company.mobile != ''">/</span> @{{company.mobile}}
                 </div>
                 <div class="col-md-4">
                     <i class="fa fa-fw fa-fax"></i> @{{company.fax}}
